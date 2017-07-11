@@ -1,0 +1,77 @@
+{
+	"title": "DBS Lernmodul (aus JSON erzeugt)",
+	"chapter": [
+		{
+			"name": "01_INTRO",
+			"title": "01 INTRO: Einführung",
+			"page": [
+				{
+					"name": "Datenbanksystem",
+					"title": "Datenbankystem"
+				},
+				{
+					"name": "Relationenmodell_Beispiel",
+					"title": "Relationenmodell (Beispiel)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Wir betrachten die Tabelle Student. Geben Sie für die folgenden Elemente an, ob es sich um Metadaten oder Instanzdaten handelt!\n\n* Tabellenname Student: |*Metadaten; Instanzdaten|\n* Attributwert 101 für Student Schmidt: |Metadaten; *Instanzdaten|\n* Attributname W-Ort: |*Metadaten; Instanzdaten|\n* Attributwerte des letzten Datensatzes: |Metadaten; *Instanzdaten|"
+						},
+						{
+							"type": "gap",
+							"text": "Geben Sie für jede der Anfragen an, wieviele Tabellen zur Beantwortung verwendet werden!\n\n* Liste der Namen aller Studenten: |*1;2;3;4|\n* Liste der Büros aller Professoren aus dem Wirtschafts-Department: |1;*2;3;4|\n* Namen der Studenten, die von einem Professor aus dem Wirtschafts-Department mit der Note 1.3 geprüft wurden? |1;2;3;*4|"
+						}
+					]
+				},
+				{
+					"name": "Drei_Schema_Architektur",
+					"title": "Drei-Schema-Architektur"
+				},
+				{
+					"name": "Transaktion_Beispiel",
+					"title": "Transaktion (Beispiel)"
+				},
+				{
+					"name": "DBS_Nutzer",
+					"title": "Datenbank-Nutzer",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Ordnen Sie die folgenden Eigenschaften dem jeweiligen Nutzer zu!\n\n* Hat mit seinem Domänenwissen die Datenbank modelliert, d.h. Tabellen erstellt: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; *DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Kennt den Aufbau der Datenbank (Tabellen, Attribute) und erstellt SQL-Anfragen: |Endbenutzer von DB-Anwendungen; *Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Benötigt keine Datenbankkenntnisse: |*Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Analysiert Anfragen und Datenmengen und optimiert ggf. die Datenbank: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; *DB-Analyst; DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Hat das DBMS (z.B. DB2) implementiert: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; DB-Administrator; *DBMS-Implementierer|\n* Kümmert sich um die Nutzer- und Rechte-Verwaltung: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; *DB-Administrator; DBMS-Implementierer|"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "02_RM",
+			"title": "02 RM: Das Relationale Modell",
+			"page": [
+				{
+					"name": "Relationen_in_Tabellendarstellung",
+					"title": "Relation in Tabellendarstellung"
+				},
+				{
+					"name": "Schluesselkandidat",
+					"title": "Schlüsselkandidat"
+				},
+				{
+					"name": "Primaerschluessel",
+					"title": "Primärschlüssel"
+				},
+				{
+					"name": "Fremdschluessel",
+					"title": "Fremdschlüssel"
+				},
+				{
+					"name": "Relationenmodell_in_SQL",
+					"title": "Relationenmodell in SQL"
+				},
+				{
+					"name": "Wartung_Referentielle_Integritaet_Beispiel",
+					"title": "Wartung Referentielle Integrität"
+				}
+			]
+		}
+	]
+}
