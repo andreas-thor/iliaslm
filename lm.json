@@ -49,19 +49,67 @@
 			"page": [
 				{
 					"name": "Relationen_in_Tabellendarstellung",
-					"title": "Relation in Tabellendarstellung"
+					"title": "Relation in Tabellendarstellung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Beantworten Sie die folgenden Fragen zur dargestellten Relation PROFESSOR!\n\n* Was ist die Kardinalität der Relation? |1;2;3;*4;5;6;7;8;9;20;25;26|\n* Was ist der Grad der Relation? |1;2;3;4;*5;6;7;8;9;20;25;26|\n* Was ist der Wertebereich (Domäne) des Attributs PNr? |*INTEGER (ganze Zahl); VARCHAR (Zeichenkette)|"
+						},
+						{
+							"type": "gap",
+							"text": "Beantworten Sie die folgenden Fragen zur dargestellten Relation STUDENT!\n\n* Was ist die Kardinalität der Relation? |1;2;3;4;*5;6;7;8;9;20;25;26|\n* Was ist der Grad der Relation? |1;2;*3;4;5;6;7;8;9;20;25;26|\n* Welches Attribut hat einen NULL-Wert? |MatNr; SName; *W-Ort; 104; Krause|\n* Was ist der Wertebereich (Domäne) des Attributs W-Ort? |INTEGER (ganze Zahl); *VARCHAR (Zeichenkette)|"
+						}
+					]
 				},
 				{
 					"name": "Schluesselkandidat",
-					"title": "Schlüsselkandidat"
+					"title": "Schlüsselkandidat",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Markieren Sie alle Schlüsselkandidaten der Relation PROFESSOR!| Büro; DPT; PName;  PName + Büro; *PNr; PNr + PName; *Telefon"
+						},
+						{
+							"type": "mc",
+							"text": "Markieren Sie alle Schlüsselkandidaten der Relation STUDENT!| *MatNr; MatNr + SName; SName; SName + W-Ort; W-Ort"
+						}
+					]
 				},
 				{
 					"name": "Primaerschluessel",
-					"title": "Primärschlüssel"
+					"title": "Primärschlüssel",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Markieren Sie die korrekten Aussagen bzgl. der dargestellten Relation PROFESSOR mit dem Primärschlüssel PNr.\n\nDie dargestellte Relation PROFESSOR ist... | nicht gültig, da es Tupel mit NULL-Werten gibt; nicht gültig, da es mehrere Tupel mit gleichem Primärschlüssel-Wert gibt. ; *gültig"
+						},
+						{
+							"type": "mc",
+							"text": "Markieren Sie die korrekten Aussagen bzgl. der dargestellten Relation STUDENT mit dem Primärschlüssel MatNr.\n\nDie dargestellte Relation STUDENT ist... | *nicht gültig, da es mehrere Tupel mit gleichem Primärschlüssel-Wert gibt; nicht gültig, da für Student Krause der W-Ort einen NULL-Wert hat; *nicht gültig, da ein Tupel einen NULL-Wert für den Primärschlüssel hat.; gültig."
+						}
+					]
 				},
 				{
 					"name": "Fremdschluessel",
-					"title": "Fremdschlüssel"
+					"title": "Fremdschlüssel",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Geben Sie für die nachfolgenden Attribute der Relation DEPARTMENT an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* ID: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* DName: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* Leiter: | kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; *Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
+						},
+						{
+							"type": "gap",
+							"text": "Geben Sie für die nachfolgenden Attribute der Relation PROFESSOR an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* PNr: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* PName: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* Dept: | kein Fremdschlüssel; *Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
+						},
+						{
+							"type": "gap",
+							"text": "Geben Sie für die nachfolgenden Attribute der Relation STUDENT an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* MatNr: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* SName: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* W-Ort: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
+						},
+						{
+							"type": "gap",
+							"text": "Geben Sie für die nachfolgenden Attribute der Relation PRÜFUNG an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* PNr: | kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; *Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* MatNr: | kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; *Fremdschlüssel auf STUDENT.MatNr |\n* Fach: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
+						}
+					]
 				},
 				{
 					"name": "Relationenmodell_in_SQL",
@@ -69,7 +117,13 @@
 				},
 				{
 					"name": "Wartung_Referentielle_Integritaet_Beispiel",
-					"title": "Wartung Referentielle Integrität"
+					"title": "Wartung Referentielle Integrität",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Geben Sie die Auswirkung der Operation \"DELETE FROM Student WHERE MatNr=101\" für jede der drei Löschregeln an:\n\n* NO ACTION: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; *Es wird nichts gelöscht. |\n* CASCADE: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; *Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; Es wird nichts gelöscht. |\n* SET NULL: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; *Es wird nichts gelöscht. |"
+						}
+					]
 				}
 			]
 		}

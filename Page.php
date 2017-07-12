@@ -1,5 +1,8 @@
 <?php
-require_once ('Question.php');
+
+require_once 'Question.php';
+require_once 'QuestionGap.php';
+require_once 'QuestionMC.php';
 
 class Page {
 
@@ -36,7 +39,14 @@ class Page {
 		$this->questions = [];
 		if (isset($page["question"])) {
 			foreach ($page["question"] as $pos => $question) {
-				array_push($this->questions, new Question($this->id, $pos, $question));
+				
+				$q = NULL;
+				switch ($question["type"]) {
+					case "gap": $q = new QuestionGap($this->id, $pos, $question); break;
+					case "mc" : $q = new QuestionMC ($this->id, $pos, $question); break;
+				}
+				
+				array_push($this->questions, $q);
 			}
 		}
 	}
