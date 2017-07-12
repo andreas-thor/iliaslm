@@ -1,6 +1,8 @@
 <?php
-require_once ('LearningModule.php');
-require_once ('Page.php');
+require_once 'LearningModule.php';
+require_once 'Page.php';
+require_once 'PageSlide.php';
+require_once 'PageOverview.php';
 
 class Chapter {
 
@@ -19,7 +21,7 @@ class Chapter {
 		
 		$this->pages = [];
 		foreach ($chap["page"] as $page) {
-			array_push($this->pages, new Page($this->name, $page));
+			array_push($this->pages, ($page["name"]=="overview") ? new PageOverview($this->name, $page) : new PageSlide($this->name, $page));
 		}
 	}
 

@@ -6,6 +6,16 @@
 			"title": "01 INTRO: Einführung",
 			"page": [
 				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"Vorteile der Datenhaltung mittels Datenbanksysteme gegenüber Dateisystemen zu erklären",
+						"die wesentlichen Eigenschaften relationaler Datenbanksysteme zu erläutern",
+						"das Transaktionskonzept und die Transaktionseigenschaften (ACID) an einem Beispiel darzustellen",
+						"Praktische Einsatzszenarien den DBS-Einsatzformen OLTP und OLAP zuzuordnen"
+					]
+				},
+				{
 					"name": "Datenbanksystem",
 					"title": "Datenbankystem"
 				},
@@ -47,6 +57,16 @@
 			"name": "02_RM",
 			"title": "02 RM: Das Relationale Modell",
 			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"Aufbau und Eigenschaften einer Relation zu erläutern",
+						"Bedeutung und Funktionsweise von Primär- und Fremdschlüsseln darzustellen",
+						"Relationen mittels Primär- und Fremdschlüsseln zu verknüpfen",
+						"die verschiedenen Arten von Löschregeln und ihre Funktionsweise an konkreten Beispielen umzusetzen"
+					]
+				},
 				{
 					"name": "Relationen_in_Tabellendarstellung",
 					"title": "Relation in Tabellendarstellung",

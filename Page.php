@@ -4,29 +4,19 @@ require_once 'Question.php';
 require_once 'QuestionGap.php';
 require_once 'QuestionMC.php';
 
-class Page {
+abstract class Page {
 
-	private $id;
+	protected $id;
 
-	private $name;
+	protected $name;
 
-	private $title;
+	protected $title;
 
-	private $questions;
+	protected $questions;
 
-	public static $media = [
-		"image" => [
-			"caption" => "Skriptfolie",
-			"format" => "image/jpeg",
-			"ext" => "jpg"
-		
-		],
-		"video" => [
-			"caption" => "Lernvideo",
-			"format" => "video/mp4",
-			"ext" => "mp4"
-		]
-	];
+	protected $media;
+	
+	protected $mediaBaseName;
 
 
 
@@ -34,21 +24,10 @@ class Page {
 		$this->name = $page["name"];
 		$this->title = $page["title"];
 		$this->id = $chapName . "_" . $this->name;
-		printf("  Create Page %s (%s)\n", $this->name, $this->title);                                                                                                                                          
-		
 		$this->questions = [];
-		if (isset($page["question"])) {
-			foreach ($page["question"] as $pos => $question) {
-				
-				$q = NULL;
-				switch ($question["type"]) {
-					case "gap": $q = new QuestionGap($this->id, $pos, $question); break;
-					case "mc" : $q = new QuestionMC ($this->id, $pos, $question); break;
-				}
-				
-				array_push($this->questions, $q);
-			}
-		}
+		$this->media = [];
+		$this->mediaBaseName = "";
+		printf("  Create %s %s (%s)\n", get_class($this), $this->name, $this->title);                                                                                                                                          
 	}
 
 
@@ -78,7 +57,7 @@ class Page {
 		$xmlTabs->setAttribute("HorizontalAlign", "Center");
 		$xmlTabs->setAttribute("Behavior", "FirstOpen");
 		
-		foreach (self::$media as $type => $typeinfo) {
+		foreach ($this->media as $type => $typeinfo) {
 			
 			$xmlTab = $xmlTabs->appendChild($dom->createElement("Tab"));
 			$xmlMediaObject = ($xmlTab->appendChild($dom->createElement("PageContent")))->appendChild($dom->createElement("MediaObject"));
@@ -93,11 +72,6 @@ class Page {
 			$xmlTab->appendChild($dom->createElement("TabCaption", $typeinfo["caption"]));
 		}
 		
-		/* @var $q Question */
-		foreach ($this->questions as $q) {
-			($xmlPageObject->appendChild($dom->createElement("PageContent")))->appendChild ($q->getXMLQuestion());
-		}
-		
 		return $xmlPageObject;
 	}
 
@@ -108,9 +82,9 @@ class Page {
 		
 		$xmlMediaObjects = [];
 		
-		foreach (self::$media as $type => $typeinfo) {
+		foreach ($this->media as $type => $typeinfo) {
 			
-			$location = $url . $this->id . "." . $typeinfo["ext"];
+			$location = $url . sprintf ($typeinfo["namepattern"], $this->mediaBaseName);
 			
 			$xmlMediaObject = $dom->createElement("MediaObject");
 			$xmlMediaObject->appendChild(LearningModule::getXMLMetadata($this->id . "_" . $type, $location, $typeinfo["format"]));

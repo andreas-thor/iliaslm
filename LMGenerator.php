@@ -19,7 +19,7 @@ foreach ($json['chapter'] as $chap) {
 	array_push ($chapters, new Chapter($chap));
 }
 
-createDOM($chapters, $lmid, $json['title'], "http://www1.hft-leipzig.de/thor/dbs/");
+createDOM($chapters, $lmid, $json['title'], "https://www1.hft-leipzig.de/thor/dbs/");
 createQTI($chapters);
 
 writeZip($lmid, "ilias/Vorlage/");
