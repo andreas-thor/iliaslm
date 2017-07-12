@@ -9,10 +9,10 @@
 					"name": "overview",
 					"title": "Übersicht",
 					"outcome": [
-						"Vorteile der Datenhaltung mittels Datenbanksysteme gegenüber Dateisystemen zu erklären",
+						"Vorteile der Datenhaltung mittels Datenbanksystemen gegenüber Dateisystemen zu erklären",
 						"die wesentlichen Eigenschaften relationaler Datenbanksysteme zu erläutern",
 						"das Transaktionskonzept und die Transaktionseigenschaften (ACID) an einem Beispiel darzustellen",
-						"Praktische Einsatzszenarien den DBS-Einsatzformen OLTP und OLAP zuzuordnen"
+						"praktische Einsatzszenarien den DBS-Einsatzformen OLTP und OLAP zuzuordnen"
 					]
 				},
 				{
@@ -144,6 +144,96 @@
 							"text": "Geben Sie die Auswirkung der Operation \"DELETE FROM Student WHERE MatNr=101\" für jede der drei Löschregeln an:\n\n* NO ACTION: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; *Es wird nichts gelöscht. |\n* CASCADE: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; *Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; Es wird nichts gelöscht. |\n* SET NULL: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; *Es wird nichts gelöscht. |"
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "03_SQL-1",
+			"title": "03 SQL-1: Datenbanksprache SQL (Teil 1)",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"den grundsätzlichen Aufbau einfacher SQL-SELECT-Anweisungen zu erklären (Attributauswahl in SELECT, WHERE-Bedignung, JOIN)",
+						"das Ergebnis von SQL-SELECT-Anweisungen für gegebene Relationen zu berechnen",
+						"die unterschiedlichen JOIN-Arten zu erklären",
+						"SQL-SELECT-Anweisungen zu formulieren"
+					]
+				},
+				{
+					"name": "Einfache_Selektionen_und_Projektionen",
+					"title": "Selektion und Projektion",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Was berechnen jeweils die folgenden SQL-Anfragen? \n\n <code>SELECT name FROM verlag</code> | *Name aller Verlage; Name aller Berliner Verlage; Name und Ort aller Berliner Verlage; Ort aller Verlage| \n\n <code>SELECT name FROM verlag WHERE ort = \"Berlin\"</code> | Name aller Verlage; *Name aller Berliner Verlage; Name und Ort aller Berliner Verlage; Ort aller Verlage| \n\n <code>SELECT titel FROM buch WHERE jahr > 1990</code> | Titel der Bücher, die vor 1990 erschienen sind; Titel der Bücher, die 1990 erschienen sind; *Titel der Bücher, die nach 1990 erschienen sind | \n\n"
+						},
+						{
+							"type": "gap",
+							"text": "Welche SQL-Anfrage berechnet jeweils die folgenden Ergebnisse?\n\n<code>Name\n-------------------\nLunetIX SoftAir\nAkademie Verl.\nSchmidt</code>\n | SELECT name FROM verlag; SELECT name FROM verlage WHERE \"Berlin\"; *SELECT name FROM verlage WHERE ort=\"Berlin\"; SELECT ort FROM verlag | \n\n<code>Titel\n------------------\nExcel\nGrundlagen\nPC Tools\nInfo für Ing.\nJava</code>\n | SELECT titel FROM buch; SELECT titel, jahr FROM buch WHERE jahr>1990; *SELECT titel FROM buch WHERE jahr>1990; SELECT jahr>1990 FROM buch"
+						}
+					]
+				},
+				{
+					"name": "Sortierung",
+					"title": "Sortierung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Ordnen Sie den folgenden SQL-Ergebnissen (d.h. Ergebnis-Tabellen) diejenigen SQL-Anfragen zu, die dieses Ergebnis produzieren! \nHinweis: Alle Anfragen beginnen mit \"SELECT titel, jahr FROM buch WHERE jahr > 1990\" und werden dann durch eine ORDER-BY-Klausel ergänzt. Wählen Sie daher die korrekte ORDER-BY-Klausel aus!\n<code>\nTitel ······· + Jahr\n --------------+-----\n Excel ······· + 1991\n Grundlagen ·· + 1991\n Info für Ing. + 1995\n Java ········ + 1996\n PC Tools ···· + 1993</code>\n|*ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n<code>\nTitel ······· + Jahr\n --------------+-----\n PC Tools ···· + 1993\n Java ········ + 1996\n Info für Ing. + 1995\n Grundlagen ·· + 1991\n Excel ······· + 1991</code>\n|ORDER BY titel ASC; *ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n<code>\nTitel ······· + Jahr\n --------------+-----\n Java ········ + 1996\n Info für Ing. + 1995\n PC Tools ···· + 1993\n Grundlagen ·· + 1991\n Excel ······· + 1991</code>\n|ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; *ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n<code>\nTitel ······· + Jahr\n --------------+-----\n Java ········ + 1996\n Info für Ing. + 1995\n PC Tools ···· + 1993\n Excel ······· + 1991\n Grundlagen ·· + 1991</code>\n|ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; *ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC  "
+						}
+					]
+				},
+				{
+					"name": "Duplikateliminierung",
+					"title": "Duplikateliminierung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "  Geben Sie für die nachfolgenden SQL-Anfragen an, wieviele Datensätze (Tupel) das Ergebnis jeweils beinhaltet! \n\nSELECT ort FROM verlag : |0;1;2;3;4;5;*6;7;8;9| \n\nSELECT DISTINCT ort FROM verlag : |0;1;2;*3;4;5;6;7;8;9| \n\nSELECT name FROM verlag : |0;1;2;3;4;5;*6;7;8;9| \n\nSELECT DISTINCT name FROM verlag : |0;1;2;3;4;5;*6;7;8;9|"
+						}
+					]
+				},
+				{
+					"name": "Ausgabebearbeitung_Fallunterscheidung",
+					"title": "Fallunterscheidung"
+				},
+				{
+					"name": "Join_Beispiel",
+					"title": "Join (Beispiel)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Geben Sie das Ergebnis der Join-Anfrage \"Alle Buchtitel mit dem Ort ihres Verlags\" an, in dem Sie für jeden Buchtitel den zugehörigen Ort auswählen oder \"---\", falls das Buch nicht im Anfrageergebnis auftritt.\n \nExcel: |Berlin; *Düsseldorf; München; ---| \nGrundlagen: |*Berlin; Düsseldorf; München; ---| \nKaufverträge: |*Berlin; Düsseldorf; München; ---| \nPC Tools: |Berlin; Düsseldorf; München; *---| \nInfo für Ing.: |Berlin; *Düsseldorf; München; ---| \nSemantik: |Berlin; Düsseldorf; *München; ---| \nJava: |Berlin; *Düsseldorf; München; --- "
+						}
+					]
+				},
+				{
+					"name": "Join-Anfragen-1",
+					"title": "Join-Anfragen (1)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "  Formulieren Sie die Anfrage \"Welche Buchtitel wurden von Berliner Verlagen herausgebracht\" in SQL. Vervollständigen Sie dazu die  nachfolgende SQL-Anfrage.\n\n  \nSELECT |buch.id; *buch.titel; verlag.name; verlag.ort| \nFROM buch, |buch; *verlag| \nWHERE |buch.buchid; buch.titel; *buch.verlagsid|  |>;*=;<| |verlag.name; *verlag.verlagsid; verlag.ort| \n |*AND; OR| |verlag.name; verlag.verlagsid; *verlag.ort| = 'Berlin'   "
+						}
+					]
+				},
+				{
+					"name": "Join-Anfragen-2",
+					"title": "Join-Anfragen (2)"
+				},
+				{
+					"name": "Schreibweisen_Joins",
+					"title": "Schreibweisen Join"
+				},
+				{
+					"name": "Join-Anfragen-3",
+					"title": "Join-Anfragen (3)"
+				},
+				{
+					"name": "OuterJoin",
+					"title": "Outer Join"
 				}
 			]
 		}
