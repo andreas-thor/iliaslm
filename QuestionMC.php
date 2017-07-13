@@ -9,8 +9,6 @@ class QuestionMC extends Question {
 		global $qti;
 		
 		
-		// TODO: Other Item Types that "gap"
-		
 		$xmlItem = $qti->createElement("item");
 		$xmlItem->setAttribute("ident", $this->id);
 		$xmlItem->setAttribute("maxattempts", "3");

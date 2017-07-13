@@ -1,5 +1,5 @@
 {
-	"title": "y4DBS Lernmodul (aus JSON erzeugt)",
+	"title": "y6DBS Lernmodul (aus JSON erzeugt)",
 	"chapter": [
 		{
 			"name": "01_INTRO",
@@ -351,55 +351,55 @@
 					]
 				},
 				{
-					"name": "04_ER_Attribute",
+					"name": "Attribute",
 					"title": "Attribute"
 				},
 				{
-					"name": "04_ER_Anwendungsbeispiel1",
+					"name": "Anwendungsbeispiel1",
 					"title": "Anwendungsbeispiel 1"
 				},
 				{
-					"name": "04_ER_Relationsships",
+					"name": "Relationsships",
 					"title": "Relationsships"
 				},
 				{
-					"name": "04_ER_Relationships_Rekursive_Beziehung",
+					"name": "Relationships_Rekursive_Beziehung",
 					"title": "Relationships: Rekursive Beziehung"
 				},
 				{
-					"name": "04_ER_Beziehung_11",
+					"name": "Beziehung_11",
 					"title": "Beziehung 1:1"
 				},
 				{
-					"name": "04_ER_Beziehung_N1",
+					"name": "Beziehung_N1",
 					"title": "Beziehung 1:N"
 				},
 				{
-					"name": "04_ER_Beziehung_NM",
+					"name": "Beziehung_NM",
 					"title": "Beziehung N:M"
 				},
 				{
-					"name": "04_ER_Beziehung_Ueberblick",
+					"name": "Beziehung_Ueberblick",
 					"title": "Beziehung: Überblick"
 				},
 				{
-					"name": "04_ER_Anwendungsbeispiel2",
+					"name": "Anwendungsbeispiel2",
 					"title": "Anwendungsbeispiel 2"
 				},
 				{
-					"name": "04_ER_MinMaxNotation",
+					"name": "MinMaxNotation",
 					"title": "Min-Max-Notation"
 				},
 				{
-					"name": "04_ER_Anwendungsbeispiel2_MinMaxNotation",
+					"name": "Anwendungsbeispiel2_MinMaxNotation",
 					"title": "Anwendungsbeispiel 2 mit Min-Max-Notation"
 				},
 				{
-					"name": "04_ER_Anwendungsbeispiel3",
+					"name": "Anwendungsbeispiel3",
 					"title": "Anwendungsbeispiel 3"
 				},
 				{
-					"name": "04_ER_Arten_der_Spezialisierung",
+					"name": "Arten_der_Spezialisierung",
 					"title": "Arten der Spezialisierung"
 				}
 			]
@@ -418,48 +418,194 @@
 					]
 				},
 				{
-					"name": "05_ER2RM_EntityMenge",
-					"title": "05_ER2RM_EntityMenge"
+					"name": "EntityMenge",
+					"title": "Entity-Menge"
 				},
 				{
-					"name": "05_ER2RM_Generalisierung_Beispiel",
-					"title": "05_ER2RM_Generalisierung_Beispiel"
+					"name": "RelationshipMenge_NM",
+					"title": "Relationship-Menge N:M"
 				},
 				{
-					"name": "05_ER2RM_Generalisierung_Vergleich",
-					"title": "05_ER2RM_Generalisierung_Vergleich"
+					"name": "RelationshipMenge_N1",
+					"title": "Relationship-Menge 1:N"
 				},
 				{
-					"name": "05_ER2RM_HorizontalePartitionierung",
-					"title": "05_ER2RM_HorizontalePartitionierung"
+					"name": "MehrwertigeAttribute",
+					"title": "Mehrwertiges Attribut"
 				},
 				{
-					"name": "05_ER2RM_MehrwertigeAttribute",
-					"title": "05_ER2RM_MehrwertigeAttribute"
+					"name": "SchwacheEntityMenge",
+					"title": "Schwache Entity-Menge"
 				},
 				{
-					"name": "05_ER2RM_RelationshipMenge_N1",
-					"title": "05_ER2RM_RelationshipMenge_N1"
+					"name": "VertikalePartitionierung",
+					"title": "Vertikale Partitionierung"
 				},
 				{
-					"name": "05_ER2RM_RelationshipMenge_NM",
-					"title": "05_ER2RM_RelationshipMenge_NM"
+					"name": "HorizontalePartitionierung",
+					"title": "Horizontale Partitionierung"
 				},
 				{
-					"name": "05_ER2RM_SchwacheEntityMenge",
-					"title": "05_ER2RM_SchwacheEntityMenge"
+					"name": "VolleRedundanz",
+					"title": "VolleRedundanz"
 				},
 				{
-					"name": "05_ER2RM_VertikalePartitionierung",
-					"title": "05_ER2RM_VertikalePartitionierung"
+					"name": "WideTable",
+					"title": "WideTable"
 				},
 				{
-					"name": "05_ER2RM_VolleRedundanz",
-					"title": "05_ER2RM_VolleRedundanz"
+					"name": "Generalisierung_Beispiel",
+					"title": "Generalisierung: Beispiel"
 				},
 				{
-					"name": "05_ER2RM_WideTable",
-					"title": "05_ER2RM_WideTable"
+					"name": "Generalisierung_Vergleich",
+					"title": "Generalisierung: Vergleich"
+				}
+			]
+		},
+		{
+			"name": "06_NORM",
+			"title": "06 NORM: Normalisierung von Relationen",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"die Begriffe funktionale Abhängingkeiten und Normalformen (1NF, 2NF, 3NF, BCNF) zu erläutern",
+						"negative Auswirkungen (Anomalien) schlechter Schemata am konkreten Beispiel zu identifizieren und zu begründen",
+						"Schlüssel und Normalform eines gegebenen Relationenschema auf Basis funktionaler Abhängigkeiten zu bestimmen",
+						"Relationen in höhere Normalformen zu überführen"
+					]
+				},
+				{
+					"name": "Schlechtes_Schema",
+					"title": "Schlechtes Schema "
+				},
+				{
+					"name": "Funktionale_Abhaengigkeit",
+					"title": "Funktionale Abhängigkeit"
+				},
+				{
+					"name": "Schluessel",
+					"title": "Schlüssel"
+				},
+				{
+					"name": "FA_und_Schluessel",
+					"title": "FA und Schlüssel"
+				},
+				{
+					"name": "Zweite_Normalform",
+					"title": "Zweite Normalform (2NF)"
+				},
+				{
+					"name": "Ueberfuehrung_in_2NF",
+					"title": "Überführung in 2NF"
+				},
+				{
+					"name": "Dritte_Normalform",
+					"title": "Dritte Normalform (3NF)"
+				},
+				{
+					"name": "Ueberfuehrung_in_3NF",
+					"title": "Überführung in 3NF"
+				},
+				{
+					"name": "Nachteile_3NF",
+					"title": "Nachteile 3NF"
+				},
+				{
+					"name": "Probleme_BCNF",
+					"title": "Probleme BCNF"
+				}
+			]
+		},
+		{
+			"name": "08_DK",
+			"title": "08 DK: Datenkontrolle",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"den Begriff Datenbank-Integrität die Datenbank-Methoden zur Zugriffskontrolle zu erläutern",
+						"semantische Integritätsbedingungen an ein Schema zu definieren und bzgl. ihrer Eigenschaften zu klassifizieren",
+						"gegebene semantische Integritätsbedingungen in einem Datenbankschema durch SQL-Anweisungen (TABLE-Definition, TRIGGER) umzusetzen",
+						"Sichten auf gegebene Relationen zu definieren und zu interpretieren (u.a. einzuschätzen, ob die Sicht aktualisierbar ist)"
+					]
+				},
+				{
+					"name": "Transaktion_Beispiel",
+					"title": "Transaktion (Beispiel)"
+				},
+				{
+					"name": "IntBedingung_Beispiele",
+					"title": "Integritätsbedingungen (Beispiel)"
+				},
+				{
+					"name": "Kontrolle",
+					"title": "Kontrolle semantischer Int.Bed.",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Die Überwachnung von Integrtiätsbedingungen kann sowohl durch Anwendungsprogramme (AP) oder das Datenbanksystem (DBS) realisiert werden. Geben Sie für die nachfolgenden Kriterien an, welche Variante vorteilhafter ist.\n\n* Sicherheit und Konsistenzwahrung: |Anwendungsprogramm; *Datenbanksystem|\n* Aufwand zur Erstellung eines Anwendungsprogramms: |Anwendungsprogramm; *Datenbanksystem|\n* Unterstützung von DB-Änderungen: |Anwendungsprogramm; *Datenbanksystem|\n* Änderbarkeit von Integritätsbedingungen: |Anwendungsprogramm; *Datenbanksystem| \n* Mächtigkeit bzgl. Implementierung von Integritätsbedingung: |*Anwendungsprogramm; Datenbanksystem|"
+						}
+					]
+				},
+				{
+					"name": "Modell_vs_Anwendung",
+					"title": "Modellinhärente vs. anwendungsspezifische Int.Bed.",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Geben Sie für die nachfolgenden Integritätsbedingungen jeweils an, ob es sich um eine modellinhärente oder eine anwendungsspezifische Integritätsbedingung handelt.\n\n* Alter >= 18: |modellinhärent; *anwendungsspezifisch|\n* Gehaltssumme < Budget: |modellinhärent; *anwendungsspezifisch|\n* PNR ist eindeutig: |*modellinhärent; anwendungsspezifisch|\n* Alter ist eine Zahl (Integer): |*modellinhärent; anwendungsspezifisch|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |modellinhärent; *anwendungsspezifisch|\n* Person.ANR hat Wert, der in Abteilung.ANR auftritt: |*modellinhärent; anwendungsspezifisch|"
+						}
+					]
+				},
+				{
+					"name": "Reichweite",
+					"title": "Reichweite von Int.Bed.",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Geben Sie für die nachfolgenden Integritätsbedingungen die Reichweite an, d.h. Attribut, Tupel, Tabelle oder mehrere Tabellen.\n\n* Alter >= 18: |*Attribut; Tupel; Tabelle; Mehrere Tabellen|\n* Gehaltssumme < Budget: |Attribut; *Tupel; Tabelle; Mehrere Tabellen|\n* PNR ist eindeutig: |Attribut; Tupel; *Tabelle; Mehrere Tabellen|\n* Gehaltssumme ist Summe der Gehalts-Werte der zugehörigen Personen: |Attribut; Tupel; Tabelle; *Mehrere Tabellen|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |Attribut; *Tupel; Tabelle; Mehrere Tabellen|\n* Person.ANR hat Wert, der in Abteilung.ANR auftritt: |Attribut; Tupel; Tabelle; *Mehrere Tabellen|\n* Abteilung sind maximal 10 Personen zugeordnet: |Attribut; Tupel; *Tabelle; Mehrere Tabellen|"
+						}
+					]
+				},
+				{
+					"name": "Dynamisch_vs_statisch",
+					"title": "Dynamische vs. statische Int.Bed.",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Geben Sie für die folgenden Integritätsbedingungen jeweils an, ob es sich um eine statische oder dynamische Integritätsbedingung handelt. In letzterem Fall geben Sie zuätzlich an, ob eine Übergangsbedingung oder eine temporale Bedingung vorliegt.\n\n* Alter >= 18: |*Statische Integritätsbedingung; Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|\n* Gehaltssumme < Budget: |*Statische Integritätsbedingung; Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |Statische Integritätsbedingung; *Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|\n* Gehalt darf innerhalb von 3 Jahren nicht um mehr als 25% wachsen: |Statische Integritätsbedingung; Dynamische Integritätsbedingung (Übergangsbedingung); *Dynamische Integritätsbedingung (temporale Bedingung)|\n* Familienstand von \"ledig\" nach \"geschieden\" ist unzulässig:: |Statische Integritätsbedingung; *Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|"
+						}
+					]
+				},
+				{
+					"name": "Trigger",
+					"title": "Trigger",
+					"question": [
+						{
+							"type": "gap",
+							"text": "TODO |*1;2|"
+						}
+					]
+				},
+				{
+					"name": "Sicht_Beispiel",
+					"title": "Sicht/View: Beispiel"
+				},
+				{
+					"name": "Sicht_Semantik",
+					"title": "Sicht/View: Semantik"
+				},
+				{
+					"name": "Sicht_Aenderung",
+					"title": "Sicht/View: Änderung"
+				},
+				{
+					"name": "INSTEAD_OF_Trigger",
+					"title": "INSTEAD-OF-Trigger"
 				}
 			]
 		}
