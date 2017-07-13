@@ -41,11 +41,11 @@ class PageOverview extends Page {
 
 
 
-	public function getXMLPageObject() {
+	public function getXMLPageObject(string $url) {
 		global $dom;
 		
 		
-		$xmlPageObject = parent::getXMLPageObject();
+		$xmlPageObject = parent::getXMLPageObject($url);
 		
 		$xmlParagraph = ($xmlPageObject->appendChild($dom->createElement("PageContent")))->appendChild($dom->createElement("Paragraph", "Lernziele"));
 		$xmlParagraph->setAttribute ("Language", "de");

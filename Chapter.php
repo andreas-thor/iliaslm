@@ -43,30 +43,16 @@ class Chapter {
 
 
 
-	public function getXMLPageObjects() {
+	public function getXMLPageObjects(string $url) {
 		$xmlPageObjects = [];
 		
 		/* @var $p Page */
 		foreach ($this->pages as $p) {
-			array_push($xmlPageObjects, $p->getXMLPageObject());
+			array_push($xmlPageObjects, $p->getXMLPageObject($url));
 		}
 		
 		return $xmlPageObjects;
 	}
-
-
-
-	public function getXMLMediaObjects(string $url) {
-		$xmlMediaObjects = [];
-		
-		/* @var $p Page */
-		foreach ($this->pages as $p) {
-			$xmlMediaObjects = array_merge($xmlMediaObjects, $p->getXMLMediaObjects($url));
-		}
-		
-		return $xmlMediaObjects;
-	}
-
 
 
 	public function getXMLItems() {
@@ -79,6 +65,19 @@ class Chapter {
 		
 		return $xmlItems;
 	}
-}
+	
+	
+	
+// 	public function getXMLMediaObjects(string $url) {
+// 		$xmlMediaObjects = [];
+//		
+// 		/* @var $p Page */
+// 		foreach ($this->pages as $p) {
+// 			$xmlMediaObjects = array_merge($xmlMediaObjects, $p->getXMLMediaObjects($url));
+// 		}
+//		
+// 		return $xmlMediaObjects;
+// 	}
 
+}
 ?>

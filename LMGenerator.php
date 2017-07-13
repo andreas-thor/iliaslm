@@ -56,17 +56,18 @@ function createDOM (array $chapters, int $id, string $title, string $url) {
 	
 	/* @var $c Chapter */
 	foreach ($chapters as $c) {
-		foreach ($c->getXMLPageObjects() as $d) {
+		foreach ($c->getXMLPageObjects($url) as $d) {
 			$dom->documentElement->appendChild ($d);
 		}
 	}
 	
-	/* @var $c Chapter */
-	foreach ($chapters as $c) {
-		foreach ($c->getXMLMediaObjects($url) as $d) {
-			$dom->documentElement->appendChild ($d);
-		}
-	}
+	// WE DO NOT INCLUDE VIA MEDIAOBJECT ANYMORE
+// 	/* @var $c Chapter */
+// 	foreach ($chapters as $c) {
+// 		foreach ($c->getXMLMediaObjects($url) as $d) {
+// 			$dom->documentElement->appendChild ($d);
+// 		}
+// 	}
 	
 	$dom->documentElement->appendChild (LearningModule::getXMLProperties());
 	

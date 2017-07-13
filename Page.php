@@ -44,7 +44,7 @@ abstract class Page {
 
 
 
-	public function getXMLPageObject() {
+	public function getXMLPageObject(string $url) {
 		global $dom;
 		
 		$xmlPageObject = $dom->createElement("PageObject");
@@ -60,50 +60,37 @@ abstract class Page {
 		foreach ($this->media as $type => $typeinfo) {
 			
 			$xmlTab = $xmlTabs->appendChild($dom->createElement("Tab"));
-			$xmlMediaObject = ($xmlTab->appendChild($dom->createElement("PageContent")))->appendChild($dom->createElement("MediaObject"));
+			$xmlPageContent = $xmlTab->appendChild($dom->createElement("PageContent"));
+
+			/* include media via HTML5 => not getXMLMediaObject necessary*/
+			$html = "";
+			$location = $url . sprintf ($typeinfo["namepattern"], $this->mediaBaseName);
+			switch ($typeinfo["format"]) {
+				case "image/jpeg":		$html = sprintf ('<img src="%s" width="640" height="480" style="border:1px solid black"/>', $location); break;
+				case "video/mp4":		$html = sprintf ('<video controls width="640" height="480" style="border:1px solid black"><source src="%s" type="%s"/></video>', $location, $typeinfo["format"]); break;
+				case "application/pdf":	$html = sprintf ('<object width="640" height="480" data="%1$s" type="%2$s"><a href="%1$s">Download</a></object>', $location, $typeinfo["format"]); break;
+				
+			}
+
+			$xmlParagraph = $xmlPageContent->appendChild ($dom->createElement ("Paragraph", $html));
+			$xmlParagraph->setAttribute("Characteristic", "Standard");
+			$xmlParagraph->setAttribute("Language", "de");
 			
-			$xmlMediaAlias = $xmlMediaObject->appendChild($dom->createElement("MediaAlias"));
-			$xmlMediaAlias->setAttribute("OriginId", $this->id . "_" . $type);
-			$xmlMediaAliasItem = $xmlMediaObject->appendChild($dom->createElement("MediaAliasItem"));
-			$xmlMediaAliasItem->setAttribute("Purpose", "Standard");
-			$xmlLayout = $xmlMediaAliasItem->appendChild($dom->createElement("Layout"));
-			$xmlLayout->setAttribute("HorizontalAlign", "Left");
+			
+			/* include media via MediaObject => Reference with generated ID; Media must be list in getXMLMediaObjects */ 
+			// WE DO NOT INCLUDE VIA MEDIAOBJECT ANYMORE
+// 			$xmlMediaObject = $xmlPageContent->appendChild($dom->createElement("MediaObject"));
+// 			$xmlMediaAlias = $xmlMediaObject->appendChild($dom->createElement("MediaAlias"));
+// 			$xmlMediaAlias->setAttribute("OriginId", $this->id . "_" . $type);
+// 			$xmlMediaAliasItem = $xmlMediaObject->appendChild($dom->createElement("MediaAliasItem"));
+// 			$xmlMediaAliasItem->setAttribute("Purpose", "Standard");
+// 			$xmlLayout = $xmlMediaAliasItem->appendChild($dom->createElement("Layout"));
+// 			$xmlLayout->setAttribute("HorizontalAlign", "Left");
 			
 			$xmlTab->appendChild($dom->createElement("TabCaption", $typeinfo["caption"]));
 		}
 		
 		return $xmlPageObject;
-	}
-
-
-
-	public function getXMLMediaObjects(string $url) {
-		global $dom;
-		
-		$xmlMediaObjects = [];
-		
-		foreach ($this->media as $type => $typeinfo) {
-			
-			$location = $url . sprintf ($typeinfo["namepattern"], $this->mediaBaseName);
-			
-			$xmlMediaObject = $dom->createElement("MediaObject");
-			$xmlMediaObject->appendChild(LearningModule::getXMLMetadata($this->id . "_" . $type, $location, $typeinfo["format"]));
-			
-			$xmlMediaItem = $xmlMediaObject->appendChild($dom->createElement("MediaItem"));
-			$xmlMediaItem->setAttribute("Purpose", "Standard");
-			
-			$xmlLocation = $xmlMediaItem->appendChild($dom->createElement("Location", $location));
-			$xmlLocation->setAttribute("Type", "Reference");
-			$xmlMediaItem->appendChild($dom->createElement("Format", $typeinfo["format"]));
-			$xmlLayout = $xmlMediaItem->appendChild($dom->createElement("Layout"));
-			$xmlLayout->setAttribute("Width", "640");
-			$xmlLayout->setAttribute("Height", "480");
-			$xmlLayout->setAttribute("HorizontalAlign", "Left");
-			
-			array_push($xmlMediaObjects, $xmlMediaObject);
-		}
-		
-		return $xmlMediaObjects;
 	}
 
 
@@ -118,6 +105,41 @@ abstract class Page {
 		
 		return $xmlItems;
 	}
+	
+	
+	// WE DO NOT INCLUDE VIA MEDIAOBJECT ANYMORE
+// 	public function getXMLMediaObjects(string $url) {
+// 		global $dom;
+//		
+// 		$xmlMediaObjects = [];
+//		
+// 		foreach ($this->media as $type => $typeinfo) {
+//			
+// 			$location = $url . sprintf ($typeinfo["namepattern"], $this->mediaBaseName);
+//			
+// 			$xmlMediaObject = $dom->createElement("MediaObject");
+// 			$xmlMediaObject->appendChild(LearningModule::getXMLMetadata($this->id . "_" . $type, $location, $typeinfo["format"]));
+//			
+// 			$xmlMediaItem = $xmlMediaObject->appendChild($dom->createElement("MediaItem"));
+// 			$xmlMediaItem->setAttribute("Purpose", "Standard");
+//			
+// 			$xmlLocation = $xmlMediaItem->appendChild($dom->createElement("Location", $location));
+// 			$xmlLocation->setAttribute("Type", "Reference");
+// 			$xmlMediaItem->appendChild($dom->createElement("Format", $typeinfo["format"]));
+// 			$xmlLayout = $xmlMediaItem->appendChild($dom->createElement("Layout"));
+// 			$xmlLayout->setAttribute("Width", "640");
+// 			$xmlLayout->setAttribute("Height", "480");
+// 			$xmlLayout->setAttribute("HorizontalAlign", "Left");
+//			
+// 			array_push($xmlMediaObjects, $xmlMediaObject);
+// 		}
+//		
+// 		return $xmlMediaObjects;
+// 	}
+
+
+
+
 }
 
 ?>

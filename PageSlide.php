@@ -48,10 +48,10 @@ class PageSlide extends Page {
 
 
 
-	public function getXMLPageObject() {
+	public function getXMLPageObject(string $url) {
 		global $dom;
 		
-		$xmlPageObject = parent::getXMLPageObject();
+		$xmlPageObject = parent::getXMLPageObject($url);
 		
 		/* @var $q Question */
 		foreach ($this->questions as $q) {

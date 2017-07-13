@@ -1,5 +1,5 @@
 {
-	"title": "DBS Lernmodul (aus JSON erzeugt)",
+	"title": "y4DBS Lernmodul (aus JSON erzeugt)",
 	"chapter": [
 		{
 			"name": "01_INTRO",
@@ -234,6 +234,232 @@
 				{
 					"name": "OuterJoin",
 					"title": "Outer Join"
+				}
+			]
+		},
+		{
+			"name": "03_SQL-2",
+			"title": "03 SQL-2: Datenbanksprache SQL (Teil 2)",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"die Funktionsweise komplexer SQL-Anweisungen zu erklären (inkl. Unterabfragen, Gruppierung, Aggregation, komplexer Prädikate)",
+						"das Ergebnis von SQL-SELECT-Anweisungen  für gegebene Relationen zu berechnen",
+						"SQL-Anweisungen (SELECT, INSERT, DELETE, UPDATE) zu formulieren"
+					]
+				},
+				{
+					"name": "SubQuery",
+					"title": "SubQuery (Unterabfrage)"
+				},
+				{
+					"name": "Einfach_vs_korrelierte_SubQuery",
+					"title": "Einfache vs. korrelierte SubQuery"
+				},
+				{
+					"name": "AggregatFunktion",
+					"title": "Aggregatfunktion"
+				},
+				{
+					"name": "AggregatFunktion_2",
+					"title": "Aggregatfunktion (2)"
+				},
+				{
+					"name": "AggregatFunktion_3",
+					"title": "Aggregatfunktion (3)"
+				},
+				{
+					"name": "Gruppierung",
+					"title": "Gruppierung"
+				},
+				{
+					"name": "Mehrere_Gruppierungsattribute",
+					"title": "Mehrere Gruppierungsattribute"
+				},
+				{
+					"name": "Having",
+					"title": "HAVING-Prädikat"
+				},
+				{
+					"name": "Like_Praedikat",
+					"title": "LIKE-Prädikat"
+				},
+				{
+					"name": "Between_Praedikat",
+					"title": "BETWEEN-Prädikat"
+				},
+				{
+					"name": "IN_Praedikat",
+					"title": "IN-Prädikat"
+				},
+				{
+					"name": "NULL_Problemfaelle",
+					"title": "NULL-Werte: Problemfälle"
+				},
+				{
+					"name": "NULL_Problemfaelle_2",
+					"title": "NULL-Werte: Problemfälle (2)"
+				},
+				{
+					"name": "Quantifizierte_Praedikate",
+					"title": "Quantifizierte Prädikate"
+				},
+				{
+					"name": "Existenztests",
+					"title": "Existenztests"
+				},
+				{
+					"name": "Existenztests_2",
+					"title": "Existenztests (2)"
+				},
+				{
+					"name": "Mengenoperatoren",
+					"title": "Mengenoperatoren"
+				},
+				{
+					"name": "INSERT",
+					"title": "INSERT-Anweisung"
+				},
+				{
+					"name": "UPDATE",
+					"title": "UPDATE-Anweisung"
+				},
+				{
+					"name": "DELETE",
+					"title": "DELETE-Anweisung"
+				},
+				{
+					"name": "MERGE",
+					"title": "MERGE-Anweisung"
+				}
+			]
+		},
+		{
+			"name": "04_ER",
+			"title": "04 ER: Entity-Relationship-Modell",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"Grundkonzepte der ER-Modellierung sowie der Abstraktionskonzepte zu erläutern",
+						"selbstständig ER-Modelle für gegebene Anwendungsszenarien zu erstellen",
+						"wichtige Kennzeichen in ER-Modellen (Schlüssel, Beziehungstypen, Kardinalitätsrestriktionen, schwache Entity-Mengen) festzulegen und zu begründen",
+						"gegebene ER-Modelle zu interpretieren"
+					]
+				},
+				{
+					"name": "04_ER_Attribute",
+					"title": "Attribute"
+				},
+				{
+					"name": "04_ER_Anwendungsbeispiel1",
+					"title": "Anwendungsbeispiel 1"
+				},
+				{
+					"name": "04_ER_Relationsships",
+					"title": "Relationsships"
+				},
+				{
+					"name": "04_ER_Relationships_Rekursive_Beziehung",
+					"title": "Relationships: Rekursive Beziehung"
+				},
+				{
+					"name": "04_ER_Beziehung_11",
+					"title": "Beziehung 1:1"
+				},
+				{
+					"name": "04_ER_Beziehung_N1",
+					"title": "Beziehung 1:N"
+				},
+				{
+					"name": "04_ER_Beziehung_NM",
+					"title": "Beziehung N:M"
+				},
+				{
+					"name": "04_ER_Beziehung_Ueberblick",
+					"title": "Beziehung: Überblick"
+				},
+				{
+					"name": "04_ER_Anwendungsbeispiel2",
+					"title": "Anwendungsbeispiel 2"
+				},
+				{
+					"name": "04_ER_MinMaxNotation",
+					"title": "Min-Max-Notation"
+				},
+				{
+					"name": "04_ER_Anwendungsbeispiel2_MinMaxNotation",
+					"title": "Anwendungsbeispiel 2 mit Min-Max-Notation"
+				},
+				{
+					"name": "04_ER_Anwendungsbeispiel3",
+					"title": "Anwendungsbeispiel 3"
+				},
+				{
+					"name": "04_ER_Arten_der_Spezialisierung",
+					"title": "Arten der Spezialisierung"
+				}
+			]
+		},
+		{
+			"name": "05_ER2RM",
+			"title": "05 ER2RM: Umwandlung ER-Modelle in relationale Modelle",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"Entity-Mengen und Relationship-Mengen inkl. Attribute der ER-Modellierung in Tabellen/Relationen zu überführen",
+						"wichtige Kennzeichen in ER-Modellen (u.a. Schlüssel, Beziehungstypen, Kardinalitätsrestriktionen) durch entsprechende Eigenschaften der Relationen zu modellieren",
+						"ER-Generalisierungen/Spezialisierungen in das Relationenmodell zu überführen und je nach Anwendungsfall ein geeignetes Verfahren anzuwenden und zu begründen"
+					]
+				},
+				{
+					"name": "05_ER2RM_EntityMenge",
+					"title": "05_ER2RM_EntityMenge"
+				},
+				{
+					"name": "05_ER2RM_Generalisierung_Beispiel",
+					"title": "05_ER2RM_Generalisierung_Beispiel"
+				},
+				{
+					"name": "05_ER2RM_Generalisierung_Vergleich",
+					"title": "05_ER2RM_Generalisierung_Vergleich"
+				},
+				{
+					"name": "05_ER2RM_HorizontalePartitionierung",
+					"title": "05_ER2RM_HorizontalePartitionierung"
+				},
+				{
+					"name": "05_ER2RM_MehrwertigeAttribute",
+					"title": "05_ER2RM_MehrwertigeAttribute"
+				},
+				{
+					"name": "05_ER2RM_RelationshipMenge_N1",
+					"title": "05_ER2RM_RelationshipMenge_N1"
+				},
+				{
+					"name": "05_ER2RM_RelationshipMenge_NM",
+					"title": "05_ER2RM_RelationshipMenge_NM"
+				},
+				{
+					"name": "05_ER2RM_SchwacheEntityMenge",
+					"title": "05_ER2RM_SchwacheEntityMenge"
+				},
+				{
+					"name": "05_ER2RM_VertikalePartitionierung",
+					"title": "05_ER2RM_VertikalePartitionierung"
+				},
+				{
+					"name": "05_ER2RM_VolleRedundanz",
+					"title": "05_ER2RM_VolleRedundanz"
+				},
+				{
+					"name": "05_ER2RM_WideTable",
+					"title": "05_ER2RM_WideTable"
 				}
 			]
 		}
