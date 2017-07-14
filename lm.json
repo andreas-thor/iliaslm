@@ -296,43 +296,115 @@
 				},
 				{
 					"name": "NULL_Problemfaelle",
-					"title": "NULL-Werte: Problemfälle"
+					"title": "NULL-Werte: Problemfälle",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Gegeben sind die folgenden drei Queries:<pre> Q1: SELECT * FROM Buch WHERE Preis <= 75<br/> Q2: SELECT * FROM Buch WHERE Preis > 75 <br/> Q3: SELECT * FROM Buch WHERE Preis IS NULL</pre> Geben Sie für alle Datensätze der gezeigten Tabelle buch an, in welchen Query-Ergebnissen sie auftreten! <pre> (  87, NULL)   : |Q1;Q2;~Q3;Q1 und Q2;Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3| <br/> ( 188, 142.00) : |Q1;~Q2;Q3;Q1 und Q2;Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3| <br/> ( 462, NULL)   : |Q1;Q2;~Q3;Q1 und Q2;Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3| <br/> ( 575, 59.00)  : |~Q1;Q2;Q3;Q1 und Q2;Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3| <br/> (1841, 78.00)  : |Q1;~Q2;Q3;Q1 und Q2;Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3| <br/> (2951, 19.80)  : |~Q1;Q2;Q3;Q1 und Q2;Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3| <br/> (3727, 19.80)  : |~Q1;Q2;Q3;Q1 und Q2;Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3|</pre>"
+						}
+					]
 				},
 				{
 					"name": "NULL_Problemfaelle_2",
-					"title": "NULL-Werte: Problemfälle (2)"
+					"title": "NULL-Werte: Problemfälle (2)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Geben Sie das Ergebnis der nachfolgenden SQL-Anfragen an!\n\n* SELECT COUNT(*) FROM buch: |0;1;2;3;4;5;6;~7;8;9;10|\n* SELECT COUNT(*) FROM buch WHERE NOT (preis IS NULL): |0;1;2;3;4;~5;6;7;8;9;10|\n* SELECT COUNT(preis) FROM buch: |0;1;2;3;4;~5;6;7;8;9;10|\n* SELECT COUNT(DISTINCT preis) FROM buch: |0;1;2;3;~4;5;6;7;8;9;10|"
+						}
+					]
 				},
 				{
 					"name": "Quantifizierte_Praedikate",
-					"title": "Quantifizierte Prädikate"
+					"title": "Quantifizierte Prädikate",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die nachfolgende SQL-Anfrage zur Bestimmung aller Verlage, die alle ihre Bücher im selben Jahr veröffentlicht haben!<pre> SELECT |~B1; B2|.verlagsid <br/> FROM buch B1 <br/> WHERE B1.|buchid; ~jahr; verlagsid| = |~ALL; ANY; SOME| ( <br/>    SELECT B2.|buchid; ~jahr; verlagsid| <br/>    FROM buch B2 <br/>    WHERE |B1.buchid = B2.buchid; B1.jahr=B2.jahr; ~B1.verlagsid = B2.verlagsid|<br/> )</pre>"
+						}
+					]
 				},
 				{
 					"name": "Existenztests",
-					"title": "Existenztests"
+					"title": "Existenztests",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die nachfolgende SQL-Anfrage zur Bestimmung aller Verlage, die alle ihre Bücher im selben Jahr veröffentlicht haben!<pre> SELECT B1.verlagsid <br/> FROM buch B1 <br/> WHERE |EXISTS; ~NOT EXISTS| ( <br/>    SELECT * <br/>    FROM buch B2 <br/>    WHERE ( |~b1.verlagsid=b2.verlagsid;NOT (b1.verlagsid=b2.verlagsid)| ) <br/>    |~AND;OR;NOT| ( |b1.jahr=b2.jahr; ~NOT(b1.jahr=b2.jahr)| )<br/> )</pre>"
+						}
+					]
 				},
 				{
 					"name": "Existenztests_2",
-					"title": "Existenztests (2)"
+					"title": "Existenztests (2)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die Anfrage zur Bestimmung aller Schlagworte, die für kein Buch vergeben wurden!<pre> SELECT X.* <br/> FROM |~schlagwort;buch;buch_sw| AS X <br/> WHERE |EXISTS; ~NOT EXISTS| ( <br/>    SELECT * <br/>    FROM |schlagwort;buch;~buch_sw| AS Y <br/>    WHERE X.swid = Y.swid)</pre>"
+						}
+					]
 				},
 				{
 					"name": "Mengenoperatoren",
-					"title": "Mengenoperatoren"
+					"title": "Mengenoperatoren",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Gegeben sind die folgenden drei Queries:<pre> Q1: (SELECT swid FROM schlagwort) UNION (SELECT swid FROM buch_sw)<br/> Q2: (SELECT swid FROM schlagwort) INTERSECT (SELECT swid FROM buch_sw) <br/> Q3: (SELECT swid FROM schlagwort) EXCEPT (SELECT swid FROM buch_sw)</pre> Geben Sie für die angegebenen Werte an, in welchen Query-Ergebnissen sie auftreten:\n\n* 762: |Q1;Q2;Q3;~Q1 und Q2;Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3|\n* 882: |Q1;Q2;Q3;~Q1 und Q2;Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3|\n* 911: |Q1;Q2;Q3;Q1 und Q2;~Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3|\n* 1400: |Q1;Q2;Q3;~Q1 und Q2;Q1 und Q3;Q2 und Q3;Q1 und Q2 und Q3|"
+						}
+					]
 				},
 				{
 					"name": "INSERT",
-					"title": "INSERT-Anweisung"
+					"title": "INSERT-Anweisung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie das nachfolgende INSERT-Statement zum Einfügen des Buchs \"Windows\" mit BuchId 194 und VerlagsId 10.!\n\n<pre> INSERT INTO |windows;~buch;values| <br/> (|buchid;~titel;jahr;verlagsid|, |~buchid;titel;jahr;verlagsid|,|buchid;titel;jahr;~verlagsid|) <br/> VALUES <br/> ('Windows', 194, 10)</pre>"
+						}
+					]
 				},
 				{
 					"name": "UPDATE",
-					"title": "UPDATE-Anweisung"
+					"title": "UPDATE-Anweisung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie das nachfolgende UPDATE-Statement \"Preiserhöhung um 5% aller Bücher des Verlags mit Id 10\"!\n\n<pre> UPDATE buch <br/> |~SET;LET;VALUE| preis = |preis;5%;1.05;~1.05*preis| <br/> WHERE verlagsid = 10</pre>"
+						},
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie das nachfolgende UPDATE-Statement \"Buch mit Id 575 wird Verlag mit Id 93 zugeordnet\"!\n\n<pre> UPDATE buch <br/> SET |~verlagsid;buchid| = |~93;575| <br/> WHERE |verlagsid;~buchid| = |93;~575| </pre>"
+						}
+					]
 				},
 				{
 					"name": "DELETE",
-					"title": "DELETE-Anweisung"
+					"title": "DELETE-Anweisung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie das nachfolgende DELETE-Statement \"Lösche Buch mit der Id 87\"!\n\n<pre> DELETE<br/> FROM |~buch;verlag|<br/> |SET;~WHERE| |~buchid;titel;jahr;verlagsid| = 87</pre>"
+						},
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie das nachfolgende DELETE-Statement \"Lösche alle Schlagworte, die bei keinem Buch verwendet werden\"!\n\n<pre> DELETE <br/> FROM schlagwort <br/> WHERE |buchid;~swid| |IN; ~NOT IN; ALL| (<br/>    SELECT |buchid; ~swid| <br/>    FROM buch_sw)</pre> "
+						}
+					]
 				},
 				{
 					"name": "MERGE",
-					"title": "MERGE-Anweisung"
+					"title": "MERGE-Anweisung",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Welche der folgenden Datensätze (Angabe der BuchID) werden von der Anweisung \"WHEN MATCHED\" erfasst? | 87; ~188; ~575; 2951; 3727|"
+						},
+						{
+							"type": "mc",
+							"text": "Welche der folgenden Datensätze (Angabe der BuchID) werden von der Anweisung \"WHEN NOT MATCHED\" erfasst? | 87; 188; 575; 2951; ~3727|"
+						}
+					]
 				}
 			]
 		},
