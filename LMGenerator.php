@@ -47,7 +47,7 @@ function createDOM (array $chapters, int $id, string $title, string $url) {
 	global $dom;
 	
 	$dom = DOMDocument::loadXML('<?xml version="1.0" encoding="utf-8"?><!DOCTYPE ContentObject SYSTEM "http://www.ilias.de/download/dtd/ilias_co_3_7.dtd"><ContentObject Type="LearningModule"></ContentObject>');
-	$dom->documentElement->appendChild (LearningModule::getXMLMetadata($id, $title, "created " . date("Y-m-d H:i:s")));
+	$dom->documentElement->appendChild (LearningModule::getXMLMetadata($id, $title . " created " . date("Y-m-d H:i:s"), "created " . date("Y-m-d H:i:s")));
 	
 	/* @var $c Chapter */
 	foreach ($chapters as $c) {

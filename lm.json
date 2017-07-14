@@ -1,5 +1,5 @@
 {
-	"title": "y6DBS Lernmodul (aus JSON erzeugt)",
+	"title": "DBS Lernmodul (aus JSON erzeugt)",
 	"chapter": [
 		{
 			"name": "01_INTRO",
@@ -181,7 +181,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Ordnen Sie den folgenden SQL-Ergebnissen (d.h. Ergebnis-Tabellen) diejenigen SQL-Anfragen zu, die dieses Ergebnis produzieren! \nHinweis: Alle Anfragen beginnen mit \"SELECT titel, jahr FROM buch WHERE jahr > 1990\" und werden dann durch eine ORDER-BY-Klausel ergänzt. Wählen Sie daher die korrekte ORDER-BY-Klausel aus!\n<code>\nTitel ······· + Jahr\n --------------+-----\n Excel ······· + 1991\n Grundlagen ·· + 1991\n Info für Ing. + 1995\n Java ········ + 1996\n PC Tools ···· + 1993</code>\n|*ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n<code>\nTitel ······· + Jahr\n --------------+-----\n PC Tools ···· + 1993\n Java ········ + 1996\n Info für Ing. + 1995\n Grundlagen ·· + 1991\n Excel ······· + 1991</code>\n|ORDER BY titel ASC; *ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n<code>\nTitel ······· + Jahr\n --------------+-----\n Java ········ + 1996\n Info für Ing. + 1995\n PC Tools ···· + 1993\n Grundlagen ·· + 1991\n Excel ······· + 1991</code>\n|ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; *ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n<code>\nTitel ······· + Jahr\n --------------+-----\n Java ········ + 1996\n Info für Ing. + 1995\n PC Tools ···· + 1993\n Excel ······· + 1991\n Grundlagen ·· + 1991</code>\n|ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; *ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC  "
+							"text": "Ordnen Sie den folgenden SQL-Ergebnissen (d.h. Ergebnis-Tabellen) diejenigen SQL-Anfragen zu, die dieses Ergebnis produzieren! \nHinweis: Alle Anfragen beginnen mit \"SELECT titel, jahr FROM buch WHERE jahr > 1990\" und werden dann durch eine ORDER-BY-Klausel ergänzt. Wählen Sie daher die korrekte ORDER-BY-Klausel aus!\n  <pre> Titel         + Jahr<br/> --------------+-----<br/> Excel         + 1991<br/> Grundlagen    + 1991<br/> Info für Ing. + 1995<br/> Java          + 1996<br/> PC Tools      + 1993</pre>|*ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n\n<pre> Titel         + Jahr<br/> --------------+-----<br/> PC Tools      + 1993<br/> Java          + 1996<br/> Info für Ing. + 1995<br/> Grundlagen    + 1991<br/> Excel         + 1991</pre>|ORDER BY titel ASC; *ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n\n<pre> Titel         + Jahr<br/> --------------+-----<br/> Java          + 1996<br/> Info für Ing. + 1995<br/> PC Tools      + 1993<br/> Grundlagen    + 1991<br/> Excel         + 1991</pre>|ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; *ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n\n<pre> Titel         + Jahr<br/> --------------+-----<br/> Java          + 1996<br/> Info für Ing. + 1995<br/> PC Tools      + 1993<br/> Excel         + 1991<br/> Grundlagen    + 1991</pre>|ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; *ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC  "
 						}
 					]
 				},
@@ -435,7 +435,8 @@
 				},
 				{
 					"name": "SchwacheEntityMenge",
-					"title": "Schwache Entity-Menge"
+					"title": "Schwache Entity-Menge",
+					"question" : [ {"type":"gap", "text":" Vervollständigen Sie die relationale Modellierung der schwachen Entity-Menge Kind!\n\n <pre>TABLE Kind ( <br/>  Vorname, <br/>  Alter, <br/>  |*PersNr; Vorname| REFERENCES |Kind; *Person|, <br/>  PRIMARY KEY ( |Vorname; Alter; PersNr; Vorname, Alter; *Vorname, PersNr; Alter, PersNr| ) <br/>)</pre>  "}]
 				},
 				{
 					"name": "VertikalePartitionierung",
@@ -455,7 +456,33 @@
 				},
 				{
 					"name": "Generalisierung_Beispiel",
-					"title": "Generalisierung: Beispiel"
+					"title": "Generalisierung: Beispiel",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde PNr und Tarif aller Angestellten\" wie folgt: \n<code>SELECT PNr, Tarif\nFROM Angestellter</code> |*Vertikale Partitionierung; Horizontale Partitionierung; *Volle Redundanz; Wide Table|"
+						},
+						{
+							"type": "mc",
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde PNr und Tarif aller Angestellten\" wie folgt: \n<code>SELECT PNr, Tarif FROM Angestellter\nUNION\nSELECT PNr, Tarif FROM Dozent\nUNION\nSELECT PNr, Tarif FROM Techniker</code> |Vertikale Partitionierung; *Horizontale Partitionierung; Volle Redundanz; Wide Table|"
+						},
+						{
+							"type": "mc",
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde PNr und Tarif aller Angestellten\" wie folgt: \n<code>SELECT PNr, Tarif\nFROM HS-Angehöriger\nWHERE Typ IN (\"Angestellter\", \"Dozent\", \"Techniker\")</code> |Vertikale Partitionierung; Horizontale Partitionierung; Volle Redundanz; *Wide Table|"
+						},
+						{
+							"type": "mc",
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde alle Informationen (PNr, Name, Tarif, Erfahrung) zum Techniker mit PNr=123\" wie folgt: \n<code>SELECT Techniker.PNr, Name, Tarif, Erfahrung\nFROM HS-Angehöriger\nJOIN Angesteller USING (PNr)\nJOIN Techniker USING (PNr)\nWHERE Techniker.PNr = 123</code> |*Vertikale Partitionierung; Horizontale Partitionierung; Volle Redundanz; Wide Table| "
+						},
+						{
+							"type": "mc",
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde alle Informationen (PNr, Name, Tarif, Erfahrung) zum Techniker mit PNr=123\" wie folgt: \n<code>SELECT PNr, Name, Tarif, Erfahrung\nFROM Techniker\nWHERE PNr = 123</code> |Vertikale Partitionierung; *Horizontale Partitionierung; *Volle Redundanz; Wide Table|"
+						},
+						{
+							"type": "mc",
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde alle Informationen (PNr, Name, Tarif, Erfahrung) zum Techniker mit PNr=123\" wie folgt: \n<code>SELECT PNr, Name, Tarif, Erfahrung\nFROM HS-Angehöriger\nWHERE Typ = \"Techniker\"\nAND PNr = 123</code> |Vertikale Partitionierung; Horizontale Partitionierung; Volle Redundanz; *Wide Table|"
+						}
+					]
 				},
 				{
 					"name": "Generalisierung_Vergleich",
@@ -479,23 +506,53 @@
 				},
 				{
 					"name": "Schlechtes_Schema",
-					"title": "Schlechtes Schema "
+					"title": "Schlechtes Schema ",
+					"question": [
+						{
+							"type": "gap",
+							"text": " Bei der gezeigten Relation KursEinschreibung ...\n \n* entsteht eine Update-Anomalie bei der Raumänderung eines Kurses weil |*ggf. mehrere Datensätze geändert werden müssen; keine Änderung des Raums möglich ist; die Studenten sich neu einschreiben müssen| \n* entsteht eine Insert-Anomalie beim Einfügen eines Kurses ohne zugehörigen/eingeschriebenen Studenten weil |ggf. mehrere Datensätze eingefügt werden müssen; *kein Einfügen eines Kurses ohne Student möglich ist; die Studenten sich neu einschreiben müssen| \n *entsteht eine Delete-Anomalie beim Löschen des letzten eingeschriebenen Studenten eines Kurses |ggf. mehrere Datensätze gelöscht werden müssen; das Löschen des letzten Studenten nicht möglich ist; *alle Informationen zu einem Kurs mitgelöscht werden|"
+						}
+					]
 				},
 				{
 					"name": "Funktionale_Abhaengigkeit",
-					"title": "Funktionale Abhängigkeit"
+					"title": "Funktionale Abhängigkeit",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Markieren Sie alle korrekten funktionalen Abhängigkeiten der Relation KursEinschreibung! |MNr -> Datum ; *MNr -> Name, Vorname ; Name, Vorname -> MNr ; Plätze -> Raum ; *Raum -> Plätze ; *Titel -> Raum ; *Titel, MNr -> Datum"
+						}
+					]
 				},
 				{
 					"name": "Schluessel",
-					"title": "Schlüssel"
+					"title": "Schlüssel",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Markieren Sie alle Schlüssel der Relation KursEinschreibung! |Titel; Raum; Plätze; MNR; Name; Vorname; Datum; Titel, Raum; *Titel, MNR; Titel, Datum; MNR, Raum; MNR, Datum; Titel, MNR, Datum|"
+						}
+					]
 				},
 				{
 					"name": "FA_und_Schluessel",
-					"title": "FA und Schlüssel"
+					"title": "FA und Schlüssel",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Markieren Sie alle Schlüssel der Relation R! |A; B; *C; D; AB; AC; AD; BC; BD; CD; ABC; ABD; ACD; BCD; ABCD|"
+						}
+					]
 				},
 				{
 					"name": "Zweite_Normalform",
-					"title": "Zweite Normalform (2NF)"
+					"title": "Zweite Normalform (2NF)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Geben Sie für die nachfolgenden Attribute der Relation KursEinschreibung an, ob sie voll funktional oder nur partiell vom Schlüssel Titel,MNr abhängen. Im Falle einer partiellen Abhängigkeit geben Sie zusätzlich an, von welchem Attribut es allein abhängig ist (d.h. Titel oder MNr)!\n \n* Raum: |voll funktional; *partiell (nur von Titel); partiell (nur von MNr)| \n* Plätze: |voll funktional; *partiell (nur von Titel); partiell (nur von MNr)| \n* Name: |voll funktional; partiell (nur von Titel); *partiell (nur von MNr)| \n* Vorname: |voll funktional; partiell (nur von Titel); *partiell (nur von MNr)| \n*Datum: |*voll funktional; partiell (nur von Titel); partiell (nur von MNr)|"
+						}
+					]
 				},
 				{
 					"name": "Ueberfuehrung_in_2NF",
@@ -503,7 +560,13 @@
 				},
 				{
 					"name": "Dritte_Normalform",
-					"title": "Dritte Normalform (3NF)"
+					"title": "Dritte Normalform (3NF)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Ergänzen Sie die Lücken, so dass eine korrekte Aussage entsteht!\n\nDas Attribut |Titel; Raum; *Plätze| ist transitiv abhängig vom Attribut |*Titel; Raum; Plätze| wegen der funktionalen Abängigkeiten Titel -> Raum und |Titel -> Plätze; *Raum -> Plätze; Plätze -> Raum|."
+						}
+					]
 				},
 				{
 					"name": "Ueberfuehrung_in_3NF",
@@ -511,7 +574,13 @@
 				},
 				{
 					"name": "Nachteile_3NF",
-					"title": "Nachteile 3NF"
+					"title": "Nachteile 3NF",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Was sind die Determinanten der Relation Prüfung? |*PNr; MNr; *Fach; Note; *PNr, MNr; PNr, Fach; PNr, Note; *MNr, Fach; MNr, Note; Fach, Note; PNr, MNr, Fach; PNr, MNr, Note; PNr, Fach, Note; MNr, Fach, Note; PNr, MNr, Fach, Note"
+						}
+					]
 				},
 				{
 					"name": "Probleme_BCNF",
@@ -587,7 +656,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "TODO |*1;2|"
+							"text": "TODO Aufgabe nicht ganz korrekt|*1;2|"
 						}
 					]
 				},

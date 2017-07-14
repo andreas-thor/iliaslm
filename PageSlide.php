@@ -8,7 +8,14 @@ require_once 'QuestionMC.php';
 class PageSlide extends Page {
 
 
-	
+	/*
+
+	kein Video:
+	 * 05_ER2RM_Generalisierung_Beispiel
+	 
+	 
+	 
+	 */
 
 	public function __construct(string $chapName, $page) {
 		
