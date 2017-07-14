@@ -5,7 +5,7 @@ require_once('Chapter.php');
 
 
 
-	// Learning Module = array of chapters
+$url = "https://www1.hft-leipzig.de/thor/dbs/";		// global URL that has all the media
 $dom;	// DOMDocument (XML File) for Learning Module
 $qti; 	// DOMDocument (XML File) for Items
 $lmid = time();		// Id for Learning Module (== current UNIX timestamp)
@@ -14,12 +14,12 @@ $lmid = time();		// Id for Learning Module (== current UNIX timestamp)
 
 $json = readJSON("lm.json");
 
-$chapters = [];	
+$chapters = [];	// Learning Module = array of chapters
 foreach ($json['chapter'] as $chap) {
 	array_push ($chapters, new Chapter($chap));
 }
 
-createDOM($chapters, $lmid, $json['title'], "https://www1.hft-leipzig.de/thor/dbs/");
+createDOM($chapters, $lmid, $json['title']);
 createQTI($chapters);
 
 writeZip($lmid, "ilias/Vorlage/");
@@ -42,7 +42,7 @@ function readJSON ($jsonFile) {
 
 
 
-function createDOM (array $chapters, int $id, string $title, string $url) {
+function createDOM (array $chapters, int $id, string $title) {
 	
 	global $dom;
 	
@@ -56,7 +56,7 @@ function createDOM (array $chapters, int $id, string $title, string $url) {
 	
 	/* @var $c Chapter */
 	foreach ($chapters as $c) {
-		foreach ($c->getXMLPageObjects($url) as $d) {
+		foreach ($c->getXMLPageObjects() as $d) {
 			$dom->documentElement->appendChild ($d);
 		}
 	}

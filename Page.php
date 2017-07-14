@@ -41,8 +41,8 @@ abstract class Page {
 
 
 
-	public function getXMLPageObject(string $url) {
-		global $dom;
+	public function getXMLPageObject() {
+		global $dom, $url;
 		
 		$xmlPageObject = $dom->createElement("PageObject");
 		$xmlPageObject->appendChild(LearningModule::getXMLMetadata($this->id, $this->page["title"]));

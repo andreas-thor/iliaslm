@@ -10,18 +10,11 @@ class PageSlide extends Page {
 
 	/*
 
-	kein Video:
-	 * 05_ER2RM_Generalisierung_Beispiel
-	 * 04_ER: Beziehung Überblick
-	 
-	 
 	Bild bei Aufgabe
 	* 04_ER: Arten der Spezialisierung
 	* 04_ER: Attribute
 	 --> im Moment hart referenziert; nicht abhängig von $url und von Chapter / Page name
 
-	Text zu Video:
-	* Fallunterscheidung CASE / COALESCE
 	 
 	 */
 
@@ -64,10 +57,10 @@ class PageSlide extends Page {
 
 
 
-	public function getXMLPageObject(string $url) {
+	public function getXMLPageObject() {
 		global $dom;
 		
-		$xmlPageObject = parent::getXMLPageObject($url);
+		$xmlPageObject = parent::getXMLPageObject();
 		
 		/* @var $q Question */
 		foreach ($this->questions as $q) {

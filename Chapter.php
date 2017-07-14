@@ -43,12 +43,12 @@ class Chapter {
 
 
 
-	public function getXMLPageObjects(string $url) {
+	public function getXMLPageObjects() {
 		$xmlPageObjects = [];
 		
 		/* @var $p Page */
 		foreach ($this->pages as $p) {
-			array_push($xmlPageObjects, $p->getXMLPageObject($url));
+			array_push($xmlPageObjects, $p->getXMLPageObject());
 		}
 		
 		return $xmlPageObjects;

@@ -9,8 +9,10 @@ abstract class Question {
 
 
 	public function __construct(string $pageId, $pos, $question) {
+		global $url;
+		
 		$this->id = $pageId . "_" . $pos;
-		$this->text = $question["text"];
+		$this->text = str_replace("[URL]", $url, $question["text"]);
 		printf("    Create %s %s\n", get_class($this), $this->id);
 		
 	}
