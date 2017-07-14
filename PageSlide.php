@@ -15,6 +15,14 @@ class PageSlide extends Page {
 	 
 	 
 	 
+	Bild bei Aufgabe
+	* 04_ER: Arten der Spezialisierung
+	* 04_ER: Attribute
+	 --> im Moment hart referenziert; nicht abhängig von $url und von Chapter / Page name
+
+	Text zu Video:
+	* Fallunterscheidung CASE / COALESCE
+	 
 	 */
 
 	public function __construct(string $chapName, $page) {

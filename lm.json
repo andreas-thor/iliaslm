@@ -25,11 +25,11 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Wir betrachten die Tabelle Student. Geben Sie für die folgenden Elemente an, ob es sich um Metadaten oder Instanzdaten handelt!\n\n* Tabellenname Student: |*Metadaten; Instanzdaten|\n* Attributwert 101 für Student Schmidt: |Metadaten; *Instanzdaten|\n* Attributname W-Ort: |*Metadaten; Instanzdaten|\n* Attributwerte des letzten Datensatzes: |Metadaten; *Instanzdaten|"
+							"text": "Wir betrachten die Tabelle Student. Geben Sie für die folgenden Elemente an, ob es sich um Metadaten oder Instanzdaten handelt!\n\n* Tabellenname Student: |~Metadaten; Instanzdaten|\n* Attributwert 101 für Student Schmidt: |Metadaten; ~Instanzdaten|\n* Attributname W-Ort: |~Metadaten; Instanzdaten|\n* Attributwerte des letzten Datensatzes: |Metadaten; ~Instanzdaten|"
 						},
 						{
 							"type": "gap",
-							"text": "Geben Sie für jede der Anfragen an, wieviele Tabellen zur Beantwortung verwendet werden!\n\n* Liste der Namen aller Studenten: |*1;2;3;4|\n* Liste der Büros aller Professoren aus dem Wirtschafts-Department: |1;*2;3;4|\n* Namen der Studenten, die von einem Professor aus dem Wirtschafts-Department mit der Note 1.3 geprüft wurden? |1;2;3;*4|"
+							"text": "Geben Sie für jede der Anfragen an, wieviele Tabellen zur Beantwortung verwendet werden!\n\n* Liste der Namen aller Studenten: |~1;2;3;4|\n* Liste der Büros aller Professoren aus dem Wirtschafts-Department: |1;~2;3;4|\n* Namen der Studenten, die von einem Professor aus dem Wirtschafts-Department mit der Note 1.3 geprüft wurden? |1;2;3;~4|"
 						}
 					]
 				},
@@ -47,7 +47,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Ordnen Sie die folgenden Eigenschaften dem jeweiligen Nutzer zu!\n\n* Hat mit seinem Domänenwissen die Datenbank modelliert, d.h. Tabellen erstellt: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; *DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Kennt den Aufbau der Datenbank (Tabellen, Attribute) und erstellt SQL-Anfragen: |Endbenutzer von DB-Anwendungen; *Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Benötigt keine Datenbankkenntnisse: |*Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Analysiert Anfragen und Datenmengen und optimiert ggf. die Datenbank: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; *DB-Analyst; DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Hat das DBMS (z.B. DB2) implementiert: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; DB-Administrator; *DBMS-Implementierer|\n* Kümmert sich um die Nutzer- und Rechte-Verwaltung: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; *DB-Administrator; DBMS-Implementierer|"
+							"text": "Ordnen Sie die folgenden Eigenschaften dem jeweiligen Nutzer zu!\n\n* Hat mit seinem Domänenwissen die Datenbank modelliert, d.h. Tabellen erstellt: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; ~DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Kennt den Aufbau der Datenbank (Tabellen, Attribute) und erstellt SQL-Anfragen: |Endbenutzer von DB-Anwendungen; ~Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Benötigt keine Datenbankkenntnisse: |~Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Analysiert Anfragen und Datenmengen und optimiert ggf. die Datenbank: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; ~DB-Analyst; DB-Modellierer; DB-Administrator; DBMS-Implementierer|\n* Hat das DBMS (z.B. DB2) implementiert: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; DB-Administrator; ~DBMS-Implementierer|\n* Kümmert sich um die Nutzer- und Rechte-Verwaltung: |Endbenutzer von DB-Anwendungen; Anwendungsprogrammierer; DB-Analyst; DB-Modellierer; ~DB-Administrator; DBMS-Implementierer|"
 						}
 					]
 				}
@@ -73,11 +73,11 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Beantworten Sie die folgenden Fragen zur dargestellten Relation PROFESSOR!\n\n* Was ist die Kardinalität der Relation? |1;2;3;*4;5;6;7;8;9;20;25;26|\n* Was ist der Grad der Relation? |1;2;3;4;*5;6;7;8;9;20;25;26|\n* Was ist der Wertebereich (Domäne) des Attributs PNr? |*INTEGER (ganze Zahl); VARCHAR (Zeichenkette)|"
+							"text": "Beantworten Sie die folgenden Fragen zur dargestellten Relation PROFESSOR!\n\n* Was ist die Kardinalität der Relation? |1;2;3;~4;5;6;7;8;9;20;25;26|\n* Was ist der Grad der Relation? |1;2;3;4;~5;6;7;8;9;20;25;26|\n* Was ist der Wertebereich (Domäne) des Attributs PNr? |~INTEGER (ganze Zahl); VARCHAR (Zeichenkette)|"
 						},
 						{
 							"type": "gap",
-							"text": "Beantworten Sie die folgenden Fragen zur dargestellten Relation STUDENT!\n\n* Was ist die Kardinalität der Relation? |1;2;3;4;*5;6;7;8;9;20;25;26|\n* Was ist der Grad der Relation? |1;2;*3;4;5;6;7;8;9;20;25;26|\n* Welches Attribut hat einen NULL-Wert? |MatNr; SName; *W-Ort; 104; Krause|\n* Was ist der Wertebereich (Domäne) des Attributs W-Ort? |INTEGER (ganze Zahl); *VARCHAR (Zeichenkette)|"
+							"text": "Beantworten Sie die folgenden Fragen zur dargestellten Relation STUDENT!\n\n* Was ist die Kardinalität der Relation? |1;2;3;4;~5;6;7;8;9;20;25;26|\n* Was ist der Grad der Relation? |1;2;~3;4;5;6;7;8;9;20;25;26|\n* Welches Attribut hat einen NULL-Wert? |MatNr; SName; ~W-Ort; 104; Krause|\n* Was ist der Wertebereich (Domäne) des Attributs W-Ort? |INTEGER (ganze Zahl); ~VARCHAR (Zeichenkette)|"
 						}
 					]
 				},
@@ -87,11 +87,11 @@
 					"question": [
 						{
 							"type": "mc",
-							"text": "Markieren Sie alle Schlüsselkandidaten der Relation PROFESSOR!| Büro; DPT; PName;  PName + Büro; *PNr; PNr + PName; *Telefon"
+							"text": "Markieren Sie alle Schlüsselkandidaten der Relation PROFESSOR!| Büro; DPT; PName;  PName + Büro; ~PNr; PNr + PName; ~Telefon"
 						},
 						{
 							"type": "mc",
-							"text": "Markieren Sie alle Schlüsselkandidaten der Relation STUDENT!| *MatNr; MatNr + SName; SName; SName + W-Ort; W-Ort"
+							"text": "Markieren Sie alle Schlüsselkandidaten der Relation STUDENT!| ~MatNr; MatNr + SName; SName; SName + W-Ort; W-Ort"
 						}
 					]
 				},
@@ -101,11 +101,11 @@
 					"question": [
 						{
 							"type": "mc",
-							"text": "Markieren Sie die korrekten Aussagen bzgl. der dargestellten Relation PROFESSOR mit dem Primärschlüssel PNr.\n\nDie dargestellte Relation PROFESSOR ist... | nicht gültig, da es Tupel mit NULL-Werten gibt; nicht gültig, da es mehrere Tupel mit gleichem Primärschlüssel-Wert gibt. ; *gültig"
+							"text": "Markieren Sie die korrekten Aussagen bzgl. der dargestellten Relation PROFESSOR mit dem Primärschlüssel PNr.\n\nDie dargestellte Relation PROFESSOR ist... | nicht gültig, da es Tupel mit NULL-Werten gibt; nicht gültig, da es mehrere Tupel mit gleichem Primärschlüssel-Wert gibt. ; ~gültig"
 						},
 						{
 							"type": "mc",
-							"text": "Markieren Sie die korrekten Aussagen bzgl. der dargestellten Relation STUDENT mit dem Primärschlüssel MatNr.\n\nDie dargestellte Relation STUDENT ist... | *nicht gültig, da es mehrere Tupel mit gleichem Primärschlüssel-Wert gibt; nicht gültig, da für Student Krause der W-Ort einen NULL-Wert hat; *nicht gültig, da ein Tupel einen NULL-Wert für den Primärschlüssel hat.; gültig."
+							"text": "Markieren Sie die korrekten Aussagen bzgl. der dargestellten Relation STUDENT mit dem Primärschlüssel MatNr.\n\nDie dargestellte Relation STUDENT ist... | ~nicht gültig, da es mehrere Tupel mit gleichem Primärschlüssel-Wert gibt; nicht gültig, da für Student Krause der W-Ort einen NULL-Wert hat; ~nicht gültig, da ein Tupel einen NULL-Wert für den Primärschlüssel hat.; gültig."
 						}
 					]
 				},
@@ -115,19 +115,19 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie für die nachfolgenden Attribute der Relation DEPARTMENT an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* ID: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* DName: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* Leiter: | kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; *Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
+							"text": "Geben Sie für die nachfolgenden Attribute der Relation DEPARTMENT an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* ID: | ~kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* DName: | ~kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* Leiter: | kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; ~Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
 						},
 						{
 							"type": "gap",
-							"text": "Geben Sie für die nachfolgenden Attribute der Relation PROFESSOR an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* PNr: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* PName: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* Dept: | kein Fremdschlüssel; *Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
+							"text": "Geben Sie für die nachfolgenden Attribute der Relation PROFESSOR an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* PNr: | ~kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* PName: | ~kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* Dept: | kein Fremdschlüssel; ~Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
 						},
 						{
 							"type": "gap",
-							"text": "Geben Sie für die nachfolgenden Attribute der Relation STUDENT an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* MatNr: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* SName: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* W-Ort: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
+							"text": "Geben Sie für die nachfolgenden Attribute der Relation STUDENT an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* MatNr: | ~kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* SName: | ~kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* W-Ort: | ~kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
 						},
 						{
 							"type": "gap",
-							"text": "Geben Sie für die nachfolgenden Attribute der Relation PRÜFUNG an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* PNr: | kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; *Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* MatNr: | kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; *Fremdschlüssel auf STUDENT.MatNr |\n* Fach: | *kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
+							"text": "Geben Sie für die nachfolgenden Attribute der Relation PRÜFUNG an, ob Sie Fremdschlüssel sind. Falls ja, geben Sie den zugehörigen Primärschlüssel an.\n\n* PNr: | kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; ~Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |\n* MatNr: | kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; ~Fremdschlüssel auf STUDENT.MatNr |\n* Fach: | ~kein Fremdschlüssel; Fremdschlüssel auf DEPARTMENT.ID; Fremdschlüssel auf PROFESSOR.PNr; Fremdschlüssel auf STUDENT.MatNr |"
 						}
 					]
 				},
@@ -141,7 +141,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie die Auswirkung der Operation \"DELETE FROM Student WHERE MatNr=101\" für jede der drei Löschregeln an:\n\n* NO ACTION: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; *Es wird nichts gelöscht. |\n* CASCADE: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; *Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; Es wird nichts gelöscht. |\n* SET NULL: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; *Es wird nichts gelöscht. |"
+							"text": "Geben Sie die Auswirkung der Operation \"DELETE FROM Student WHERE MatNr=101\" für jede der drei Löschregeln an:\n\n* NO ACTION: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; ~Es wird nichts gelöscht. |\n* CASCADE: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; ~Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; Es wird nichts gelöscht. |\n* SET NULL: | Nur der Student Schmidt wird gelöscht.; Nur beide Prüfungen vom Studenten Schmidt werden gelöscht.; Student Schmidt und seine beiden Prüfungen werden gelöscht.; Student Schmidt wird gelöscht und die MatNr bei seinen Prüfungen wird auf NULL gesetzt.; ~Es wird nichts gelöscht. |"
 						}
 					]
 				}
@@ -167,11 +167,11 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Was berechnen jeweils die folgenden SQL-Anfragen? \n\n <code>SELECT name FROM verlag</code> | *Name aller Verlage; Name aller Berliner Verlage; Name und Ort aller Berliner Verlage; Ort aller Verlage| \n\n <code>SELECT name FROM verlag WHERE ort = \"Berlin\"</code> | Name aller Verlage; *Name aller Berliner Verlage; Name und Ort aller Berliner Verlage; Ort aller Verlage| \n\n <code>SELECT titel FROM buch WHERE jahr > 1990</code> | Titel der Bücher, die vor 1990 erschienen sind; Titel der Bücher, die 1990 erschienen sind; *Titel der Bücher, die nach 1990 erschienen sind | \n\n"
+							"text": "Was berechnen jeweils die folgenden SQL-Anfragen? \n\n <code>SELECT name FROM verlag</code> | ~Name aller Verlage; Name aller Berliner Verlage; Name und Ort aller Berliner Verlage; Ort aller Verlage| \n\n <code>SELECT name FROM verlag WHERE ort = \"Berlin\"</code> | Name aller Verlage; ~Name aller Berliner Verlage; Name und Ort aller Berliner Verlage; Ort aller Verlage| \n\n <code>SELECT titel FROM buch WHERE jahr > 1990</code> | Titel der Bücher, die vor 1990 erschienen sind; Titel der Bücher, die 1990 erschienen sind; ~Titel der Bücher, die nach 1990 erschienen sind | \n\n"
 						},
 						{
 							"type": "gap",
-							"text": "Welche SQL-Anfrage berechnet jeweils die folgenden Ergebnisse?\n\n<code>Name\n-------------------\nLunetIX SoftAir\nAkademie Verl.\nSchmidt</code>\n | SELECT name FROM verlag; SELECT name FROM verlage WHERE \"Berlin\"; *SELECT name FROM verlage WHERE ort=\"Berlin\"; SELECT ort FROM verlag | \n\n<code>Titel\n------------------\nExcel\nGrundlagen\nPC Tools\nInfo für Ing.\nJava</code>\n | SELECT titel FROM buch; SELECT titel, jahr FROM buch WHERE jahr>1990; *SELECT titel FROM buch WHERE jahr>1990; SELECT jahr>1990 FROM buch"
+							"text": "Welche SQL-Anfrage berechnet jeweils die folgenden Ergebnisse?\n\n<code>Name\n-------------------\nLunetIX SoftAir\nAkademie Verl.\nSchmidt</code>\n | SELECT name FROM verlag; SELECT name FROM verlage WHERE \"Berlin\"; ~SELECT name FROM verlage WHERE ort=\"Berlin\"; SELECT ort FROM verlag | \n\n<code>Titel\n------------------\nExcel\nGrundlagen\nPC Tools\nInfo für Ing.\nJava</code>\n | SELECT titel FROM buch; SELECT titel, jahr FROM buch WHERE jahr>1990; ~SELECT titel FROM buch WHERE jahr>1990; SELECT jahr>1990 FROM buch"
 						}
 					]
 				},
@@ -181,7 +181,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Ordnen Sie den folgenden SQL-Ergebnissen (d.h. Ergebnis-Tabellen) diejenigen SQL-Anfragen zu, die dieses Ergebnis produzieren! \nHinweis: Alle Anfragen beginnen mit \"SELECT titel, jahr FROM buch WHERE jahr > 1990\" und werden dann durch eine ORDER-BY-Klausel ergänzt. Wählen Sie daher die korrekte ORDER-BY-Klausel aus!\n  <pre> Titel         + Jahr<br/> --------------+-----<br/> Excel         + 1991<br/> Grundlagen    + 1991<br/> Info für Ing. + 1995<br/> Java          + 1996<br/> PC Tools      + 1993</pre>|*ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n\n<pre> Titel         + Jahr<br/> --------------+-----<br/> PC Tools      + 1993<br/> Java          + 1996<br/> Info für Ing. + 1995<br/> Grundlagen    + 1991<br/> Excel         + 1991</pre>|ORDER BY titel ASC; *ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n\n<pre> Titel         + Jahr<br/> --------------+-----<br/> Java          + 1996<br/> Info für Ing. + 1995<br/> PC Tools      + 1993<br/> Grundlagen    + 1991<br/> Excel         + 1991</pre>|ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; *ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n\n<pre> Titel         + Jahr<br/> --------------+-----<br/> Java          + 1996<br/> Info für Ing. + 1995<br/> PC Tools      + 1993<br/> Excel         + 1991<br/> Grundlagen    + 1991</pre>|ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; *ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC  "
+							"text": "Ordnen Sie den folgenden SQL-Ergebnissen (d.h. Ergebnis-Tabellen) diejenigen SQL-Anfragen zu, die dieses Ergebnis produzieren! \nHinweis: Alle Anfragen beginnen mit \"SELECT titel, jahr FROM buch WHERE jahr > 1990\" und werden dann durch eine ORDER-BY-Klausel ergänzt. Wählen Sie daher die korrekte ORDER-BY-Klausel aus!\n  <pre> Titel         + Jahr<br/> --------------+-----<br/> Excel         + 1991<br/> Grundlagen    + 1991<br/> Info für Ing. + 1995<br/> Java          + 1996<br/> PC Tools      + 1993</pre>|~ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n\n<pre> Titel         + Jahr<br/> --------------+-----<br/> PC Tools      + 1993<br/> Java          + 1996<br/> Info für Ing. + 1995<br/> Grundlagen    + 1991<br/> Excel         + 1991</pre>|ORDER BY titel ASC; ~ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n\n<pre> Titel         + Jahr<br/> --------------+-----<br/> Java          + 1996<br/> Info für Ing. + 1995<br/> PC Tools      + 1993<br/> Grundlagen    + 1991<br/> Excel         + 1991</pre>|ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ~ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC|  \n\n<pre> Titel         + Jahr<br/> --------------+-----<br/> Java          + 1996<br/> Info für Ing. + 1995<br/> PC Tools      + 1993<br/> Excel         + 1991<br/> Grundlagen    + 1991</pre>|ORDER BY titel ASC; ORDER BY titel DESC; ORDER BY jahr ASC, titel ASC; ORDER BY jahr ASC, titel DESC; ~ORDER BY jahr DESC, titel ASC; ORDER BY jahr DESC, titel DESC  "
 						}
 					]
 				},
@@ -191,7 +191,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "  Geben Sie für die nachfolgenden SQL-Anfragen an, wieviele Datensätze (Tupel) das Ergebnis jeweils beinhaltet! \n\nSELECT ort FROM verlag : |0;1;2;3;4;5;*6;7;8;9| \n\nSELECT DISTINCT ort FROM verlag : |0;1;2;*3;4;5;6;7;8;9| \n\nSELECT name FROM verlag : |0;1;2;3;4;5;*6;7;8;9| \n\nSELECT DISTINCT name FROM verlag : |0;1;2;3;4;5;*6;7;8;9|"
+							"text": "  Geben Sie für die nachfolgenden SQL-Anfragen an, wieviele Datensätze (Tupel) das Ergebnis jeweils beinhaltet! \n\nSELECT ort FROM verlag : |0;1;2;3;4;5;~6;7;8;9| \n\nSELECT DISTINCT ort FROM verlag : |0;1;2;~3;4;5;6;7;8;9| \n\nSELECT name FROM verlag : |0;1;2;3;4;5;~6;7;8;9| \n\nSELECT DISTINCT name FROM verlag : |0;1;2;3;4;5;~6;7;8;9|"
 						}
 					]
 				},
@@ -205,7 +205,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie das Ergebnis der Join-Anfrage \"Alle Buchtitel mit dem Ort ihres Verlags\" an, in dem Sie für jeden Buchtitel den zugehörigen Ort auswählen oder \"---\", falls das Buch nicht im Anfrageergebnis auftritt.\n \nExcel: |Berlin; *Düsseldorf; München; ---| \nGrundlagen: |*Berlin; Düsseldorf; München; ---| \nKaufverträge: |*Berlin; Düsseldorf; München; ---| \nPC Tools: |Berlin; Düsseldorf; München; *---| \nInfo für Ing.: |Berlin; *Düsseldorf; München; ---| \nSemantik: |Berlin; Düsseldorf; *München; ---| \nJava: |Berlin; *Düsseldorf; München; --- "
+							"text": "Geben Sie das Ergebnis der Join-Anfrage \"Alle Buchtitel mit dem Ort ihres Verlags\" an, in dem Sie für jeden Buchtitel den zugehörigen Ort auswählen oder \"---\", falls das Buch nicht im Anfrageergebnis auftritt.\n \nExcel: |Berlin; ~Düsseldorf; München; ---| \nGrundlagen: |~Berlin; Düsseldorf; München; ---| \nKaufverträge: |~Berlin; Düsseldorf; München; ---| \nPC Tools: |Berlin; Düsseldorf; München; ~---| \nInfo für Ing.: |Berlin; ~Düsseldorf; München; ---| \nSemantik: |Berlin; Düsseldorf; ~München; ---| \nJava: |Berlin; ~Düsseldorf; München; --- "
 						}
 					]
 				},
@@ -215,7 +215,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "  Formulieren Sie die Anfrage \"Welche Buchtitel wurden von Berliner Verlagen herausgebracht\" in SQL. Vervollständigen Sie dazu die  nachfolgende SQL-Anfrage.\n\n  \nSELECT |buch.id; *buch.titel; verlag.name; verlag.ort| \nFROM buch, |buch; *verlag| \nWHERE |buch.buchid; buch.titel; *buch.verlagsid|  |>;*=;<| |verlag.name; *verlag.verlagsid; verlag.ort| \n |*AND; OR| |verlag.name; verlag.verlagsid; *verlag.ort| = 'Berlin'   "
+							"text": "  Formulieren Sie die Anfrage \"Welche Buchtitel wurden von Berliner Verlagen herausgebracht\" in SQL. Vervollständigen Sie dazu die  nachfolgende SQL-Anfrage.\n\n  \nSELECT |buch.id; ~buch.titel; verlag.name; verlag.ort| \nFROM buch, |buch; ~verlag| \nWHERE |buch.buchid; buch.titel; ~buch.verlagsid|  |>;~=;<| |verlag.name; ~verlag.verlagsid; verlag.ort| \n |~AND; OR| |verlag.name; verlag.verlagsid; ~verlag.ort| = 'Berlin'   "
 						}
 					]
 				},
@@ -352,7 +352,13 @@
 				},
 				{
 					"name": "Attribute",
-					"title": "Attribute"
+					"title": "Attribute",
+					"question": [
+						{
+							"type": "gap",
+							"text": "<img style=\"float:right\" width=\"200\" src=\"http://www1.hft-leipzig.de/thor/dbs/04_ER_Test_Attribute.png\"> Bestimmen Sie auf Basis des rechts dargestellten ER-Diagramms die Eigenschaften der Attribute!\n\n \nAttribut A ist: |~einfach; zusammengesetzt; mehrwertig; zusammengesetzt und mehrwertig| \nAttribut A ist: |Schlüsselattribut; ~kein Schlüsselattribut| \n\nAttribut B ist: |einfach; zusammengesetzt; ~mehrwertig; zusammengesetzt und mehrwertig| \nAttribut B ist: |Schlüsselattribut; ~kein Schlüsselattribut| \n\nAttribut C ist: |einfach; zusammengesetzt; mehrwertig; ~zusammengesetzt und mehrwertig| \nAttribut C ist: |Schlüsselattribut; ~kein Schlüsselattribut| \n\nAttribut D ist: |einfach; ~zusammengesetzt; mehrwertig; zusammengesetzt und mehrwertig| \nAttribut D ist: |~Schlüsselattribut; kein Schlüsselattribut| \n\nAttribut E ist: |~einfach; zusammengesetzt; mehrwertig; zusammengesetzt und mehrwertig| \nAttribut E ist: |~Schlüsselattribut; kein Schlüsselattribut|"
+						}
+					]
 				},
 				{
 					"name": "Anwendungsbeispiel1",
@@ -392,7 +398,13 @@
 				},
 				{
 					"name": "Anwendungsbeispiel2_MinMaxNotation",
-					"title": "Anwendungsbeispiel 2 mit Min-Max-Notation"
+					"title": "Anwendungsbeispiel 2 mit Min-Max-Notation",
+					"question": [
+						{
+							"type": "gap",
+							"text": " Geben Sie für die nachfolgenden Relationship-Mengen jeweils die Min-Max-Notation der genannten Entity-Menge an! <pre> Relationship-Menge + Entity-Menge           + min                    + max <br/> ------------------ + ---------------------- + ------------------------ + ------------------------ <br/> hören              + Student                + |~0;1;3;500;*| + |0;1;3;500;~*| <br/> hören              + Vorlesung              + |0;1;~3;500;*| + |0;1;3;~500;*| <br/> voraussetzen       + Vorlesung (Vorgänger)  + |~0;1;3;500;*| + |0;1;3;500;~*| <br/> voraussetzen       + Vorlesung (Nachfolger) + |~0;1;3;500;*| + |0;1;3;500;~*| <br/> lesen              + Vorlesung              + |0;~1;3;500;*| + |0;~1;3;500;*| <br/> lesen              + Professor              + |~0;1;3;500;*| + |0;1;3;500;~*| <br/> prüfen             + Student                + |~0;1;3;500;*| + |0;1;3;500;~*| <br/> prüfen             + Vorlesung              + |~0;1;3;500;*| + |0;1;3;500;~*| <br/> prüfen             + Professor              + |~0;1;3;500;*| + |0;1;3;500;~*| </pre> "
+						}
+					]
 				},
 				{
 					"name": "Anwendungsbeispiel3",
@@ -400,7 +412,13 @@
 				},
 				{
 					"name": "Arten_der_Spezialisierung",
-					"title": "Arten der Spezialisierung"
+					"title": "Arten der Spezialisierung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "<img style=\"float:right\" width=\"200\" src=\"http://www1.hft-leipzig.de/thor/dbs/04_ER_Test_Spezialisierung.png\"> Ordnen Sie den rechts dargestellten Mengen-Diagrammen (Venn-Diagramme) die jeweilige Art der Spezialisierung sowie das passende Beispiel zu.\n\n  \nA) Art der Spezialisierung: |~disjunkt und vollständig; disjunkt und unvollständig; überlappend und vollständig; überlappend und unvollständig| \nA) Beispiel: |X=Mitarbeiter, Y=Führungskraft, Z=Fachspezialist; ~X=Kunde, Y=Privatkunde, Z=Geschäftskunde; X=HS-Angehöriger, Y=Angestellter, Z=Student; X=HS-Angehöriger, Y=Professor, Z=Student| \n \nB) Art der Spezialisierung: |disjunkt und vollständig; disjunkt und unvollständig; überlappend und vollständig; ~überlappend und unvollständig| \nB) Beispiel: |X=Mitarbeiter, Y=Führungskraft, Z=Fachspezialist; X=Kunde, Y=Privatkunde, Z=Geschäftskunde; ~X=HS-Angehöriger, Y=Angestellter, Z=Student; X=HS-Angehöriger, Y=Professor, Z=Student| \n \nC) Art der Spezialisierung: |disjunkt und vollständig; disjunkt und unvollständig; ~überlappend und vollständig; überlappend und unvollständig| \nC) Beispiel: |~X=Mitarbeiter, Y=Führungskraft, Z=Fachspezialist; X=Kunde, Y=Privatkunde, Z=Geschäftskunde; X=HS-Angehöriger, Y=Angestellter, Z=Student; X=HS-Angehöriger, Y=Professor, Z=Student| \n \nD) Art der Spezialisierung: |disjunkt und vollständig; ~disjunkt und unvollständig; überlappend und vollständig; überlappend und unvollständig| \nD) Beispiel: |X=Mitarbeiter, Y=Führungskraft, Z=Fachspezialist; X=Kunde, Y=Privatkunde, Z=Geschäftskunde; X=HS-Angehöriger, Y=Angestellter, Z=Student; ~X=HS-Angehöriger, Y=Professor, Z=Student| "
+						}
+					]
 				}
 			]
 		},
@@ -419,24 +437,53 @@
 				},
 				{
 					"name": "EntityMenge",
-					"title": "Entity-Menge"
+					"title": "Entity-Menge",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die relationale Modellierung der Entity-Menge Person!\n\n <pre>TABLE Person ( <br/>  |~PersNr; Name; Straße, Ort, PLZ| PRIMARY KEY, <br/>  |PersNr; ~Name; Straße, Ort, PLZ|, <br>  AdresseStraße, <br>  AdresseOrt, <br>  AdressePLZ<br/>)</pre>  "
+						}
+					]
 				},
 				{
 					"name": "RelationshipMenge_NM",
-					"title": "Relationship-Menge N:M"
+					"title": "Relationship-Menge N:M",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die relationale Modellierung der Relationship-Menge ProjektMitarbeit!\n\n <pre>TABLE ProjektMitarbeit ( <br/>  |~PersNr; Name; ProjNr; Budget; Stunden| REFERENCES Person, <br/>  |PersNr; Name; ~ProjNr; Budget; Stunden| REFERENCES |Person; ~Projekt; Stunden|, <br>  Stunden, <br/>  PRIMARY KEY ( |PersNr; Name; ProjNr; Budget; Stunden; ~PersNr, ProjNr; PersNr, ProjNr, Stunden| )<br/>)</pre>  "
+						}
+					]
 				},
 				{
 					"name": "RelationshipMenge_N1",
-					"title": "Relationship-Menge 1:N"
+					"title": "Relationship-Menge 1:N",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die relationale Modellierung der Relationship-Menge gehörtZu!\n\n <pre>TABLE |~Person; Abteilung| ( <br/>  |~PersNr; AbtNr| PRIMARY KEY, <br/>  |~Name; Ort|, <br>  gehörtZu REFERENCES |Person; ~Abteilung|, <br/>  Position <br/>)</pre>  "
+						}
+					]
 				},
 				{
 					"name": "MehrwertigeAttribute",
-					"title": "Mehrwertiges Attribut"
+					"title": "Mehrwertiges Attribut",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die relationale Modellierung des mehrwertigen Attributes LieblingsEssen!\n\n <pre>TABLE LieblingsEssen  ( <br/>  |~Lieblingsessen; PersNr; Name|, <br/>  |Lieblingsessen; ~PersNr; Name| REFERENCES Person, <br/>  PRIMARY KEY ( |Lieblingsessen; PersNr; ~Lieblingsessen, PersNr| ) <br/>)</pre>  "
+						}
+					]
 				},
 				{
 					"name": "SchwacheEntityMenge",
 					"title": "Schwache Entity-Menge",
-					"question" : [ {"type":"gap", "text":" Vervollständigen Sie die relationale Modellierung der schwachen Entity-Menge Kind!\n\n <pre>TABLE Kind ( <br/>  Vorname, <br/>  Alter, <br/>  |*PersNr; Vorname| REFERENCES |Kind; *Person|, <br/>  PRIMARY KEY ( |Vorname; Alter; PersNr; Vorname, Alter; *Vorname, PersNr; Alter, PersNr| ) <br/>)</pre>  "}]
+					"question": [
+						{
+							"type": "gap",
+							"text": " Vervollständigen Sie die relationale Modellierung der schwachen Entity-Menge Kind!\n\n <pre>TABLE Kind ( <br/>  Vorname, <br/>  Alter, <br/>  |~PersNr; Vorname| REFERENCES |Kind; ~Person|, <br/>  PRIMARY KEY ( |Vorname; Alter; PersNr; Vorname, Alter; ~Vorname, PersNr; Alter, PersNr| ) <br/>)</pre>  "
+						}
+					]
 				},
 				{
 					"name": "VertikalePartitionierung",
@@ -460,27 +507,27 @@
 					"question": [
 						{
 							"type": "mc",
-							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde PNr und Tarif aller Angestellten\" wie folgt: \n<code>SELECT PNr, Tarif\nFROM Angestellter</code> |*Vertikale Partitionierung; Horizontale Partitionierung; *Volle Redundanz; Wide Table|"
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde PNr und Tarif aller Angestellten\" wie folgt: \n<code>SELECT PNr, Tarif\nFROM Angestellter</code> |~Vertikale Partitionierung; Horizontale Partitionierung; ~Volle Redundanz; Wide Table|"
 						},
 						{
 							"type": "mc",
-							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde PNr und Tarif aller Angestellten\" wie folgt: \n<code>SELECT PNr, Tarif FROM Angestellter\nUNION\nSELECT PNr, Tarif FROM Dozent\nUNION\nSELECT PNr, Tarif FROM Techniker</code> |Vertikale Partitionierung; *Horizontale Partitionierung; Volle Redundanz; Wide Table|"
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde PNr und Tarif aller Angestellten\" wie folgt: \n<code>SELECT PNr, Tarif FROM Angestellter\nUNION\nSELECT PNr, Tarif FROM Dozent\nUNION\nSELECT PNr, Tarif FROM Techniker</code> |Vertikale Partitionierung; ~Horizontale Partitionierung; Volle Redundanz; Wide Table|"
 						},
 						{
 							"type": "mc",
-							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde PNr und Tarif aller Angestellten\" wie folgt: \n<code>SELECT PNr, Tarif\nFROM HS-Angehöriger\nWHERE Typ IN (\"Angestellter\", \"Dozent\", \"Techniker\")</code> |Vertikale Partitionierung; Horizontale Partitionierung; Volle Redundanz; *Wide Table|"
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde PNr und Tarif aller Angestellten\" wie folgt: \n<code>SELECT PNr, Tarif\nFROM HS-Angehöriger\nWHERE Typ IN (\"Angestellter\", \"Dozent\", \"Techniker\")</code> |Vertikale Partitionierung; Horizontale Partitionierung; Volle Redundanz; ~Wide Table|"
 						},
 						{
 							"type": "mc",
-							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde alle Informationen (PNr, Name, Tarif, Erfahrung) zum Techniker mit PNr=123\" wie folgt: \n<code>SELECT Techniker.PNr, Name, Tarif, Erfahrung\nFROM HS-Angehöriger\nJOIN Angesteller USING (PNr)\nJOIN Techniker USING (PNr)\nWHERE Techniker.PNr = 123</code> |*Vertikale Partitionierung; Horizontale Partitionierung; Volle Redundanz; Wide Table| "
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde alle Informationen (PNr, Name, Tarif, Erfahrung) zum Techniker mit PNr=123\" wie folgt: \n<code>SELECT Techniker.PNr, Name, Tarif, Erfahrung\nFROM HS-Angehöriger\nJOIN Angesteller USING (PNr)\nJOIN Techniker USING (PNr)\nWHERE Techniker.PNr = 123</code> |~Vertikale Partitionierung; Horizontale Partitionierung; Volle Redundanz; Wide Table| "
 						},
 						{
 							"type": "mc",
-							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde alle Informationen (PNr, Name, Tarif, Erfahrung) zum Techniker mit PNr=123\" wie folgt: \n<code>SELECT PNr, Name, Tarif, Erfahrung\nFROM Techniker\nWHERE PNr = 123</code> |Vertikale Partitionierung; *Horizontale Partitionierung; *Volle Redundanz; Wide Table|"
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde alle Informationen (PNr, Name, Tarif, Erfahrung) zum Techniker mit PNr=123\" wie folgt: \n<code>SELECT PNr, Name, Tarif, Erfahrung\nFROM Techniker\nWHERE PNr = 123</code> |Vertikale Partitionierung; ~Horizontale Partitionierung; ~Volle Redundanz; Wide Table|"
 						},
 						{
 							"type": "mc",
-							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde alle Informationen (PNr, Name, Tarif, Erfahrung) zum Techniker mit PNr=123\" wie folgt: \n<code>SELECT PNr, Name, Tarif, Erfahrung\nFROM HS-Angehöriger\nWHERE Typ = \"Techniker\"\nAND PNr = 123</code> |Vertikale Partitionierung; Horizontale Partitionierung; Volle Redundanz; *Wide Table|"
+							"text": "Für welche Verfahren der Umwandlung einer Generalisierung lautet die SQL-Anfrage für \"Finde alle Informationen (PNr, Name, Tarif, Erfahrung) zum Techniker mit PNr=123\" wie folgt: \n<code>SELECT PNr, Name, Tarif, Erfahrung\nFROM HS-Angehöriger\nWHERE Typ = \"Techniker\"\nAND PNr = 123</code> |Vertikale Partitionierung; Horizontale Partitionierung; Volle Redundanz; ~Wide Table|"
 						}
 					]
 				},
@@ -510,7 +557,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": " Bei der gezeigten Relation KursEinschreibung ...\n \n* entsteht eine Update-Anomalie bei der Raumänderung eines Kurses weil |*ggf. mehrere Datensätze geändert werden müssen; keine Änderung des Raums möglich ist; die Studenten sich neu einschreiben müssen| \n* entsteht eine Insert-Anomalie beim Einfügen eines Kurses ohne zugehörigen/eingeschriebenen Studenten weil |ggf. mehrere Datensätze eingefügt werden müssen; *kein Einfügen eines Kurses ohne Student möglich ist; die Studenten sich neu einschreiben müssen| \n *entsteht eine Delete-Anomalie beim Löschen des letzten eingeschriebenen Studenten eines Kurses |ggf. mehrere Datensätze gelöscht werden müssen; das Löschen des letzten Studenten nicht möglich ist; *alle Informationen zu einem Kurs mitgelöscht werden|"
+							"text": " Bei der gezeigten Relation KursEinschreibung ...\n \n* entsteht eine Update-Anomalie bei der Raumänderung eines Kurses weil |~ggf. mehrere Datensätze geändert werden müssen; keine Änderung des Raums möglich ist; die Studenten sich neu einschreiben müssen| \n* entsteht eine Insert-Anomalie beim Einfügen eines Kurses ohne zugehörigen/eingeschriebenen Studenten weil |ggf. mehrere Datensätze eingefügt werden müssen; ~kein Einfügen eines Kurses ohne Student möglich ist; die Studenten sich neu einschreiben müssen| \n ~entsteht eine Delete-Anomalie beim Löschen des letzten eingeschriebenen Studenten eines Kurses |ggf. mehrere Datensätze gelöscht werden müssen; das Löschen des letzten Studenten nicht möglich ist; ~alle Informationen zu einem Kurs mitgelöscht werden|"
 						}
 					]
 				},
@@ -520,7 +567,7 @@
 					"question": [
 						{
 							"type": "mc",
-							"text": "Markieren Sie alle korrekten funktionalen Abhängigkeiten der Relation KursEinschreibung! |MNr -> Datum ; *MNr -> Name, Vorname ; Name, Vorname -> MNr ; Plätze -> Raum ; *Raum -> Plätze ; *Titel -> Raum ; *Titel, MNr -> Datum"
+							"text": "Markieren Sie alle korrekten funktionalen Abhängigkeiten der Relation KursEinschreibung! |MNr -> Datum ; ~MNr -> Name, Vorname ; Name, Vorname -> MNr ; Plätze -> Raum ; ~Raum -> Plätze ; ~Titel -> Raum ; ~Titel, MNr -> Datum"
 						}
 					]
 				},
@@ -530,7 +577,7 @@
 					"question": [
 						{
 							"type": "mc",
-							"text": "Markieren Sie alle Schlüssel der Relation KursEinschreibung! |Titel; Raum; Plätze; MNR; Name; Vorname; Datum; Titel, Raum; *Titel, MNR; Titel, Datum; MNR, Raum; MNR, Datum; Titel, MNR, Datum|"
+							"text": "Markieren Sie alle Schlüssel der Relation KursEinschreibung! |Titel; Raum; Plätze; MNR; Name; Vorname; Datum; Titel, Raum; ~Titel, MNR; Titel, Datum; MNR, Raum; MNR, Datum; Titel, MNR, Datum|"
 						}
 					]
 				},
@@ -540,7 +587,7 @@
 					"question": [
 						{
 							"type": "mc",
-							"text": "Markieren Sie alle Schlüssel der Relation R! |A; B; *C; D; AB; AC; AD; BC; BD; CD; ABC; ABD; ACD; BCD; ABCD|"
+							"text": "Markieren Sie alle Schlüssel der Relation R! |A; B; ~C; D; AB; AC; AD; BC; BD; CD; ABC; ABD; ACD; BCD; ABCD|"
 						}
 					]
 				},
@@ -550,7 +597,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie für die nachfolgenden Attribute der Relation KursEinschreibung an, ob sie voll funktional oder nur partiell vom Schlüssel Titel,MNr abhängen. Im Falle einer partiellen Abhängigkeit geben Sie zusätzlich an, von welchem Attribut es allein abhängig ist (d.h. Titel oder MNr)!\n \n* Raum: |voll funktional; *partiell (nur von Titel); partiell (nur von MNr)| \n* Plätze: |voll funktional; *partiell (nur von Titel); partiell (nur von MNr)| \n* Name: |voll funktional; partiell (nur von Titel); *partiell (nur von MNr)| \n* Vorname: |voll funktional; partiell (nur von Titel); *partiell (nur von MNr)| \n*Datum: |*voll funktional; partiell (nur von Titel); partiell (nur von MNr)|"
+							"text": "Geben Sie für die nachfolgenden Attribute der Relation KursEinschreibung an, ob sie voll funktional oder nur partiell vom Schlüssel Titel,MNr abhängen. Im Falle einer partiellen Abhängigkeit geben Sie zusätzlich an, von welchem Attribut es allein abhängig ist (d.h. Titel oder MNr)!\n \n* Raum: |voll funktional; ~partiell (nur von Titel); partiell (nur von MNr)| \n* Plätze: |voll funktional; ~partiell (nur von Titel); partiell (nur von MNr)| \n* Name: |voll funktional; partiell (nur von Titel); ~partiell (nur von MNr)| \n* Vorname: |voll funktional; partiell (nur von Titel); ~partiell (nur von MNr)| \n*Datum: |~voll funktional; partiell (nur von Titel); partiell (nur von MNr)|"
 						}
 					]
 				},
@@ -564,7 +611,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Ergänzen Sie die Lücken, so dass eine korrekte Aussage entsteht!\n\nDas Attribut |Titel; Raum; *Plätze| ist transitiv abhängig vom Attribut |*Titel; Raum; Plätze| wegen der funktionalen Abängigkeiten Titel -> Raum und |Titel -> Plätze; *Raum -> Plätze; Plätze -> Raum|."
+							"text": "Ergänzen Sie die Lücken, so dass eine korrekte Aussage entsteht!\n\nDas Attribut |Titel; Raum; ~Plätze| ist transitiv abhängig vom Attribut |~Titel; Raum; Plätze| wegen der funktionalen Abängigkeiten Titel -> Raum und |Titel -> Plätze; ~Raum -> Plätze; Plätze -> Raum|."
 						}
 					]
 				},
@@ -578,7 +625,7 @@
 					"question": [
 						{
 							"type": "mc",
-							"text": "Was sind die Determinanten der Relation Prüfung? |*PNr; MNr; *Fach; Note; *PNr, MNr; PNr, Fach; PNr, Note; *MNr, Fach; MNr, Note; Fach, Note; PNr, MNr, Fach; PNr, MNr, Note; PNr, Fach, Note; MNr, Fach, Note; PNr, MNr, Fach, Note"
+							"text": "Was sind die Determinanten der Relation Prüfung? |~PNr; MNr; ~Fach; Note; ~PNr, MNr; PNr, Fach; PNr, Note; ~MNr, Fach; MNr, Note; Fach, Note; PNr, MNr, Fach; PNr, MNr, Note; PNr, Fach, Note; MNr, Fach, Note; PNr, MNr, Fach, Note"
 						}
 					]
 				},
@@ -616,7 +663,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Die Überwachnung von Integrtiätsbedingungen kann sowohl durch Anwendungsprogramme (AP) oder das Datenbanksystem (DBS) realisiert werden. Geben Sie für die nachfolgenden Kriterien an, welche Variante vorteilhafter ist.\n\n* Sicherheit und Konsistenzwahrung: |Anwendungsprogramm; *Datenbanksystem|\n* Aufwand zur Erstellung eines Anwendungsprogramms: |Anwendungsprogramm; *Datenbanksystem|\n* Unterstützung von DB-Änderungen: |Anwendungsprogramm; *Datenbanksystem|\n* Änderbarkeit von Integritätsbedingungen: |Anwendungsprogramm; *Datenbanksystem| \n* Mächtigkeit bzgl. Implementierung von Integritätsbedingung: |*Anwendungsprogramm; Datenbanksystem|"
+							"text": "Die Überwachnung von Integrtiätsbedingungen kann sowohl durch Anwendungsprogramme (AP) oder das Datenbanksystem (DBS) realisiert werden. Geben Sie für die nachfolgenden Kriterien an, welche Variante vorteilhafter ist.\n\n* Sicherheit und Konsistenzwahrung: |Anwendungsprogramm; ~Datenbanksystem|\n* Aufwand zur Erstellung eines Anwendungsprogramms: |Anwendungsprogramm; ~Datenbanksystem|\n* Unterstützung von DB-Änderungen: |Anwendungsprogramm; ~Datenbanksystem|\n* Änderbarkeit von Integritätsbedingungen: |Anwendungsprogramm; ~Datenbanksystem| \n* Mächtigkeit bzgl. Implementierung von Integritätsbedingung: |~Anwendungsprogramm; Datenbanksystem|"
 						}
 					]
 				},
@@ -626,7 +673,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie für die nachfolgenden Integritätsbedingungen jeweils an, ob es sich um eine modellinhärente oder eine anwendungsspezifische Integritätsbedingung handelt.\n\n* Alter >= 18: |modellinhärent; *anwendungsspezifisch|\n* Gehaltssumme < Budget: |modellinhärent; *anwendungsspezifisch|\n* PNR ist eindeutig: |*modellinhärent; anwendungsspezifisch|\n* Alter ist eine Zahl (Integer): |*modellinhärent; anwendungsspezifisch|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |modellinhärent; *anwendungsspezifisch|\n* Person.ANR hat Wert, der in Abteilung.ANR auftritt: |*modellinhärent; anwendungsspezifisch|"
+							"text": "Geben Sie für die nachfolgenden Integritätsbedingungen jeweils an, ob es sich um eine modellinhärente oder eine anwendungsspezifische Integritätsbedingung handelt.\n\n* Alter >= 18: |modellinhärent; ~anwendungsspezifisch|\n* Gehaltssumme < Budget: |modellinhärent; ~anwendungsspezifisch|\n* PNR ist eindeutig: |~modellinhärent; anwendungsspezifisch|\n* Alter ist eine Zahl (Integer): |~modellinhärent; anwendungsspezifisch|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |modellinhärent; ~anwendungsspezifisch|\n* Person.ANR hat Wert, der in Abteilung.ANR auftritt: |~modellinhärent; anwendungsspezifisch|"
 						}
 					]
 				},
@@ -636,7 +683,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie für die nachfolgenden Integritätsbedingungen die Reichweite an, d.h. Attribut, Tupel, Tabelle oder mehrere Tabellen.\n\n* Alter >= 18: |*Attribut; Tupel; Tabelle; Mehrere Tabellen|\n* Gehaltssumme < Budget: |Attribut; *Tupel; Tabelle; Mehrere Tabellen|\n* PNR ist eindeutig: |Attribut; Tupel; *Tabelle; Mehrere Tabellen|\n* Gehaltssumme ist Summe der Gehalts-Werte der zugehörigen Personen: |Attribut; Tupel; Tabelle; *Mehrere Tabellen|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |Attribut; *Tupel; Tabelle; Mehrere Tabellen|\n* Person.ANR hat Wert, der in Abteilung.ANR auftritt: |Attribut; Tupel; Tabelle; *Mehrere Tabellen|\n* Abteilung sind maximal 10 Personen zugeordnet: |Attribut; Tupel; *Tabelle; Mehrere Tabellen|"
+							"text": "Geben Sie für die nachfolgenden Integritätsbedingungen die Reichweite an, d.h. Attribut, Tupel, Tabelle oder mehrere Tabellen.\n\n* Alter >= 18: |~Attribut; Tupel; Tabelle; Mehrere Tabellen|\n* Gehaltssumme < Budget: |Attribut; ~Tupel; Tabelle; Mehrere Tabellen|\n* PNR ist eindeutig: |Attribut; Tupel; ~Tabelle; Mehrere Tabellen|\n* Gehaltssumme ist Summe der Gehalts-Werte der zugehörigen Personen: |Attribut; Tupel; Tabelle; ~Mehrere Tabellen|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |Attribut; ~Tupel; Tabelle; Mehrere Tabellen|\n* Person.ANR hat Wert, der in Abteilung.ANR auftritt: |Attribut; Tupel; Tabelle; ~Mehrere Tabellen|\n* Abteilung sind maximal 10 Personen zugeordnet: |Attribut; Tupel; ~Tabelle; Mehrere Tabellen|"
 						}
 					]
 				},
@@ -646,7 +693,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie für die folgenden Integritätsbedingungen jeweils an, ob es sich um eine statische oder dynamische Integritätsbedingung handelt. In letzterem Fall geben Sie zuätzlich an, ob eine Übergangsbedingung oder eine temporale Bedingung vorliegt.\n\n* Alter >= 18: |*Statische Integritätsbedingung; Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|\n* Gehaltssumme < Budget: |*Statische Integritätsbedingung; Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |Statische Integritätsbedingung; *Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|\n* Gehalt darf innerhalb von 3 Jahren nicht um mehr als 25% wachsen: |Statische Integritätsbedingung; Dynamische Integritätsbedingung (Übergangsbedingung); *Dynamische Integritätsbedingung (temporale Bedingung)|\n* Familienstand von \"ledig\" nach \"geschieden\" ist unzulässig:: |Statische Integritätsbedingung; *Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|"
+							"text": "Geben Sie für die folgenden Integritätsbedingungen jeweils an, ob es sich um eine statische oder dynamische Integritätsbedingung handelt. In letzterem Fall geben Sie zuätzlich an, ob eine Übergangsbedingung oder eine temporale Bedingung vorliegt.\n\n* Alter >= 18: |~Statische Integritätsbedingung; Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|\n* Gehaltssumme < Budget: |~Statische Integritätsbedingung; Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |Statische Integritätsbedingung; ~Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|\n* Gehalt darf innerhalb von 3 Jahren nicht um mehr als 25% wachsen: |Statische Integritätsbedingung; Dynamische Integritätsbedingung (Übergangsbedingung); ~Dynamische Integritätsbedingung (temporale Bedingung)|\n* Familienstand von \"ledig\" nach \"geschieden\" ist unzulässig:: |Statische Integritätsbedingung; ~Dynamische Integritätsbedingung (Übergangsbedingung); Dynamische Integritätsbedingung (temporale Bedingung)|"
 						}
 					]
 				},
@@ -656,7 +703,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "TODO Aufgabe nicht ganz korrekt|*1;2|"
+							"text": "TODO Aufgabe nicht ganz korrekt|~1;2|"
 						}
 					]
 				},

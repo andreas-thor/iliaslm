@@ -35,7 +35,7 @@ class QuestionMC extends Question {
 					
 					$points = "0";
 					$choiceText = trim($choiceText);
-					if ($choiceText[0] == "*") {		// correct choice(s) is/are prefixed with *
+					if ($choiceText[0] == "~") {		// correct choice(s) is/are prefixed with ~
 						$points = "1";
 						$choiceText = substr($choiceText, 1);	// remove *-prefix
 					}
