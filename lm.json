@@ -171,7 +171,7 @@
 						},
 						{
 							"type": "gap",
-							"text": "Welche SQL-Anfrage berechnet jeweils die folgenden Ergebnisse?\n\n<code>Name\n-------------------\nLunetIX SoftAir\nAkademie Verl.\nSchmidt</code>\n | SELECT name FROM verlag; SELECT name FROM verlage WHERE \"Berlin\"; ~SELECT name FROM verlage WHERE ort=\"Berlin\"; SELECT ort FROM verlag | \n\n<code>Titel\n------------------\nExcel\nGrundlagen\nPC Tools\nInfo für Ing.\nJava</code>\n | SELECT titel FROM buch; SELECT titel, jahr FROM buch WHERE jahr>1990; ~SELECT titel FROM buch WHERE jahr>1990; SELECT jahr>1990 FROM buch"
+							"text": "Welche SQL-Anfrage berechnet jeweils die folgenden Ergebnisse?   <pre> Name <br/> ------------------- <br/> LunetIX SoftAir <br/> Akademie Verl. <br/> Schmidt</pre> | SELECT name FROM verlag; SELECT name FROM verlage WHERE \"Berlin\"; ~SELECT name FROM verlage WHERE ort=\"Berlin\"; SELECT ort FROM verlag | \n\n <pre> Titel <br/> ------------------ <br/> Excel <br/> Grundlagen <br/> PC Tools <br/> Info für Ing. <br/> Java</pre> | SELECT titel FROM buch; SELECT titel, jahr FROM buch WHERE jahr>1990; ~SELECT titel FROM buch WHERE jahr>1990; SELECT jahr>1990 FROM buch"
 						}
 					]
 				},
@@ -191,13 +191,23 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "  Geben Sie für die nachfolgenden SQL-Anfragen an, wieviele Datensätze (Tupel) das Ergebnis jeweils beinhaltet! \n\nSELECT ort FROM verlag : |0;1;2;3;4;5;~6;7;8;9| \n\nSELECT DISTINCT ort FROM verlag : |0;1;2;~3;4;5;6;7;8;9| \n\nSELECT name FROM verlag : |0;1;2;3;4;5;~6;7;8;9| \n\nSELECT DISTINCT name FROM verlag : |0;1;2;3;4;5;~6;7;8;9|"
+							"text": "  Geben Sie für die nachfolgenden SQL-Anfragen an, wieviele Datensätze (Tupel) das Ergebnis jeweils beinhaltet! \n\n* SELECT ort FROM verlag : |0;1;2;3;4;5;~6;7;8;9| \n* SELECT DISTINCT ort FROM verlag : |0;1;2;~3;4;5;6;7;8;9| \n* SELECT name FROM verlag : |0;1;2;3;4;5;~6;7;8;9| \n* SELECT DISTINCT name FROM verlag : |0;1;2;3;4;5;~6;7;8;9|"
 						}
 					]
 				},
 				{
 					"name": "Ausgabebearbeitung_Fallunterscheidung",
-					"title": "Fallunterscheidung"
+					"title": "Fallunterscheidung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie das Ergebnis der folgenden SQL-Anfrage:<pre> SELECT titel, jahr, <br/> CASE <br/>    WHEN jahr >= 2000 THEN '2000er'<br/>    WHEN jahr >= 1990 THEN '90er' <br/>    ELSE 'Veraltet' <br/> END AS Dekade <br/> FROM buch</pre>  \n \n  <pre> titel         + jahr + |titel; jahr; CASE; ~Dekade; buch| <br/> --------------+------+------------------------- <br/> Excel         + 1991 + |2000er; ~90er; Veraltet| <br/> Grundlagen    + 1991 + |2000er; ~90er; Veraltet| <br/> Kaufverträge  + 1989 + |2000er; 90er; ~Veraltet| <br/> PC Tools      + 1993 + |2000er; ~90er; Veraltet| <br/> Info für Ing. + 1995 + |2000er; ~90er; Veraltet| <br/> Semantik      + 1983 + |2000er; 90er; ~Veraltet| <br/> Java          + 1996 + |2000er; ~90er; Veraltet| </pre> "
+						},
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie das Ergebnis der folgenden SQL-Anfrage:<pre> SELECT titel, COALESCE (preis, 999.99) AS verkaufspreis <br/> FROM buch</pre>  \n \n  \n <pre> titel         + |titel; preis; ~verkaufspreis; buch| <br/> --------------+------------------------- <br/> Excel         + |NULL;19.80;59.00;78.00;142.00;~999.99| <br/> Grundlagen    + |NULL;19.80;59.00;78.00;~142.00;999.99| <br/> Kaufverträge  + |NULL;19.80;59.00;78.00;142.00;~999.99| <br/> PC Tools      + |NULL;19.80;~59.00;78.00;142.00;999.99| <br/> Info für Ing. + |NULL;19.80;59.00;~78.00;142.00;999.99| <br/> Semantik      + |NULL;~19.80;59.00;78.00;142.00;999.99| <br/> Java          + |NULL;~19.80;59.00;78.00;142.00;999.99| </pre> "
+						}
+					]
 				},
 				{
 					"name": "Join_Beispiel",
@@ -205,7 +215,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie das Ergebnis der Join-Anfrage \"Alle Buchtitel mit dem Ort ihres Verlags\" an, in dem Sie für jeden Buchtitel den zugehörigen Ort auswählen oder \"---\", falls das Buch nicht im Anfrageergebnis auftritt.\n \nExcel: |Berlin; ~Düsseldorf; München; ---| \nGrundlagen: |~Berlin; Düsseldorf; München; ---| \nKaufverträge: |~Berlin; Düsseldorf; München; ---| \nPC Tools: |Berlin; Düsseldorf; München; ~---| \nInfo für Ing.: |Berlin; ~Düsseldorf; München; ---| \nSemantik: |Berlin; Düsseldorf; ~München; ---| \nJava: |Berlin; ~Düsseldorf; München; --- "
+							"text": "Geben Sie das Ergebnis der Join-Anfrage \"Alle Buchtitel mit dem Ort ihres Verlags\" an, in dem Sie für jeden Buchtitel den zugehörigen Ort auswählen oder \"---\", falls das Buch nicht im Anfrageergebnis auftritt.\n \n* Excel: |Berlin; ~Düsseldorf; München; ---| \n* Grundlagen: |~Berlin; Düsseldorf; München; ---| \n* Kaufverträge: |~Berlin; Düsseldorf; München; ---| \n* PC Tools: |Berlin; Düsseldorf; München; ~---| \n* Info für Ing.: |Berlin; ~Düsseldorf; München; ---| \n* Semantik: |Berlin; Düsseldorf; ~München; ---| \n* Java: |Berlin; ~Düsseldorf; München; --- "
 						}
 					]
 				},
@@ -215,25 +225,65 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "  Formulieren Sie die Anfrage \"Welche Buchtitel wurden von Berliner Verlagen herausgebracht\" in SQL. Vervollständigen Sie dazu die  nachfolgende SQL-Anfrage.\n\n  \nSELECT |buch.id; ~buch.titel; verlag.name; verlag.ort| \nFROM buch, |buch; ~verlag| \nWHERE |buch.buchid; buch.titel; ~buch.verlagsid|  |>;~=;<| |verlag.name; ~verlag.verlagsid; verlag.ort| \n |~AND; OR| |verlag.name; verlag.verlagsid; ~verlag.ort| = 'Berlin'   "
+							"text": "  Formulieren Sie die Anfrage \"Welche Buchtitel wurden von Berliner Verlagen herausgebracht\" in SQL. Vervollständigen Sie dazu die  nachfolgende SQL-Anfrage! <pre> SELECT |buch.id; ~buch.titel; verlag.name; verlag.ort| <br/> FROM buch, |buch; ~verlag| <br/> WHERE |buch.buchid; buch.titel; ~buch.verlagsid|  |>;~=;<| |verlag.name; ~verlag.verlagsid; verlag.ort| <br/> |~AND; OR| |verlag.name; verlag.verlagsid; ~verlag.ort| = 'Berlin'   "
 						}
 					]
 				},
 				{
 					"name": "Join-Anfragen-2",
-					"title": "Join-Anfragen (2)"
+					"title": "Join-Anfragen (2)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Formulieren Sie die Anfrage \"Welche Bücher sind vom Autor mit Nachnamen 'Braun' verfasst worden?\" in SQL. Vervollständigen Sie dazu die  nachfolgende SQL-Query. <pre> SELECT B.titel <br/> FROM buch B, autor A, buch_aut BA <br/> |AND;FROM;OR;~WHERE| B.buchid = |A.autorid; B.buchid; B.verlagsid; BA.autorid; ~BA.buchid| <br/> |~AND;FROM;OR;WHERE| BA.autorid = |~A.autorid; B.buchid; B.verlagsid; BA.autorid; BA.buchid| <br/> |~AND;FROM;OR;WHERE| |A.autorid; ~A.nachname; A.vorname| = 'Braun' </pre>"
+						},
+						{
+							"type": "gap",
+							"text": "Formulieren Sie die Anfrage \"Welche Autoren haben ein Buch im 'Data Becker'-Verlag herausgegeben?\" in SQL. Vervollständigen Sie dazu die  nachfolgende SQL-Query. <pre> SELECT A.nachname, A.vorname <br/> FROM autor A, buch_aut BA, buch B, verlag V <br/> |AND;FROM;OR;~WHERE| A.autorid = |A.autorid; B.buchid; B.verlagsid; ~BA.autorid; BA.buchid; V.verlagsid| <br/> |~AND;FROM;OR;WHERE| BA.buchid = |A.autorid; ~B.buchid; B.verlagsid; BA.autorid; BA.buchid; V.verlagsid| <br/> |~AND;FROM;OR;WHERE| B.verlagsid = |A.autorid; B.buchid; B.verlagsid; BA.autorid; BA.buchid; ~V.verlagsid| <br/> |~AND;FROM;OR;WHERE| |ort; nachname; ~name| = 'Data Becker' </pre>"
+						}
+					]
 				},
 				{
 					"name": "Schreibweisen_Joins",
-					"title": "Schreibweisen Join"
+					"title": "Schreibweisen Join",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die Anfrage \"Finde alle Bücher vom Autor mit dem Nachnamen Braun!\"! <pre> SELECT B.titel <br/> |~FROM;JOIN;NATURAL JOIN;WHERE| buch B <br/> |FROM;~JOIN;NATURAL JOIN;WHERE| buch_aut BA ON (|autorid; buchid; B.buchid; BA.buchid; ~B.buchid=BA.buchid|) <br/> |FROM;~JOIN;NATURAL JOIN;WHERE| autor A USING (|~autorid; buchid; A.autorid; B.autorid; A.autorid=BA.autorid|) <br/> |FROM;JOIN;NATURAL JOIN;~WHERE| A.nachname = 'Braun'</pre>"
+						}
+					]
 				},
 				{
 					"name": "Join-Anfragen-3",
-					"title": "Join-Anfragen (3)"
+					"title": "Join-Anfragen (3)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Tabelle Person repräsentiert mittels des Fremdschlüssels MNr auf die gleiche Tabelle Person die \"Manager-Beziehung\", d.h. eine Person ist Manager einer anderen. Vervollständigen Sie die nachfolgenden Aussagen so, dass sie der Tabelle Person entsprechen.\n   \n* Der Manager von Abel ist : |Abel; ~Schulz; Müller; Schmid| \n* Abel ist Manager von : |Abel; Schulz; ~Müller; Schmid| \n* Der Manager von Schmid ist : |Abel; ~Schulz; Müller; Schmid| \n* Keinen Manager hat : |Abel; ~Schulz; Müller; Schmid| "
+						},
+						{
+							"type": "gap",
+							"text": "Formulieren Sie die Anfrage \"Finde die Angestellten, die mehr als ihre (direkten) Manager verdienen.\" in SQL! Vervollständigen die dazu die  nachfolgende SQL-Query!<pre> SELECT P.name <br/> |AND;~FROM;OR;WHERE| person P, person M <br/> |AND;FROM;OR;~WHERE| |P.PNr=M.PNr; P.PNr=M.MNr; ~P.MNr=M.PNr; P.MNr=M.MNr| <br/> |~AND;FROM;OR;WHERE| |~P.Gehalt > M.Gehalt; M.Gehalt > P.Gehalt|"
+						}
+					]
 				},
 				{
 					"name": "OuterJoin",
-					"title": "Outer Join"
+					"title": "Outer Join",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Geben Sie für das Tupel (3727, 'Java', 10, 'Data Becker') an, in welchen Anfrage-Ergebnissen es auftritt, d.h. welche Join-Art das Tupel erzeugt. |~JOIN; ~LEFT OUTER JOIN; ~RIGHT OUTER JOIN; ~FULL OUTER JOIN|"
+						},
+						{
+							"type": "mc",
+							"text": "Geben Sie für das Tupel (575, 'PC Tools', NULL, NULL) an, in welchen Anfrage-Ergebnissen es auftritt, d.h. welche Join-Art das Tupel erzeugt. |JOIN; ~LEFT OUTER JOIN; RIGHT OUTER JOIN; ~FULL OUTER JOIN|"
+						},
+						{
+							"type": "mc",
+							"text": "Geben Sie für das Tupel (NULL, NULL, 79, 'LunetIX Softfair') an, in welchen Anfrage-Ergebnissen es auftritt, d.h. welche Join-Art das Tupel erzeugt. |JOIN; LEFT OUTER JOIN; ~RIGHT OUTER JOIN; ~FULL OUTER JOIN|"
+						}
+					]
 				}
 			]
 		},
@@ -252,39 +302,101 @@
 				},
 				{
 					"name": "SubQuery",
-					"title": "SubQuery (Unterabfrage)"
+					"title": "SubQuery (Unterabfrage)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die Anfrage \"Welche Buchtitel wurden von Berliner Verlagen herausgebracht?\"!<pre> SELECT |*;buchid;~titel;verlagsid;name;ort| <br/> FROM |~buch;verlag| <br/> WHERE |buchid;~verlagsid| |=;~IN| ( <br/>    SELECT |*;buchid;titel;~verlagsid;name;ort| <br/>    FROM |buch;~verlag| <br/>    WHERE |*;buchid;titel;verlagsid;name;~ort| = 'Berlin' <br/> )</pre>"
+						}
+					]
 				},
 				{
 					"name": "Einfach_vs_korrelierte_SubQuery",
-					"title": "Einfache vs. korrelierte SubQuery"
+					"title": "Einfache vs. korrelierte SubQuery",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Die Anfrage \"Welche Buchtitel wurden von Berliner Verlagen veröffentlicht?\" lässt sich mit einer korrelierten Sub-Query wie folgt realisieren: <pre> SELECT B.titel <br/> FROM buch <br/> WHERE 'Berlin' = ( <br/>    SELECT V.ort <br/>    FROM verlag V <br/>    WHERE V.verlagsid = B.verlagsid <br/> ) </pre> Beantworten Sie dazu die folgenden Fragen:\n \n* Welche Query ist die Sub-Query: |Query mit \"FROM buch\"; ~Query mit \"FROM verlag\"| \n* Wie häufig muss die Sub-Query ausgeführt werden:  |einmal; ~einmal pro Tupel der Tabelle Buch; einmal pro Tupel der Tabelle Verlag| \n* Wie viele Tupel liefert die Sub-Query pro Ausführung: |~höchstens 1; evtl. mehr als 1|"
+						}
+					]
 				},
 				{
 					"name": "AggregatFunktion",
-					"title": "Aggregatfunktion"
+					"title": "Aggregatfunktion",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die Anfrage \"Bestimme das durchschnittliche Erscheinungsjahr aller Bücher\"!<pre> SELECT |~AVG;COUNT;SUM| ( |*;buchid;titel;~jahr|) <br/> FROM buch</pre>"
+						},
+						{
+							"type": "gap",
+							"text": "Geben Sie das Ergebnis der folgende SQL-Queries an!\n\n* SELECT COUNT(jahr) FROM buch: |0;1;2;3;4;5;6;~7|\n* SELECT COUNT(DISTINCT jahr) FROM buch: |0;1;2;3;4;5;~6;7|\n* SELECT DISTINCT COUNT(jahr) FROM buch: |0;1;2;3;4;5;6;~7|"
+						}
+					]
 				},
 				{
 					"name": "AggregatFunktion_2",
-					"title": "Aggregatfunktion (2)"
+					"title": "Aggregatfunktion (2)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Wählen Sie jeweils die korrekte SQL-Anfrage aus!\n \n* Wie viele Verlage gibt es? |~SELECT COUNT(*) FROM verlag; ~SELECT COUNT(verlagsid) FROM verlag; SELECT COUNT(ort) FROM verlag; SELECT COUNT(DISTINCT ort) FROM verlag; SELECT COUNT(*) FROM buch; SELECT COUNT(verlagsid) FROM buch; SELECT COUNT(*)-COUNT(verlagsid) FROM buch; SELECT COUNT(DISTINCT verlagsid) FROM buch| \n* An wie vielen Orten gibt es Verlage? |SELECT COUNT(*) FROM verlag; SELECT COUNT(verlagsid) FROM verlag; SELECT COUNT(ort) FROM verlag; ~SELECT COUNT(DISTINCT ort) FROM verlag; SELECT COUNT(*) FROM buch; SELECT COUNT(verlagsid) FROM buch; SELECT COUNT(*)-COUNT(verlagsid) FROM buch; SELECT COUNT(DISTINCT verlagsid) FROM buch| \n* Für wie viele Bücher ist der Verlag bekannt? |SELECT COUNT(*) FROM verlag; SELECT COUNT(verlagsid) FROM verlag; SELECT COUNT(ort) FROM verlag; SELECT COUNT(DISTINCT ort) FROM verlag; SELECT COUNT(*) FROM buch; ~SELECT COUNT(verlagsid) FROM buch; SELECT COUNT(*)-COUNT(verlagsid) FROM buch; SELECT COUNT(DISTINCT verlagsid) FROM buch| \n* Für wie viele Bücher ist der Verlag nicht bekannt? |SELECT COUNT(*) FROM verlag; SELECT COUNT(verlagsid) FROM verlag; SELECT COUNT(ort) FROM verlag; SELECT COUNT(DISTINCT ort) FROM verlag; SELECT COUNT(*) FROM buch; SELECT COUNT(verlagsid) FROM buch; ~SELECT COUNT(*)-COUNT(verlagsid) FROM buch; SELECT COUNT(DISTINCT verlagsid) FROM buch| \n* Zu wie vielen Verlagen gibt es Bücher? |SELECT COUNT(*) FROM verlag; SELECT COUNT(verlagsid) FROM verlag; SELECT COUNT(ort) FROM verlag; SELECT COUNT(DISTINCT ort) FROM verlag; SELECT COUNT(*) FROM buch; SELECT COUNT(verlagsid) FROM buch; SELECT COUNT(*)-COUNT(verlagsid) FROM buch; ~SELECT COUNT(DISTINCT verlagsid) FROM buch|"
+						}
+					]
 				},
 				{
 					"name": "AggregatFunktion_3",
-					"title": "Aggregatfunktion (3)"
+					"title": "Aggregatfunktion (3)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Bewerten Sie die nachfolgenden SQL-Queries hinsichtlich ihrer Korrektheit bezogen auf die Anfrage \"Welches Buch (Titel, Jahr) ist am ältesten?\"!\n \n* SELECT titel, MIN(jahr) FROM buch : |korrekt; syntaktisch korrekt, aber semantisch falsch; ~syntaktisch falsch| \n* SELECT titel, jahr FROM buch WHERE jahr = (SELECT MIN(jahr) FROM buch) : |~korrekt; syntaktisch korrekt, aber semantisch falsch; syntaktisch falsch| \n* SELECT titel, (SELECT MIN(jahr) FROM buch) FROM buch : |korrekt; ~syntaktisch korrekt, aber semantisch falsch; syntaktisch falsch| "
+						},
+						{
+							"type": "gap",
+							"text": "Bewerten Sie die nachfolgenden SQL-Queries hinsichtlich ihrer Korrektheit bezogen auf die Anfrage \"An welchen Orten gibt es mehr als zwei Verlage?\"!\n \n* SELECT ort FROM verlag WHERE count(*) > 2 : |korrekt; syntaktisch korrekt, aber semantisch falsch; ~syntaktisch falsch| \n* SELECT v.ort FROM verlag v WHERE 2 < (SELECT count(*) FROM verlag v2 WHERE v.ort=v2.ort) : |~korrekt; syntaktisch korrekt, aber semantisch falsch; syntaktisch falsch| \n* SELECT v.ort FROM verlag v JOIN verlag v2 ON (v.ort = v2.ort) : |korrekt; ~syntaktisch korrekt, aber semantisch falsch; syntaktisch falsch|"
+						}
+					]
 				},
 				{
 					"name": "Gruppierung",
-					"title": "Gruppierung"
+					"title": "Gruppierung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie das Ergebnis der SQL-Anfrage <pre> SELECT ort, COUNT(verlagsid) <br/> FROM verlag <br/> GROUP BY ort</pre> <pre> ort         + count(verlagsid) <br/> ----------- + ---------------------- <br/> Düsseldorf  + |0;1;~2;3;4;5;6| <br/> Berlin      + |0;1;2;~3;4;5;6| <br/> München     + |0;~1;2;3;4;5;6| </pre>"
+						}
+					]
 				},
 				{
 					"name": "Mehrere_Gruppierungsattribute",
-					"title": "Mehrere Gruppierungsattribute"
+					"title": "Mehrere Gruppierungsattribute",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die nachfolgende SQL-Anfrage zur Bestimmung aller Verlage (VerlagsId und Name) sowie die Anzahl und das durchschnittliche Erscheinungsjahr der jeweils verlegten Bücher!<pre> SELECT verlagsid, name, |SUM(verlagsid); ~COUNT(*)|, |jahr; ~AVG(jahr); MAX(jahr)| <br/> FROM verlag NATURAL JOIN buch <br/> GROUP BY |verlagsid; name; ~verlagsid, name|</pre>"
+						}
+					]
 				},
 				{
 					"name": "Having",
-					"title": "HAVING-Prädikat"
+					"title": "HAVING-Prädikat",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die nachfolgende SQL-Query zur Bestimmung aller Orte mit mehr als zwei Verlagen!<pre> SELECT ort <br/> FROM verlag <br/> |~GROUP BY ort;GROUP BY COUNT(*); GROUP BY ort, COUNT(*); HAVING ort>2; HAVING COUNT(*)>2| <br/> |GROUP BY ort;GROUP BY COUNT(*); GROUP BY ort, COUNT(*); HAVING ort>2; ~HAVING COUNT(*)>2|</pre>"
+						}
+					]
 				},
 				{
 					"name": "Like_Praedikat",
-					"title": "LIKE-Prädikat"
+					"title": "LIKE-Prädikat",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Geben Sie an, ob die nachfolgenden Datenwerte das dahinterstehende LIKE-Prädikat erfüllen! |~'Kaufverträge' LIKE '_a%'; ~'Semantik' LIKE 'S%'; 'Grundlagen' LIKE '_a%'; 'Excel' LIKE '%\\_%' ESCAPE '\\'; 'Windows' LIKE 'S%'; ~'PC_Tools' LIKE '%\\_%' ESCAPE '\\'; ~'Java' LIKE '_a%'; ~'_Excel' LIKE '%\\_%' ESCAPE '\\'; ~'Sicherheit' LIKE 'S%'|"
+						}
+					]
 				},
 				{
 					"name": "Between_Praedikat",
@@ -292,7 +404,13 @@
 				},
 				{
 					"name": "IN_Praedikat",
-					"title": "IN-Prädikat"
+					"title": "IN-Prädikat",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vervollständigen Sie die Anfrage \"Finde die Verlage ohne Buch\"!<pre> SELECT * <br/> FROM |buch;~verlag| <br/> WHERE verlagsid |IN;~NOT IN| ( <br/>    SELECT |*;buchid;ort;~verlagsid| <br/>    FROM |~buch;verlag| <br/> )</pre>"
+						}
+					]
 				},
 				{
 					"name": "NULL_Problemfaelle",
