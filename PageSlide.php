@@ -29,7 +29,7 @@ class PageSlide extends Page {
 		
 		parent::__construct($chapName, $page);
 		
-		$this->mediaBaseName = $chapName . "_" . $this->name;
+		$this->mediaBaseName = $chapName . "_" . $this->page["name"];
 		
 		$this->media = [
 			"slide" => [
@@ -43,6 +43,7 @@ class PageSlide extends Page {
 				"namepattern" => "%s.mp4"
 			]
 		];
+		
 		
 		$this->questions = [];
 		if (isset($page["question"])) {

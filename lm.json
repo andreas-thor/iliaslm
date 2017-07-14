@@ -198,6 +198,7 @@
 				{
 					"name": "Ausgabebearbeitung_Fallunterscheidung",
 					"title": "Fallunterscheidung",
+					"video": "Korrektur: Im Video wird als Default-Wert statt eines Preises (z.B. 999.99) der (Zeichenketten-)Wert \"unbekannt\" verwendet. Die Erläuterungen zur COALESCE-Funktion sind korrekt, aber die SQL-Anfrage ist fehlerhaft. Grund: COALESCE würde im Beispiel sowohl numerische Werte (Preis) als auch Zeichenkettenwerte (\"unbekannt\") ausgeben und damit ist der Datentyp des Attributs Verkaufspreis nicht definiert (Datentypfehler). Soll als Default-Wert \"unbekannt\" verwendet werden, muss die Anfrage durch Konvertierung des numerischen Attributs preis in einen Zeichenketten-Wert (VARCHAR) mittels der CAST-Funktion wie folgt modifiziert werden: <pre> SELECT titel, COALESCE (CAST(preis AS VARCHAR), 'unbekannt') AS Verkaufspreis<br/> FROM buch</pre>",
 					"question": [
 						{
 							"type": "gap",
@@ -591,6 +592,7 @@
 				{
 					"name": "Beziehung_Ueberblick",
 					"title": "Beziehung: Überblick",
+					"video": false,
 					"question": [
 						{
 							"type": "gap",
@@ -730,6 +732,7 @@
 				{
 					"name": "Generalisierung_Beispiel",
 					"title": "Generalisierung: Beispiel",
+					"video": false, 
 					"question": [
 						{
 							"type": "mc",

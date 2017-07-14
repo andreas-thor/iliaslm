@@ -8,9 +8,7 @@ abstract class Page {
 
 	protected $id;
 
-	protected $name;
-
-	protected $title;
+	protected $page;	// JSON object
 
 	protected $questions;
 
@@ -21,13 +19,12 @@ abstract class Page {
 
 
 	public function __construct(string $chapName, $page) {
-		$this->name = $page["name"];
-		$this->title = $page["title"];
-		$this->id = $chapName . "_" . $this->name;
+		$this->page = $page;
+		$this->id = $chapName . "_" . $this->page["name"];
 		$this->questions = [];
 		$this->media = [];
 		$this->mediaBaseName = "";
-		printf("  Create %s %s (%s)\n", get_class($this), $this->name, $this->title);                                                                                                                                          
+		printf("  Create %s %s (%s)\n", get_class($this), $this->page["name"], $this->page["title"]);                                                                                                                                          
 	}
 
 
@@ -48,7 +45,7 @@ abstract class Page {
 		global $dom;
 		
 		$xmlPageObject = $dom->createElement("PageObject");
-		$xmlPageObject->appendChild(LearningModule::getXMLMetadata($this->id, $this->title));
+		$xmlPageObject->appendChild(LearningModule::getXMLMetadata($this->id, $this->page["title"]));
 		
 		$xmlPageContent = $xmlPageObject->appendChild($dom->createElement("PageContent"));
 		
@@ -58,6 +55,8 @@ abstract class Page {
 		$xmlTabs->setAttribute("Behavior", "FirstOpen");
 		
 		foreach ($this->media as $type => $typeinfo) {
+			
+			if ((isset ($this->page[$type])) && ($this->page[$type] == FALSE)) continue;	// "false" flag --> do not add
 			
 			$xmlTab = $xmlTabs->appendChild($dom->createElement("Tab"));
 			$xmlPageContent = $xmlTab->appendChild($dom->createElement("PageContent"));
@@ -75,6 +74,14 @@ abstract class Page {
 			$xmlParagraph = $xmlPageContent->appendChild ($dom->createElement ("Paragraph", $html));
 			$xmlParagraph->setAttribute("Characteristic", "Standard");
 			$xmlParagraph->setAttribute("Language", "de");
+			
+			// additional information for media
+			if ((isset ($this->page[$type])) && (is_string($this->page[$type]))) {
+				$xmlPageContent = $xmlTab->appendChild($dom->createElement("PageContent"));
+				$xmlParagraph = $xmlPageContent->appendChild ($dom->createElement ("Paragraph", $this->page[$type]));
+				$xmlParagraph->setAttribute("Characteristic", "Standard");
+				$xmlParagraph->setAttribute("Language", "de");
+			}
 			
 			
 			/* include media via MediaObject => Reference with generated ID; Media must be list in getXMLMediaObjects */ 
