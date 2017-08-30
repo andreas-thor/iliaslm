@@ -549,7 +549,7 @@
 						{
 							"type": "gap",
 							"text": "<img style=\"float:right\" width=\"200\" src=\"[URL]04_ER_Attribute_Frage.png\"> Bestimmen Sie auf Basis des rechts dargestellten ER-Diagramms die Eigenschaften der Attribute!\n\n \nAttribut A ist: |~einfach; zusammengesetzt; mehrwertig; zusammengesetzt und mehrwertig| \nAttribut A ist: |Schlüsselattribut; ~kein Schlüsselattribut| \n\nAttribut B ist: |einfach; zusammengesetzt; ~mehrwertig; zusammengesetzt und mehrwertig| \nAttribut B ist: |Schlüsselattribut; ~kein Schlüsselattribut| \n\nAttribut C ist: |einfach; zusammengesetzt; mehrwertig; ~zusammengesetzt und mehrwertig| \nAttribut C ist: |Schlüsselattribut; ~kein Schlüsselattribut| \n\nAttribut D ist: |einfach; ~zusammengesetzt; mehrwertig; zusammengesetzt und mehrwertig| \nAttribut D ist: |~Schlüsselattribut; kein Schlüsselattribut| \n\nAttribut E ist: |~einfach; zusammengesetzt; mehrwertig; zusammengesetzt und mehrwertig| \nAttribut E ist: |~Schlüsselattribut; kein Schlüsselattribut|"
-						} 
+						}
 					]
 				},
 				{
@@ -733,7 +733,7 @@
 				{
 					"name": "Generalisierung_Beispiel",
 					"title": "Generalisierung: Beispiel",
-					"video": false, 
+					"video": false,
 					"question": [
 						{
 							"type": "mc",
@@ -952,6 +952,140 @@
 				{
 					"name": "INSTEAD_OF_Trigger",
 					"title": "INSTEAD-OF-Trigger"
+				}
+			]
+		},
+		{
+			"name": "10_DBPROG",
+			"title": "10 DBPROG: Datenbank-Programmierung",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"rekursive SQL-Anfragen zu realisieren",
+						"Vor- und Nachteile persistenter SQL-Module zu erläutern",
+						"SQL-Routinen (Funktionen und Stored Procedures) zu implementieren und zu verwenden",
+						"für ein gegebenes Anwendungsszenario geeignete objekt-relationale Elemente eines DBMS auszunutzen"
+					]
+				},
+				{
+					"name": "Modellierung_Polyeder",
+					"title": "Modellierung von Polyedern"
+				},
+				{
+					"name": "Rekursion",
+					"title": "Rekursion und SQL"
+				},
+				{
+					"name": "WITH",
+					"title": "WITH-Anweisung"
+				},
+				{
+					"name": "Rekursion_Variante1",
+					"title": "Rekursion: Beispiel"
+				},
+				{
+					"name": "Rekursion_Variante2",
+					"title": "Rekursion: Beispiel (2)"
+				},
+				{
+					"name": "Tabellenwertige_Funktionen",
+					"title": "Tabellenwertige Funktionen"
+				},
+				{
+					"name": "ROW_Beispiel_DB2",
+					"title": "ROW-Typ: Beispiel DB2"
+				},
+				{
+					"name": "Kollektionstypen_ARRAY",
+					"title": "Kollektionstypen: ARRAY"
+				}
+			]
+		},
+		{
+			"name": "11_DBANB",
+			"title": "11 DBANB: Datenbank-Anbindung",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"die wesentlichen Konzepte (eingebettetes SQL vs. CLI, Cursor-Konzept) und Probleme (SQL Injection, Impedence Mismatch) der Datenbank-Anbindung zu erläutern und Vor- und Nachteile zu benennen",
+						"Objekt-Relationale-Mappings prozedural und deklarativ zu implementieren",
+						"mögliche negative Effekte konkurrierenderer Transaktionen zu erkennen, zu erklären sowie zu beheben bzw. zu vermeiden"
+					]
+				},
+				{
+					"name": "CLI_vs_ESQL",
+					"title": "CLI vs Embedded SQL"
+				},
+				{
+					"name": "Hibernate_Beispiel",
+					"title": "Hibernate: Beispiel"
+				},
+				{
+					"name": "Transaktion_Beispiel",
+					"title": "Transaktionskonzept: Beispiel"
+				},
+				{
+					"name": "LostUpdate",
+					"title": "Verlorengegangene Änderung (Lost Update)"
+				},
+				{
+					"name": "DirtyRead",
+					"title": "Schmutzuges Lesen (Dirty Read)"
+				},
+				{
+					"name": "NonRepeatableRead",
+					"title": "Inkonsistente Analyse (Non-Repeatable Read)"
+				},
+				{
+					"name": "InconsistentRead",
+					"title": "Phantom-Problem (Inconsistent Read)"
+				}
+			]
+		},
+		{
+			"name": "14_DWH",
+			"title": "14 DWH: Data Warehousing",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"Aufbau und Funktionsweise eines Data Warehouses zu erläutern",
+						"für ein gegebenes Anwendungsszenario ein geeignetes Star-Schema zu entwickeln, d.h. Fakten- und Dimensionstabellen abzuleiten sowie Kennzahlen festzulegen",
+						"Anfragen an ein DWH mit den SQL-Erweiterungen (GROUP BY, Window Functions) zu realisieren"
+					]
+				},
+				{
+					"name": "CLI_vs_ESQL",
+					"title": "CLI vs Embedded SQL"
+				},
+				{
+					"name": "Hibernate_Beispiel",
+					"title": "Hibernate: Beispiel"
+				},
+				{
+					"name": "Transaktion_Beispiel",
+					"title": "Transaktionskonzept: Beispiel"
+				},
+				{
+					"name": "LostUpdate",
+					"title": "Verlorengegangene Änderung (Lost Update)"
+				},
+				{
+					"name": "DirtyRead",
+					"title": "Schmutzuges Lesen (Dirty Read)"
+				},
+				{
+					"name": "NonRepeatableRead",
+					"title": "Inkonsistente Analyse (Non-Repeatable Read)"
+				},
+				{
+					"name": "InconsistentRead",
+					"title": "Phantom-Problem (Inconsistent Read)"
 				}
 			]
 		}
