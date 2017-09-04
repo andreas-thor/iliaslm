@@ -971,7 +971,13 @@
 				},
 				{
 					"name": "Modellierung_Polyeder",
-					"title": "Modellierung von Polyedern"
+					"title": "Modellierung von Polyedern",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Beantworten Sie die folgenden Fragen zur Speicherung eines Tetraeders im oben dargestellten relationalen Modell für Polyeder!\n\nWieviele Datensätze (Tupel) werden insgesamt (über alle Tabellen hinweg) benötigt, um einen Tetraeder zu speichern? |39|\n\nWieviele Tabellen müssen bei einer SQL-Anfrage miteinander verknüpft werden, um alle Flächen eines Eckpunkts zu bestimmen? |5|"
+						}
+					]
 				},
 				{
 					"name": "Rekursion",
@@ -990,16 +996,48 @@
 					"title": "Rekursion: Beispiel (2)"
 				},
 				{
+					"name": "PSM_SQL_Routine_1",
+					"title": "PSM: SQL-Routine (1)"
+				},
+				{
+					"name": "PSM_SQL_Routine_2",
+					"title": "PSM: SQL-Routine (2)"
+				},
+				{
 					"name": "Tabellenwertige_Funktionen",
-					"title": "Tabellenwertige Funktionen"
+					"title": "Tabellenwertige Funktionen (DB2)"
+				},
+				{
+					"name": "Tabellenwertige_Funktionen_2",
+					"title": "Tabellenwertige Funktionen (PostgreSQL)"
+				},
+				{
+					"name": "ROW",
+					"title": "ROW-Typ"
 				},
 				{
 					"name": "ROW_Beispiel_DB2",
-					"title": "ROW-Typ: Beispiel DB2"
+					"title": "ROW-Typ (Beispiel DB2)",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Markieren Sie alle Tupel, welche sich nach Ausführung von proc01() in der (anfänglich leeren) Tabelle Mitarbeiter befinden!\n\n|~(1, Beth); (1, James); (2, Beth); ~(2, James); (3, Beth); ~(3, James); (4, Beth); (4, James)|"
+						}
+					]
 				},
 				{
 					"name": "Kollektionstypen_ARRAY",
 					"title": "Kollektionstypen: ARRAY"
+				},
+				{
+					"name": "ARRAY_DB2",
+					"title": "ARRAY-Typ (Beispiel DB2)",
+					"question": [
+						{
+							"type": "mc",
+							"text": "Markieren Sie alle Tupel, welche sich nach Ausführung von proc02() in der (anfänglich leeren) Tabelle Mitarbeiter befinden!\n\n|~(1, Mike) ; (1, Foo) ; (1, Jon) ; (1, Bob) ; (2, Mike) ; (2 Foo) ; ~(2, Jon) ; (2, Bob) ; (3, Mike) ; (3, Foo) ; (3, Jon) ; ~(3, Bob) ; (4, Mike) ; (4, Foo) ; (4, Jon) ; (4, Bob) ; (10, Mike) ; (10, Foo) ; ~(10, Jon) ; (10, Bob)|"
+						}
+					]
 				}
 			]
 		},
@@ -1019,6 +1057,22 @@
 				{
 					"name": "CLI_vs_ESQL",
 					"title": "CLI vs Embedded SQL"
+				},
+				{
+					"name": "Cursor",
+					"title": "Cursor-Konzept"
+				},
+				{
+					"name": "SQLInjection_1",
+					"title": "SQL-Injection"
+				},
+				{
+					"name": "SQLInjection_2",
+					"title": "SQL-Injection: Verändern von Daten"
+				},
+				{
+					"name": "SQLInjection_3",
+					"title": "SQL-Injection: Auslesen von Daten"
 				},
 				{
 					"name": "Hibernate_Beispiel",
@@ -1060,32 +1114,44 @@
 					]
 				},
 				{
-					"name": "CLI_vs_ESQL",
-					"title": "CLI vs Embedded SQL"
+					"name": "Star_Schema",
+					"title": "Star-Schema"
 				},
 				{
-					"name": "Hibernate_Beispiel",
-					"title": "Hibernate: Beispiel"
+					"name": "Star_Join",
+					"title": "Star-Join"
 				},
 				{
-					"name": "Transaktion_Beispiel",
-					"title": "Transaktionskonzept: Beispiel"
+					"name": "Mehrdimensionale_Aggregation",
+					"title": "Mehrdimensionale Aggregation"
 				},
 				{
-					"name": "LostUpdate",
-					"title": "Verlorengegangene Änderung (Lost Update)"
+					"name": "GROUP_BY_CUBE",
+					"title": "GROUP BY CUBE"
 				},
 				{
-					"name": "DirtyRead",
-					"title": "Schmutzuges Lesen (Dirty Read)"
+					"name": "GROUP_BY_ROLLUP",
+					"title": "GROUP BY ROLLUP"
 				},
 				{
-					"name": "NonRepeatableRead",
-					"title": "Inkonsistente Analyse (Non-Repeatable Read)"
+					"name": "GROUPY_BY_GROUPING_SETS",
+					"title": "GROUP BY GROUPING SETS"
 				},
 				{
-					"name": "InconsistentRead",
-					"title": "Phantom-Problem (Inconsistent Read)"
+					"name": "Datenanalyse",
+					"title": "Datenanalyse: Anfragen"
+				},
+				{
+					"name": "Window_Function",
+					"title": "Window-Funktionen"
+				},
+				{
+					"name": "TopN",
+					"title": "Top-N-Anfragen"
+				},
+				{
+					"name": "Window_Function_Range",
+					"title": "Window-Funktionen: Range"
 				}
 			]
 		}
