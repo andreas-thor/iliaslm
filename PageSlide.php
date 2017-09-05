@@ -4,6 +4,7 @@ require_once 'Page.php';
 require_once 'Question.php';
 require_once 'QuestionGap.php';
 require_once 'QuestionMC.php';
+require_once 'QuestionFlash.php';
 
 class PageSlide extends Page {
 
@@ -43,9 +44,14 @@ class PageSlide extends Page {
 			foreach ($page["question"] as $pos => $question) {
 				
 				$q = NULL;
+				$itemId = $this->id . "_" . $pos;
 				switch ($question["type"]) {
-					case "gap": $q = new QuestionGap($this->id, $pos, $question); break;
-					case "mc" : $q = new QuestionMC ($this->id, $pos, $question); break;
+					case "gap": $q = new QuestionGap($itemId, $question); break;
+					case "mc" : $q = new QuestionMC ($itemId, $question); break;
+					case "SELECT": 
+					case "CHECK":
+					case "VIEW":
+						$q = new QuestionFlash ($itemId, $question); break;
 				}
 				
 				array_push($this->questions, $q);

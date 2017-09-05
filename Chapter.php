@@ -55,15 +55,15 @@ class Chapter {
 	}
 
 
-	public function getXMLItems() {
-		$xmlItems = [];
+	public function getItems() {
+		$items = [];
 		
 		/* @var $p Page */
 		foreach ($this->pages as $p) {
-			$xmlItems = array_merge($xmlItems, $p->getXMLItems());
+			$items = array_merge($items, $p->getItems());
 		}
 		
-		return $xmlItems;
+		return $items;
 	}
 	
 	

@@ -102,15 +102,15 @@ abstract class Page {
 
 
 
-	public function getXMLItems() {
-		$xmlItems = [];
+	public function getItems() {
+		$items = [];
 		
 		/* @var $q Question */
 		foreach ($this->questions as $q) {
-			array_push($xmlItems, $q->getXMLItem());
+			array_push($items, $q);
 		}
 		
-		return $xmlItems;
+		return $items;
 	}
 	
 	

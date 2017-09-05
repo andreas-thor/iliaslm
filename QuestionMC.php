@@ -3,6 +3,18 @@
 class QuestionMC extends Question {
 
 
+	private $text;
+	
+	
+	public function __construct(string $id, $json) {
+		
+		parent::__construct($id);
+		
+		global $url;
+		$this->text = str_replace("[URL]", $url, $json["text"]);
+	}
+	
+	
 
 	public function getXMLItem() {
 		

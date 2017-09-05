@@ -4,17 +4,10 @@ abstract class Question {
 
 	protected $id;
 
-	protected $text;
-
-
-
-	public function __construct(string $pageId, $pos, $question) {
-		global $url;
+	public function __construct(string $id) {
 		
-		$this->id = $pageId . "_" . $pos;
-		$this->text = str_replace("[URL]", $url, $question["text"]);
+		$this->id = $id;
 		printf("    Create %s %s\n", get_class($this), $this->id);
-		
 	}
 
 

@@ -1,32 +1,35 @@
 <?php 
 
-require_once('Chapter.php');
+require_once('LearningModule.php');
+
 // error_reporting(E_ERROR);
 
 
 
 $url = "https://www1.hft-leipzig.de/thor/dbs/";		// global URL that has all the media
-$dom;	// DOMDocument (XML File) for Learning Module
-$qti; 	// DOMDocument (XML File) for Items
-$lmid = time();		// Id for Learning Module (== current UNIX timestamp)
+
+/*
+$jsonLM = readJSON("lm.json");
+
+$lm = new LearningModule(time(), $jsonLM['title'], $jsonLM['chapter']);
+$lm->writeZip("ilias/Vorlage/");
 
 
+$ip = new ItemPool(time(), "Items von " . $jsonLM['title'], $lm->getItems());
+$ip->writeZip("ilias/Vorlage/");
+*/
 
-$json = readJSON("lm.json");
 
-$chapters = [];	// Learning Module = array of chapters
-foreach ($json['chapter'] as $chap) {
-	array_push ($chapters, new Chapter($chap));
+$ipFlash = new ItemPool(time(), "Flash Items", []);
+$jsonFlash = readJSON("E:/Dev/DMT/WebContent/WEB-INF/repo/bibliothek.json");
+foreach ($jsonFlash as $itemId => $jsonItem) {
+	if (substr($itemId, 0, 1) == "_") continue;
+	
+	if ($itemId != "1") continue;
+	
+	$ipFlash->addItem(new QuestionFlash($itemId, $jsonItem));
 }
-
-createDOM($chapters, $lmid, $json['title']);
-createQTI($chapters);
-
-writeZip($lmid, "ilias/Vorlage/");
-
-
-
-
+$ipFlash->writeZip("ilias/Vorlage/");
 
 
 
@@ -41,70 +44,5 @@ function readJSON ($jsonFile) {
 }
 
 
-
-function createDOM (array $chapters, int $id, string $title) {
-	
-	global $dom;
-	
-	$dom = DOMDocument::loadXML('<?xml version="1.0" encoding="utf-8"?><!DOCTYPE ContentObject SYSTEM "http://www.ilias.de/download/dtd/ilias_co_3_7.dtd"><ContentObject Type="LearningModule"></ContentObject>');
-	$dom->documentElement->appendChild (LearningModule::getXMLMetadata($id, $title . " created " . date("Y-m-d H:i:s"), "created " . date("Y-m-d H:i:s")));
-	
-	/* @var $c Chapter */
-	foreach ($chapters as $c) {
-		$dom->documentElement->appendChild ($c->getXMLStructureObject());
-	}
-	
-	/* @var $c Chapter */
-	foreach ($chapters as $c) {
-		foreach ($c->getXMLPageObjects() as $d) {
-			$dom->documentElement->appendChild ($d);
-		}
-	}
-	
-	// WE DO NOT INCLUDE VIA MEDIAOBJECT ANYMORE
-// 	/* @var $c Chapter */
-// 	foreach ($chapters as $c) {
-// 		foreach ($c->getXMLMediaObjects($url) as $d) {
-// 			$dom->documentElement->appendChild ($d);
-// 		}
-// 	}
-	
-	$dom->documentElement->appendChild (LearningModule::getXMLProperties());
-	
-}
-
-
-function createQTI(array $chapters) {
-	global $qti;
-	
-	$qti = DOMDocument::loadXML('<?xml version="1.0" encoding="utf-8"?><!DOCTYPE questestinterop SYSTEM "ims_qtiasiv1p2p1.dtd"><questestinterop></questestinterop>');
-	
-	/* @var $c Chapter */
-	foreach ($chapters as $c) {
-		foreach ($c->getXMLItems() as $d) {
-			$qti->documentElement->appendChild ($d);
-		}
-	}
-	
-}
-
-
-function writeZip (int $id, string $path) {
-	global $dom, $qti;
-	
-	$xmlName = sprintf ('dbs_lm_%d', $id);
-	
-	$zip = new ZipArchive();
-	if ($zip->open(sprintf('%s%s.zip', $path, $xmlName), ZIPARCHIVE::CREATE | ZIPARCHIVE::OVERWRITE) != TRUE) {
-		print ("\n\nErr");
-	}
-	$zip->addFromString (sprintf ('%1$s/%1$s.xml', $xmlName), $dom->saveXML() );
-	$zip->addEmptyDir ( sprintf ('%1$s/objects', $xmlName));
-	if ($qti->documentElement->hasChildNodes()) {
-		$zip->addFromString (sprintf ('%1$s/qti.xml', $xmlName), $qti->saveXML() );
-	}
-	$zip->close();
-	
-}
 
 ?>
