@@ -2,7 +2,7 @@
 
 require_once('LearningModule.php');
 
-// error_reporting(E_ERROR);
+// error_reporting(E_ALL);
 
 
 
@@ -20,14 +20,22 @@ $ip->writeZip("ilias/Vorlage/");
 */
 
 
+
+
 $ipFlash = new ItemPool(time(), "Flash Items", []);
-$jsonFlash = readJSON("E:/Dev/DMT/WebContent/WEB-INF/repo/bibliothek.json");
-foreach ($jsonFlash as $itemId => $jsonItem) {
-	if (substr($itemId, 0, 1) == "_") continue;
-	
-	if ($itemId != "1") continue;
-	
-	$ipFlash->addItem(new QuestionFlash($itemId, $jsonItem));
+
+foreach (["bibliothek" => "03_SQL", "auto_VP" => "05_ER2RM", "auto_HP" => "05_ER2RM", "auto_VR" => "05_ER2RM", "ausleihe" => "08_DK"] as $repo => $description) {
+
+		
+	$jsonFlash = readJSON("E:/Dev/DMT/WebContent/WEB-INF/repo/" . $repo . ".json");
+	foreach ($jsonFlash as $itemId => $jsonItem) {
+		if (substr($itemId, 0, 1) == "_") continue;
+		
+		// if ($itemId != "1") continue;
+		
+		$jsonItem["description"] = $description;
+		$ipFlash->addItem(new QuestionFlash($repo . ":" . $itemId, $jsonItem));
+	}
 }
 $ipFlash->writeZip("ilias/Vorlage/");
 
@@ -40,6 +48,7 @@ function readJSON ($jsonFile) {
 		printf ("Could not read file %s\n", $jsonFile);
 		exit;
 	}
+	
 	return json_decode ($content, TRUE);
 }
 

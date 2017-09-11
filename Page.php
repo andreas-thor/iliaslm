@@ -61,12 +61,13 @@ abstract class Page {
 			$xmlTab = $xmlTabs->appendChild($dom->createElement("Tab"));
 			$xmlPageContent = $xmlTab->appendChild($dom->createElement("PageContent"));
 
+			// TODO: Request bei onplay, onseeking, onpause
 			/* include media via HTML5 => not getXMLMediaObject necessary*/
 			$html = "";
 			$location = $url . sprintf ($typeinfo["namepattern"], $this->mediaBaseName);
 			switch ($typeinfo["format"]) {
 				case "image/jpeg":		$html = sprintf ('<img src="%s" width="640" height="480" style="border:1px solid black"/>', $location); break;
-				case "video/mp4":		$html = sprintf ('<video controls width="640" height="480" style="border:1px solid black"><source src="%s" type="%s"/></video>', $location, $typeinfo["format"]); break;
+				case "video/mp4":		$html = sprintf ('<video onplay="alert(window.location.href); console.log(document.cookie);" controls width="640" height="480" style="border:1px solid black"><source src="%s" type="%s"/></video>', $location, $typeinfo["format"]); break;
 				case "application/pdf":	$html = sprintf ('<object width="640" height="480" data="%1$s" type="%2$s"><a href="%1$s">Download</a></object>', $location, $typeinfo["format"]); break;
 				
 			}

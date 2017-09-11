@@ -17,6 +17,7 @@ class LearningModule {
 		$this->chapters = [];	// Learning Module = array of chapters
 		foreach ($jsonChapters as $chap) {
 			array_push ($this->chapters, new Chapter($chap));
+			// break;
 		}
 	}
 		

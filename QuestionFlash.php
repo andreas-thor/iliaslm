@@ -5,6 +5,7 @@ require_once 'Question.php';
 class QuestionFlash extends Question {
 
 	private $question;
+	private $description;
 	
 	public function __construct(string $id, $json) {
 		
@@ -12,6 +13,8 @@ class QuestionFlash extends Question {
 		
 		global $url;
 		$this->question = str_replace("[URL]", $url, $json["question"]);
+		$this->description = str_replace("[URL]", $url, $json["description"]);
+		
 	}
 
 	
@@ -29,12 +32,13 @@ class QuestionFlash extends Question {
 	public function getXMLItem() {
 		
 		global $dom;
-		$taskId = "bibliothek:" . $this->id;
 		
 		$xmlItem = $dom->createElement("item");
 		$xmlItem->setAttribute("ident", $this->id);
 		$xmlItem->setAttribute("maxattempts", "1");
-		$xmlItem->setAttribute("title", $taskId);
+		$xmlItem->setAttribute("title", $this->id);
+		
+		$xmlItem->appendChild ($dom->createElement("qticomment", $this->description));
 		
 		
 		$xmlItemMetadata =  $xmlItem->appendChild($dom->createElement("itemmetadata"));
@@ -47,7 +51,7 @@ class QuestionFlash extends Question {
 		$xmlQTIMetadata->appendChild ($this->getXMLQTIMetaDataField("height", "500"));
 		$xmlQTIMetadata->appendChild ($this->getXMLQTIMetaDataField("applet", "dmt.swf"));
 		$xmlQTIMetadata->appendChild ($this->getXMLQTIMetaDataField("swf", base64_encode(file_get_contents("E:/Dev/DMT/client/flash/bin/dmt.swf"))));
-		$xmlQTIMetadata->appendChild ($this->getXMLQTIMetaDataField("params", "a:1:{s:6:\"taskid\";s:" . strlen($taskId) . ":\"" . $taskId . "\";}"));
+		$xmlQTIMetadata->appendChild ($this->getXMLQTIMetaDataField("params", "a:1:{s:6:\"taskid\";s:" . strlen($this->id) . ":\"" . $this->id . "\";}"));
 		
 		
 		$xmlPresentation = $xmlItem->appendChild($dom->createElement("presentation"));
