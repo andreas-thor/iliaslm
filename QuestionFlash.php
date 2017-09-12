@@ -6,6 +6,7 @@ class QuestionFlash extends Question {
 
 	private $question;
 	private $description;
+	private $title;
 	
 	public function __construct(string $id, $json) {
 		
@@ -14,6 +15,7 @@ class QuestionFlash extends Question {
 		global $url;
 		$this->question = str_replace("[URL]", $url, $json["question"]);
 		$this->description = str_replace("[URL]", $url, $json["description"]);
+		$this->title = isset ($json["title"]) ? $json["title"] . " " : "";
 		
 	}
 
@@ -36,7 +38,7 @@ class QuestionFlash extends Question {
 		$xmlItem = $dom->createElement("item");
 		$xmlItem->setAttribute("ident", $this->id);
 		$xmlItem->setAttribute("maxattempts", "1");
-		$xmlItem->setAttribute("title", $this->id);
+		$xmlItem->setAttribute("title", $this->title . "[". $this->id . "]");
 		
 		$xmlItem->appendChild ($dom->createElement("qticomment", $this->description));
 		
