@@ -24,7 +24,10 @@ foreach ([
 	"auto_HP" => "05_ER2RM",
 	"auto_VR" => "05_ER2RM",
 	"ausleihe" => "08_DK",
-	"ausleihenutzung" => "10_DBPROG"
+	"ausleihenutzung" => "10_DBPROG",
+	"geraet" => "11_DBANB", 
+	"flug_2NF" => "06_NORM",
+	"flug_3NF" => "06_NORM"
 ] as $repo => $description) {
 	
 	$jsonFlash = readJSON("E:/Dev/DMT/WebContent/WEB-INF/repo/" . $repo . ".json");
@@ -45,7 +48,7 @@ $ipFlash->writeZip("ilias/Vorlage/");
 function readJSON($jsonFile) {
 	printf("Reading json file %s\n", $jsonFile);
 	$content = file_get_contents($jsonFile);
-	$content = iconv('UTF-8', 'UTF-8//IGNORE', utf8_encode($content));
+// 	$content = iconv('UTF-8', 'UTF-8//IGNORE', utf8_encode($content));
 	
 	if ($content === false) {
 		printf("Could not read file %s\n", $jsonFile);
