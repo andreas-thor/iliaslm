@@ -18,29 +18,29 @@ class QuestionMC extends Question {
 
 	public function getXMLItem() {
 		
-		global $qti;
+		global $dom;
 		
 		
-		$xmlItem = $qti->createElement("item");
+		$xmlItem = $dom->createElement("item");
 		$xmlItem->setAttribute("ident", $this->id);
 		$xmlItem->setAttribute("maxattempts", "3");
 		$xmlItem->setAttribute("title", "Titel");
-		$xmlPresentation = $xmlItem->appendChild($qti->createElement("presentation"));
+		$xmlPresentation = $xmlItem->appendChild($dom->createElement("presentation"));
 		$xmlPresentation->setAttribute("label", "Titel");
-		$xmlFlow = $xmlPresentation->appendChild($qti->createElement("flow"));
+		$xmlFlow = $xmlPresentation->appendChild($dom->createElement("flow"));
 		
-		$xmlResprocessing = $xmlItem->appendChild($qti->createElement("resprocessing"));
-		($xmlResprocessing->appendChild($qti->createElement("outcomes")))->appendChild($qti->createElement("decvar"));
+		$xmlResprocessing = $xmlItem->appendChild($dom->createElement("resprocessing"));
+		($xmlResprocessing->appendChild($dom->createElement("outcomes")))->appendChild($dom->createElement("decvar"));
 		
 		$blockText = explode("|", $this->text);
-		$xmlMattext = ($xmlFlow->appendChild($qti->createElement("material")))->appendChild($qti->createElement("mattext", $blockText[0]));
+		$xmlMattext = ($xmlFlow->appendChild($dom->createElement("material")))->appendChild($dom->createElement("mattext", $blockText[0]));
 		$xmlMattext->setAttribute("texttype", "text/plain");
 		
-				$xmlResponseLid = $xmlFlow->appendChild($qti->createElement("response_lid"));
+				$xmlResponseLid = $xmlFlow->appendChild($dom->createElement("response_lid"));
 				$xmlResponseLid->setAttribute("ident", "MCMR");
 				$xmlResponseLid->setAttribute("rcardinality", "Multiple");
 				
-				$xmlRenderChoice = $xmlResponseLid->appendChild($qti->createElement("render_choice"));
+				$xmlRenderChoice = $xmlResponseLid->appendChild($dom->createElement("render_choice"));
 				$xmlRenderChoice->setAttribute("shuffle", "No");
 				
 				foreach (explode(";", $blockText[1]) as $choiceNumber => $choiceText) {	// choices are separated by ";"
@@ -52,17 +52,17 @@ class QuestionMC extends Question {
 						$choiceText = substr($choiceText, 1);	// remove *-prefix
 					}
 					
-					$xmlResponseLabel = $xmlRenderChoice->appendChild($qti->createElement("response_label"));
+					$xmlResponseLabel = $xmlRenderChoice->appendChild($dom->createElement("response_label"));
 					$xmlResponseLabel->setAttribute("ident", $choiceNumber);
-					$xmlMattext = ($xmlResponseLabel->appendChild($qti->createElement("material")))->appendChild($qti->createElement("mattext", $choiceText));
+					$xmlMattext = ($xmlResponseLabel->appendChild($dom->createElement("material")))->appendChild($dom->createElement("mattext", $choiceText));
 					$xmlMattext->setAttribute("texttype", "text/plain");
 					
-					$xmlRespCondition = $xmlResprocessing->appendChild($qti->createElement("respcondition"));
+					$xmlRespCondition = $xmlResprocessing->appendChild($dom->createElement("respcondition"));
 					$xmlRespCondition->setAttribute("continue", "Yes");
-					$xmlVarEqual = ($xmlRespCondition->appendChild($qti->createElement("conditionvar")))->appendChild($qti->createElement("varequal", $choiceNumber));
+					$xmlVarEqual = ($xmlRespCondition->appendChild($dom->createElement("conditionvar")))->appendChild($dom->createElement("varequal", $choiceNumber));
 					$xmlVarEqual->setAttribute("respident", "MCMR");
 					
-					$xmlSetVar = $xmlRespCondition->appendChild($qti->createElement("setvar", $points));
+					$xmlSetVar = $xmlRespCondition->appendChild($dom->createElement("setvar", $points));
 					$xmlSetVar->setAttribute("action", "Add");
 				}
 		

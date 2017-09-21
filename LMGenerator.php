@@ -5,16 +5,15 @@ require_once ('LearningModule.php');
 
 $url = "https://www1.hft-leipzig.de/thor/dbs/"; // global URL that has all the media
 
+
+$jsonLM = readJSON("lm.json");
+$lm = new LearningModule(time(), $jsonLM['title'], $jsonLM['chapter']);
+$lm->writeZip("ilias/Vorlage/");
+$ip = new ItemPool(time(), "Items von " . $jsonLM['title'], $lm->getItems());
+$ip->writeZip("ilias/Vorlage/");
+
 /*
- * $jsonLM = readJSON("lm.json");
- *
- * $lm = new LearningModule(time(), $jsonLM['title'], $jsonLM['chapter']);
- * $lm->writeZip("ilias/Vorlage/");
- *
- *
- * $ip = new ItemPool(time(), "Items von " . $jsonLM['title'], $lm->getItems());
- * $ip->writeZip("ilias/Vorlage/");
- */
+
 
 $ipFlash = new ItemPool(time(), "Flash Items", []);
 
@@ -23,11 +22,13 @@ foreach ([
 	"auto_VP" => "05_ER2RM",
 	"auto_HP" => "05_ER2RM",
 	"auto_VR" => "05_ER2RM",
+	"flug_2NF" => "06_NORM",
+	"flug_3NF" => "06_NORM",
 	"ausleihe" => "08_DK",
 	"ausleihenutzung" => "10_DBPROG",
-	"geraet" => "11_DBANB", 
-	"flug_2NF" => "06_NORM",
-	"flug_3NF" => "06_NORM"
+	"geometrie" => "10_DBPROG",
+	"geraet" => "11_DBANB"
+
 ] as $repo => $description) {
 	
 	$jsonFlash = readJSON("E:/Dev/DMT/WebContent/WEB-INF/repo/" . $repo . ".json");
@@ -43,7 +44,7 @@ foreach ([
 }
 $ipFlash->writeZip("ilias/Vorlage/");
 
-
+*/
 
 function readJSON($jsonFile) {
 	printf("Reading json file %s\n", $jsonFile);
