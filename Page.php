@@ -48,6 +48,12 @@ abstract class Page {
 		$xmlPageObject->appendChild(LearningModule::getXMLMetadata($this->id, $this->page["title"]));
 		
 		$xmlPageContent = $xmlPageObject->appendChild($dom->createElement("PageContent"));
+
+		/*
+ 		$xmlPageContent->appendChild ($dom->createElement ("Paragraph", file_get_contents("Page.js")));
+ 		$xmlPageContent->appendChild ($dom->createElement ("Paragraph", "<script>jQuery(document).ready(function() { dmt_send('onload'); } );</script>"));
+ 		$xmlPageContent->appendChild ($dom->createElement ("Paragraph", "<script>jQuery(document).ready(function() { jQuery('input.ilc_qsubmit_Submit').on('click', function() { dmt_send('onsubmit'); } ); });</script>"));
+		*/
 		
 		$xmlTabs = $xmlPageContent->appendChild($dom->createElement("Tabs"));
 		$xmlTabs->setAttribute("Type", "VerticalAccordion");
@@ -67,7 +73,7 @@ abstract class Page {
 			$location = $url . sprintf ($typeinfo["namepattern"], $this->mediaBaseName);
 			switch ($typeinfo["format"]) {
 				case "image/jpeg":		$html = sprintf ('<img src="%s" width="640" height="480" style="border:1px solid black"/>', $location); break;
-				case "video/mp4":		$html = sprintf ('<video onplay="alert(window.location.href); console.log(document.cookie);" controls width="640" height="480" style="border:1px solid black"><source src="%s" type="%s"/></video>', $location, $typeinfo["format"]); break;
+				case "video/mp4":		$html = sprintf ('<video controls width="640" height="480" style="border:1px solid black"><source src="%s" type="%s"/></video>', $location, $typeinfo["format"]); break;
 				case "application/pdf":	$html = sprintf ('<object width="640" height="480" data="%1$s" type="%2$s"><a href="%1$s">Download</a></object>', $location, $typeinfo["format"]); break;
 				
 			}

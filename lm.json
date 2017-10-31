@@ -1154,6 +1154,53 @@
 					"title": "Window-Funktionen: Range"
 				}
 			]
+		},
+		{
+			"name": "15_DM",
+			"title": "15 DM: Data Mining",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"geeignete Data-Mining-Verfahren für konkrete Analyseprobleme auszuwählen",
+						"Assoziationsregeln, Entscheidungsbäume und Clusterings zu berechnen",
+						"Data-Mining-Modelle zu bewerten und zu interpretieren"
+					]
+				},
+				{
+					"name": "Berechnung_Support_Confidence_Beispiel",
+					"title": "Berechnung Support und Confidence: Beispiel"
+				},
+				{
+					"name": "Berechnung_Support_Confidence_Beispiel2",
+					"title": "Berechnung Support und Confidence: Beispiel (2)"
+				},
+				{
+					"name": "A_Priori_Algorithmus_Beispiel",
+					"title": "A-Priori-Algorithmus: Beispiel"
+				},
+				{
+					"name": "Generierung_der_Assoziationsregeln",
+					"title": "Generierung der Assoziationsregeln"
+				},
+				{
+					"name": "K_Means_Algorithmus_Beispiel",
+					"title": "K-Means-Algorithmus: Beispiel"
+				},
+				{
+					"name": "Canopy_Clustering_Beispiel",
+					"title": "Canopy Clustering: Beispiel"
+				},
+				{
+					"name": "Entscheidungsbaeume",
+					"title": "Entscheidungsbäume"
+				},
+				{
+					"name": "Beispiel_Entscheidungsbaum_Attributauswahl",
+					"title": "Beispiel Entscheidungsbaum: Attributauswahl"
+				}
+			]
 		}
 	]
 }
