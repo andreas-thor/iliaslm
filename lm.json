@@ -1185,7 +1185,7 @@
 					"title": "Generierung der Assoziationsregeln"
 				},
 				{
-					"name": "K_Means_Algorithmus_Beispiel",
+					"name": "K_Means_Clustering_Beispiel",
 					"title": "K-Means-Algorithmus: Beispiel"
 				},
 				{
@@ -1199,6 +1199,84 @@
 				{
 					"name": "Beispiel_Entscheidungsbaum_Attributauswahl",
 					"title": "Beispiel Entscheidungsbaum: Attributauswahl"
+				}
+			]
+		},
+		{
+			"name": "16_XML-Def",
+			"title": "16 XML-Def: XML-Datendefinition",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"wohlgeformte XML-Dokumente zur Datenmodellierung zu erstellen",
+						"die Gültigkeit von XML-Dokumenten bzgl. einer DTD oder eines XML-Schemas zu validieren",
+						"DTDs und XML-Schemas zu erstellen"
+					]
+				},
+				{
+					"name": "Dokument_Beispiel",
+					"title": "XML-Dokument: Beispiel"
+				},
+				{
+					"name": "Kardinalitaetsrestriktionen",
+					"title": "Kardinalitätsrestriktionen"
+				},
+				{
+					"name": "Schluesselbedingung",
+					"title": "XML-Schema: Schlüsselbedingungen"
+				},
+				{
+					"name": "Beispiel_Student_Vorlesung",
+					"title": "Beispiel: Student hört Vorlesung"
+				},
+				{
+					"name": "XMLTABLE",
+					"title": "XMLTABLE"
+				}
+			]
+		},
+		{
+			"name": "17_XML-Query",
+			"title": "17 XML-Query: XML-Anfragesprachen",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"Aufbau und Funktionsweise von XPath- und XQuery-Anfragen zu erläutern",
+						"gegebene XPath- und XQuery-Anfragen auf Dokumenten auszuführen",
+						"anwendungsspezifische XPath- und XQuery-Anfragen zu formulieren"
+					]
+				},
+				{
+					"name": "XPath_Beispiele",
+					"title": "XPath: Beispiele"
+				},
+				{
+					"name": "XPath_Beispiele2",
+					"title": "XPath: Beispiele (2)"
+				},
+				{
+					"name": "FLWOR_For_Let",
+					"title": "FLWOR: For/Let"
+				},
+				{
+					"name": "FLWOR_Where",
+					"title": "FLWOR: Where"
+				},
+				{
+					"name": "XQuery_Reihenfolge_Sortierung",
+					"title": "XQuery: Reihenfolge/Sortierung"
+				},				
+				{
+					"name": "XQuery_Verbundoperationen",
+					"title": "XQuery: Verbundoperationen"
+				},
+				{
+					"name": "XQuery_Gruppierung_Aggregation",
+					"title": "XQuery: Gruppierung/Aggregation"
 				}
 			]
 		}

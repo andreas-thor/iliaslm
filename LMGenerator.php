@@ -5,20 +5,25 @@ require_once ('LearningModule.php');
 
 $url = "https://www1.hft-leipzig.de/thor/dbs/"; // global URL that has all the media
 
-/*
+
+
 // generate LM
 $jsonLM = readJSON("lm.json");
 $lm = new LearningModule(time(), $jsonLM['title'], $jsonLM['chapter']);
 $lm->writeZip("ilias/Vorlage/");
 
+
+
+/*
 // generate items of LM
 $ip = new ItemPool(time(), "Items von " . $jsonLM['title'], $lm->getItems());
 $ip->writeZip("ilias/Vorlage/");
 */
 
 
+/*
+// generate Flash Items
 
-// genarate Flash Items
 $ipFlash = new ItemPool(time(), "Flash Items", []);
 
 foreach ([
@@ -31,7 +36,8 @@ foreach ([
 	"ausleihe" => "08_DK",
 	"ausleihenutzung" => "10_DBPROG",
 	"geometrie" => "10_DBPROG",
-	"geraet" => "11_DBANB"
+	"geraet" => "11_DBANB",
+	"formel1" => "14_DWH"
 
 ] as $repo => $description) {
 	
@@ -48,7 +54,7 @@ foreach ([
 }
 $ipFlash->writeZip("ilias/Vorlage/");
 
-
+*/
 
 function readJSON($jsonFile) {
 	printf("Reading json file %s\n", $jsonFile);
