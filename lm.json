@@ -913,7 +913,7 @@
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie für die nachfolgenden Integritätsbedingungen die Reichweite an, d.h. Attribut, Tupel, Tabelle oder mehrere Tabellen.\n\n* Alter >= 18: |~Attribut; Tupel; Tabelle; Mehrere Tabellen|\n* Gehaltssumme < Budget: |Attribut; ~Tupel; Tabelle; Mehrere Tabellen|\n* PNR ist eindeutig: |Attribut; Tupel; ~Tabelle; Mehrere Tabellen|\n* Gehaltssumme ist Summe der Gehalts-Werte der zugehörigen Personen: |Attribut; Tupel; Tabelle; ~Mehrere Tabellen|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |Attribut; ~Tupel; Tabelle; Mehrere Tabellen|\n* Person.ANR hat Wert, der in Abteilung.ANR auftritt: |Attribut; Tupel; Tabelle; ~Mehrere Tabellen|\n* Abteilung sind maximal 10 Personen zugeordnet: |Attribut; Tupel; ~Tabelle; Mehrere Tabellen|"
+							"text": "Geben Sie für die nachfolgenden Integritätsbedingungen die Reichweite an, d.h. Attribut, Tupel, Tabelle oder mehrere Tabellen.\n\n* Alter >= 18: |~Attribut; Tupel; Tabelle; Mehrere Tabellen|\n* Gehaltssumme < Budget: |Attribut; ~Tupel; Tabelle; Mehrere Tabellen|\n* PNR ist eindeutig: |Attribut; Tupel; ~Tabelle; Mehrere Tabellen|\n* Gehaltssumme ist Summe der Gehalts-Werte der zugehörigen Personen: |Attribut; Tupel; Tabelle; ~Mehrere Tabellen|\n* Gehalt darf (bei UPDATE) nicht kleiner werden: |~Attribut; Tupel; Tabelle; Mehrere Tabellen|\n* Person.ANR hat Wert, der in Abteilung.ANR auftritt: |Attribut; Tupel; Tabelle; ~Mehrere Tabellen|\n* Abteilung sind maximal 10 Personen zugeordnet: |Attribut; Tupel; ~Tabelle; Mehrere Tabellen|"
 						}
 					]
 				},
