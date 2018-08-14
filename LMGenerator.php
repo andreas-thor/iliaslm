@@ -6,12 +6,12 @@ require_once ('LearningModule.php');
 $url = "https://www1.hft-leipzig.de/thor/dbs/"; // global URL that has all the media
 
 
-/*
+
 // generate LM
 $jsonLM = readJSON("lm.json");
-$lm = new LearningModule(time(), $jsonLM['title'], $jsonLM['chapter']);
+$lm = new LearningModule(time(), $jsonLM['title'], array_slice ($jsonLM['chapter'], 0, 8));
 $lm->writeZip("ilias/Vorlage/");
-*/
+
 
 
 /*
@@ -23,7 +23,7 @@ $ip->writeZip("ilias/Vorlage/");
 
 
 // generate Flash Items
-
+/*
 $ipFlash = new ItemPool(time(), "Flash Items", []);
 
 foreach ([
@@ -54,7 +54,7 @@ foreach ([
 	}
 }
 $ipFlash->writeZip("ilias/Vorlage/");
-
+*/
 
 
 function readJSON($jsonFile) {

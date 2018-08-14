@@ -134,7 +134,7 @@ class LearningModule {
     		"PageHeader" => "pg_title",
     		"TOCMode" => "pages",
     		"ActiveLMMenu" => "y",
-    		"ActiveNumbering" => "n",
+    		"ActiveNumbering" => "y",
     		"ActiveTOC" => "y",
     		"ActivePrintView" => "y",
     		"CleanFrames" => "n",

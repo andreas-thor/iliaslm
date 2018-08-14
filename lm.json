@@ -3,7 +3,7 @@
 	"chapter": [
 		{
 			"name": "01_INTRO",
-			"title": "01 INTRO: Einführung",
+			"title": "INTRO: Einführung",
 			"page": [
 				{
 					"name": "overview",
@@ -55,7 +55,7 @@
 		},
 		{
 			"name": "02_RM",
-			"title": "02 RM: Das Relationale Modell",
+			"title": "RM: Das Relationale Modell",
 			"page": [
 				{
 					"name": "overview",
@@ -149,7 +149,7 @@
 		},
 		{
 			"name": "03_SQL-1",
-			"title": "03 SQL-1: Datenbanksprache SQL (Teil 1)",
+			"title": "SQL-1: Datenbanksprache SQL (Teil 1)",
 			"page": [
 				{
 					"name": "overview",
@@ -290,7 +290,7 @@
 		},
 		{
 			"name": "03_SQL-2",
-			"title": "03 SQL-2: Datenbanksprache SQL (Teil 2)",
+			"title": "SQL-2: Datenbanksprache SQL (Teil 2)",
 			"page": [
 				{
 					"name": "overview",
@@ -529,7 +529,7 @@
 		},
 		{
 			"name": "04_ER",
-			"title": "04 ER: Entity-Relationship-Modell",
+			"title": "ER: Entity-Relationship-Modell",
 			"page": [
 				{
 					"name": "overview",
@@ -653,7 +653,7 @@
 		},
 		{
 			"name": "05_ER2RM",
-			"title": "05 ER2RM: Umwandlung ER-Modelle in relationale Modelle",
+			"title": "ER2RM: Umwandlung ER-Modelle in relationale Modelle",
 			"page": [
 				{
 					"name": "overview",
@@ -769,7 +769,7 @@
 		},
 		{
 			"name": "06_NORM",
-			"title": "06 NORM: Normalisierung von Relationen",
+			"title": "NORM: Normalisierung von Relationen",
 			"page": [
 				{
 					"name": "overview",
@@ -867,7 +867,7 @@
 		},
 		{
 			"name": "08_DK",
-			"title": "08 DK: Datenkontrolle",
+			"title": "DK: Datenkontrolle",
 			"page": [
 				{
 					"name": "overview",
@@ -957,7 +957,7 @@
 		},
 		{
 			"name": "10_DBPROG",
-			"title": "10 DBPROG: Datenbank-Programmierung",
+			"title": "DBPROG: Datenbank-Programmierung",
 			"page": [
 				{
 					"name": "overview",
@@ -1043,7 +1043,7 @@
 		},
 		{
 			"name": "11_DBANB",
-			"title": "11 DBANB: Datenbank-Anbindung",
+			"title": "DBANB: Datenbank-Anbindung",
 			"page": [
 				{
 					"name": "overview",
@@ -1102,7 +1102,7 @@
 		},
 		{
 			"name": "14_DWH",
-			"title": "14 DWH: Data Warehousing",
+			"title": "DWH: Data Warehousing",
 			"page": [
 				{
 					"name": "overview",
@@ -1157,7 +1157,7 @@
 		},
 		{
 			"name": "15_DM",
-			"title": "15 DM: Data Mining",
+			"title": "DM: Data Mining",
 			"page": [
 				{
 					"name": "overview",
@@ -1204,7 +1204,7 @@
 		},
 		{
 			"name": "16_XML-Def",
-			"title": "16 XML-Def: XML-Datendefinition",
+			"title": "XML-Def: XML-Datendefinition",
 			"page": [
 				{
 					"name": "overview",
@@ -1239,7 +1239,7 @@
 		},
 		{
 			"name": "17_XML-Query",
-			"title": "17 XML-Query: XML-Anfragesprachen",
+			"title": "XML-Query: XML-Anfragesprachen",
 			"page": [
 				{
 					"name": "overview",
