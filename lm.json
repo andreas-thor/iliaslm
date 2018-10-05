@@ -1038,6 +1038,18 @@
 							"text": "Markieren Sie alle Tupel, welche sich nach Ausführung von proc02() in der (anfänglich leeren) Tabelle Mitarbeiter befinden!\n\n|~(1, Mike) ; (1, Foo) ; (1, Jon) ; (1, Bob) ; (2, Mike) ; (2 Foo) ; ~(2, Jon) ; (2, Bob) ; (3, Mike) ; (3, Foo) ; (3, Jon) ; ~(3, Bob) ; (4, Mike) ; (4, Foo) ; (4, Jon) ; (4, Bob) ; (10, Mike) ; (10, Foo) ; ~(10, Jon) ; (10, Bob)|"
 						}
 					]
+				},
+				{
+					"name": "DISTINCT",
+					"title": "DISTINCT-Typen (Umbenannte Typen)"
+				},
+				{
+					"name": "Typisierte_Tabelle_DB2",
+					"title": "Typisierte Tabellen (Beispiel DB2)"
+				},
+				{
+					"name": "REF_Anfragen",
+					"title": "Strukturierte Typen und REF-Typen: Anfragen"
 				}
 			]
 		},
