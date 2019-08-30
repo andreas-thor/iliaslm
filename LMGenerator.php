@@ -8,17 +8,18 @@ $url = "https://www1.hft-leipzig.de/thor/dbs/"; // global URL that has all the m
 
 
 // generate LM
+
 $jsonLM = readJSON("lm.json");
 $lm = new LearningModule(time(), $jsonLM['title'], $jsonLM['chapter'] /*array_slice ($jsonLM['chapter'], 0, 8)*/);
-$lm->writeZip("ilias/Vorlage/");
+// $lm->writeZip("ilias/Vorlage/");
 
 
 
-/*
+
 // generate items of LM
 $ip = new ItemPool(time(), "Items von " . $jsonLM['title'], $lm->getItems());
 $ip->writeZip("ilias/Vorlage/");
-*/
+
 
 
 

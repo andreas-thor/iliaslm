@@ -45,7 +45,7 @@ class QuestionMC extends Question {
 				
 				foreach (explode(";", $blockText[1]) as $choiceNumber => $choiceText) {	// choices are separated by ";"
 					
-					$points = "0";
+					$points = "-1";
 					$choiceText = trim($choiceText);
 					if ($choiceText[0] == "~") {		// correct choice(s) is/are prefixed with ~
 						$points = "1";
