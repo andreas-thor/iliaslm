@@ -465,7 +465,7 @@ div.ilc_question_Standard
 	border-width: 1px;
 	border-color: #BBCCDD;
 	border-style: solid;
-	background-image: url(images/qmark.png);
+	background-image: url(qmark.png);
 	background-repeat: no-repeat;
 	background-position: top right;
 }
