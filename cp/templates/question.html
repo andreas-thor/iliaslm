@@ -1,0 +1,31 @@
+<div xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	class="ilc_question_Standard">
+
+	<form onsubmit='return false;'>
+
+		<div id="container###QUESTIONID###" class="ilc_question_MultipleChoice">
+			<div class="ilc_qtitle_Title question id@id">qtitle</div>
+			<span class="ilc_answers answers">
+				<div class="ilc_qanswer_Answer">
+					<input type="checkbox" class="order@value" value="0"
+						name="answers###QUESTIONID###" /> <span class="answertext"></span>
+				</div>
+			</span>
+			<div id="feedback###QUESTIONID###" style="display: none"></div>
+			<input type="button" id="button###QUESTIONID###"
+				onclick="ilias.questions.checkAnswers(###QUESTIONID###)" value="Auswerten" />
+		</div>
+
+		<script>
+			questions[###QUESTIONID###] = ###QUESTIONJSON###;
+
+			function renderILQuestion###QUESTIONID###() {
+				ilias.questions.shuffle(questions[###QUESTIONID###]);
+				jQuery('div#container###QUESTIONID###').autoRender(questions[###QUESTIONID###]);
+
+			}
+			renderILQuestion###QUESTIONID###();
+		</script>
+
+	</form>
+</div>

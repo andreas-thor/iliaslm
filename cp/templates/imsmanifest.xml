@@ -1,0 +1,9 @@
+<manifest identifier="olat_ims_cp_editor_v1" schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://www.imsglobal.org/xsd/imsmd_v1p2 imsmd_v1p2p2.xsd">
+			<metadata/>			
+			<organizations>
+				<organization identifier="olatcp-99854011956291" structure="hierarchical">
+				</organization>
+			</organizations>
+			<resources>
+			</resources>
+		</manifest>
