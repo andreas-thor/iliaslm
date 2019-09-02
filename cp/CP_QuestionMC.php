@@ -42,9 +42,10 @@ class CP_QuestionMC {
 		}
 		
 		
-		$this->questionHTML = file_get_contents('templates/question.html');
+		$this->questionHTML = file_get_contents('templates/questionMC.html');
 		$this->questionHTML = str_replace('###QUESTIONID###', $qid, $this->questionHTML);
 		$this->questionHTML = str_replace('###QUESTIONJSON###', json_encode($json), $this->questionHTML);
+		
 		
 		
 		

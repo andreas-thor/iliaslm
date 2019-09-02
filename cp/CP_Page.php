@@ -1,6 +1,7 @@
 <?php 
 
 require_once 'CP_QuestionMC.php';
+require_once 'CP_QuestionGap.php';
 
 class CP_Page {
 
@@ -21,7 +22,10 @@ class CP_Page {
 		if (array_key_exists('question', $page)) {
 			foreach ($page['question'] as $qid => $question) {
 				if ($question['type']=='mc') {
-					$questionHTML .= (new CP_QuestionMC($qid, $question))->getHTMLAsString (); 
+					$questionHTML .= (new CP_QuestionMC($qid, $question))->getHTMLAsString ();
+				}
+				if ($question['type']=='gap') {
+					$questionHTML .= (new CP_QuestionGap($qid, $question))->getHTMLAsString ();
 				}
 			}
 		}
