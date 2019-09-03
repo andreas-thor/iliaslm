@@ -8,6 +8,7 @@ class CP_QuestionGap {
 	public function __construct (int $qid, array $question) {
 
 		global $url;
+		$qid += 220;	// for some reasons, id with low values (0, 1, etc) do not work
 		
 		$json = [
 			'id' => $qid,
@@ -28,13 +29,9 @@ class CP_QuestionGap {
 			} else { // gap 
 				$json['question'] .= '[gap]' . str_replace(';', ',', $blockText) . '[/gap]';
 				
-				// hier noch textfield
-				
-				
-				// hier auswahl
 				$gap =[
 					'shuffle' => false,
-					'type' => 1,
+					'type' => 1,	// other types are input fields (numeric:0, string:2)
 					'item' => []
 				];
 				
@@ -54,14 +51,15 @@ class CP_QuestionGap {
 					];
 				}
 				
-				
 				$json['gaps'][($blockNumber-1)/2] = $gap;
 			}
 			
 		
 		}
 		
-		
+		// make line breaks in HTML
+		$json['question'] = str_replace("\n", '<br/>', $json['question']);
+
 		$this->questionHTML = file_get_contents('templates/questionGap.html');
 		$this->questionHTML = str_replace('###QUESTIONID###', $qid, $this->questionHTML);
 		$this->questionHTML = str_replace('###QUESTIONJSON###', json_encode($json), $this->questionHTML);

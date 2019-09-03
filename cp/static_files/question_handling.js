@@ -1034,7 +1034,7 @@ ilias.questions.showCorrectAnswers =function(a_id) {
 			for (var i=0;i<questions[a_id].gaps.length;i++) {
 				var type = questions[a_id].gaps[i].type;
 				if (type==1) {
-					var cid;
+					var cid = 0;
 					jQuery('select#'+a_id+"_"+i).prop("disabled",true);
 					//look for correct solution
 					for (var j=0;j<questions[a_id].gaps[i].item.length;j++)
@@ -1044,7 +1044,11 @@ ilias.questions.showCorrectAnswers =function(a_id) {
 							cid=j;
 						}
 					}
-					jQuery('select#'+a_id+"_"+i+" option[id="+cid+"]").attr("selected","selected");
+					
+					// AT / ANDREAS THOR: jQuery selected does not work in Firefox for first element --> changed to val
+					// jQuery('select#'+a_id+"_"+i+" option[id="+cid+"]").attr("selected","selected");
+					jQuery('select#'+a_id+"_"+i).val(cid);
+					
 				}
 				if (type==0 || type==2) {
 					var cvalue;

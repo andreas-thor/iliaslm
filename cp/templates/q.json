@@ -1,0 +1,71 @@
+{
+	"id": 123,
+	"type": "assMultipleChoice",
+	"title": "Titel",
+	"question": "Markieren Sie alle Schl\u00fcsselkandidaten der Relation PROFESSOR!",
+	"nr_of_tries": 3,
+	"shuffle": false,
+	"feedback": {
+		"onenotcorrect": "",
+		"allcorrect": ""
+	},
+	"answers": [
+		{
+			"answertext": "B\u00fcro",
+			"points_checked": 0,
+			"points_unchecked": 0,
+			"order": 0,
+			"image": "",
+			"feedback": ""
+		},
+		{
+			"answertext": "DPT",
+			"points_checked": 0,
+			"points_unchecked": 0,
+			"order": 1,
+			"image": "",
+			"feedback": ""
+		},
+		{
+			"answertext": "PName",
+			"points_checked": 0,
+			"points_unchecked": 0,
+			"order": 2,
+			"image": "",
+			"feedback": ""
+		},
+		{
+			"answertext": "PName + B\u00fcro",
+			"points_checked": 0,
+			"points_unchecked": 0,
+			"order": 3,
+			"image": "",
+			"feedback": ""
+		},
+		{
+			"answertext": "PNr",
+			"points_checked": 1,
+			"points_unchecked": 0,
+			"order": 4,
+			"image": "",
+			"feedback": ""
+		},
+		{
+			"answertext": "PNr + PName",
+			"points_checked": 0,
+			"points_unchecked": 0,
+			"order": 5,
+			"image": "",
+			"feedback": ""
+		},
+		{
+			"answertext": "Telefon",
+			"points_checked": 1,
+			"points_unchecked": 0,
+			"order": 6,
+			"image": "",
+			"feedback": ""
+		}
+	],
+	"mobs": []
+}

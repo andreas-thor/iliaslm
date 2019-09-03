@@ -1,7 +1,8 @@
 <?php
 
 require_once 'CP_Manifest.php';
-require_once 'CP_Page.php';
+require_once 'CP_PageSlide.php';
+require_once 'CP_PageOverview.php';
 
 
 $url = "https://www1.hft-leipzig.de/thor/dbs/"; // global URL that has all the media
@@ -26,11 +27,18 @@ foreach ($content['chapter'] as $chapter) {
 	// create manifest and pages
 	$manifest = new CP_Manifest($chapter['title']);
 	foreach ($chapter['page'] as $page) {
-		$pageidentifier = $chapter['name'] . '_' . $page['name'];
-		$manifest->addPage($pageidentifier, $page['title']);
-		file_put_contents($directory . '/' . $pageidentifier . '.html', (new CP_Page($pageidentifier, $page))->getHTMLAsString());
-// 		file_put_contents($directory . '/' . $pageidentifier . '.html', '<html><body><iframe style="height:100%; width:100%" src="https://www.w3schools.com"></iframe></body></html>');
 		
+		if ($page['name'] == 'overview') {
+			$pageidentifier = $chapter['name'];
+			$pageObj = new CP_PageOverview ($pageidentifier, $page);
+		} else {
+			$pageidentifier = $chapter['name'] . '_' . $page['name'];
+			$pageObj = new CP_PageSlide($pageidentifier, $page);
+		}
+		
+		
+		$manifest->addPage($pageidentifier, $page['title']);
+		file_put_contents($directory . '/' . $pageidentifier . '.html', $pageObj->getHTMLAsString());
 		
 		
 	}
