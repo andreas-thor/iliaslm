@@ -10,7 +10,7 @@ function initAllQuestions() {
 	questions.forEach(function(questionJson, questionId) {
 
 		numberOfTries[questionId] = 0;
-		questionsDiv.append('<div id="question' + questionId + '"></div>');
+		questionsDiv.append('<div class="question" id="question' + questionId + '"></div>');
 
 		if (questionJson.type == 'mc') {
 			initQuestion_MC(questionJson, questionId);

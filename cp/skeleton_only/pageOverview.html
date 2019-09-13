@@ -1,80 +1,59 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-<link rel="stylesheet" type="text/css" href="page.css"></link>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="skeleton.css">
+<link rel="stylesheet" href="cp.css">
 
-
-<script type="text/javascript" src="jquery.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="yahoo-min.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="yahoo-dom-event.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="animation-min.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="Basic.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="accordion.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="maphilight.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="jquery-ui-min.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="ilCOPagePres.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="pure.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="question_handling.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="ilMatchingQuestion.js?vers=5-0-8-2015-11-24"></script>
-	
-	<script type="text/javascript" src="LearningModule.js?vers=5-0-8-2015-11-24"></script>
-	
-	<link rel="stylesheet" type="text/css" href="accordion.css" media="screen" ></link>
-	
-	<link rel="stylesheet" type="text/css" href="question_handling.css" media="screen" ></link>
-	
-	<link rel="stylesheet" type="text/css" href="test_javascript.css" media="screen" ></link>
-	
-	<link rel="stylesheet" type="text/css" href="content.css" media="screen" ></link>
-
+<script src="jquery.3.3.1.min.js"></script>
+<script src="accordion.js"></script>
 
 <title>###TITLE###</title>
 </head>
 <body>
-	<script>var ScormApi=null; var questions = new Array();</script>
-
 	<h1>###TITLE###</h1>
 
-	<button class="accordion">Fachlandkarte</button>
-	<div class="panel">
-		<p>
-			<img src="###URL######PAGEID###.jpg" width="640" height="480"
-				style="border: 1px solid black"></img>
-		</p>
+	<div class="example-grid">
+		<div class="row">
+			<div class="one-half column">
+				<div style="border: 1px solid #E1E1E1; border-radius: 4px;">
+					<button onclick="accordionClick (this)" class="accordion accordionOpen button" style="text-align: left; width: 100%">Fachlandkarte</button>
+					<div>
+						<img src="###URL######PAGEID###.jpg" width="100%"></img>
+					</div>
+				</div>
+
+				<div style="border: 1px solid #E1E1E1; border-radius: 4px;">
+					<button onclick="accordionClick (this)" class="accordion accordionClosed button-primary" style="text-align: left; width: 100%">Skriptfolien</button>
+					<div style="display: none">
+							<object width="100%" height="60%" data="###URL######PAGEID###.pdf" type="application/pdf">
+								<a href="###URL######PAGEID###.pdf">Download</a>
+							</object>
+					</div>
+				</div>
+
+				<div style="border: 1px solid #E1E1E1; border-radius: 4px;">
+					<button onclick="accordionClick (this)" class="accordion accordionClosed button-primary" style="text-align: left; width: 100%">Übungsblatt</button>
+					<div style="display: none">
+							<object width="100%" height="60%" data="###URL######PAGEID###_Ueb.pdf" type="application/pdf">
+								<a href="###URL######PAGEID###_Ueb.pdf">Download</a>
+							</object>
+					</div>
+				</div>
+
+			</div>
+			<div class="one-half column">
+				<div class="learningoutcomes">
+					<h2>Die Studierenden sind nach Abschluss der Lehrveranstaltung in der Lage, ...</h2>
+					<ul>###LEARNINGOUTCOMES###</ul>
+				</div>
+			</div>
+		</div>
+
 	</div>
-	
-	<button class="accordion">Skriptfolien</button>
-	<div class="panel">
-		<p>
-			<object width="640" height="480" data="###URL######PAGEID###.pdf" type="application/pdf">
-				<a href="###URL######PAGEID###.pdf">Download</a>
-			</object>		
-		</p>
-	</div>
-
-	<button class="accordion">Übungsblatt</button>
-	<div class="panel">
-		<p>
-			<object width="640" height="480" data="###URL######PAGEID###_Ueb.pdf" type="application/pdf">
-				<a href="###URL######PAGEID###_Ueb.pdf">Download</a>
-			</object>		
-		</p>
-	</div>
 
 
-
-	<script src="page_accordion.js"></script>
 
 
 

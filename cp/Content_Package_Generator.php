@@ -13,31 +13,29 @@ $url = "https://www1.hft-leipzig.de/thor/dbs/"; // global URL that has all the m
 $content = json_decode(file_get_contents('../lm.json'), TRUE);
 
 
-$tmpDir = 'tmp/' . time();
+$directory = 'tmp/' . time();
+if (! is_dir($directory)) {
+	mkdir($directory, 0755, true);
+}
+
+// create manifest and pages
+$manifest = new CP_Manifest('DBS');
+$chapterItem = null;
 
 foreach ($content['chapter'] as $chapter) {
 	
-	// set directory for chapter
-	$directory =  $tmpDir . '/' . $chapter['name'];
-	if (! is_dir($directory)) {
-		mkdir($directory, 0755, true);
-	}
-
-	
-	// create manifest and pages
-	$manifest = new CP_Manifest($chapter['title']);
 	foreach ($chapter['page'] as $page) {
 		
 		if ($page['name'] == 'overview') {
 			$pageidentifier = $chapter['name'];
 			$pageObj = new CP_PageOverview ($pageidentifier, $page);
+			$chapterItem = $manifest->addPage($pageidentifier, $chapter['title']);
 		} else {
 			$pageidentifier = $chapter['name'] . '_' . $page['name'];
 			$pageObj = new CP_PageSlide($pageidentifier, $page);
+			$manifest->addPage($pageidentifier, $page['title'], $chapterItem);
 		}
 		
-		
-		$manifest->addPage($pageidentifier, $page['title']);
 		file_put_contents($directory . '/' . $pageidentifier . '.html', $pageObj->getHTMLAsString());
 		
 		

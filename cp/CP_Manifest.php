@@ -20,14 +20,19 @@ class CP_Manifest {
 	}
 	
 	
-	public function addPage ($pageidentifier, $pagetitle) {
+	public function addPage ($pageidentifier, $pagetitle, $rootItem = null) {
 		
 		$item = $this->dom->createElement('item');
 		$item->setAttribute('identifier', $pageidentifier);
 		$item->setAttribute('identifierref', $pageidentifier . '_ref');
 		$item->setAttribute('isvisible', 'true');
 		$item->appendChild($this->dom->createElement('title', $pagetitle));
-		$this->organization->appendChild($item);
+		
+		if ($rootItem == null) {
+			$this->organization->appendChild($item);
+		} else {
+			$rootItem->appendChild($item);
+		}
 		
 		$resource = $this->dom->createElement('resource');
 		$resource->setAttribute('identifier', $pageidentifier . '_ref');
@@ -39,6 +44,8 @@ class CP_Manifest {
 		$resource->appendChild($file);
 		
 		$this->resources->appendChild($resource);
+		
+		return $item;
 	}
 	
 	public function getXMLAsString (): string {
