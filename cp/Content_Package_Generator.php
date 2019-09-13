@@ -46,7 +46,7 @@ foreach ($content['chapter'] as $chapter) {
 	
 
 	// copy static files (css, js, etc.) and zip
-	recurseCopy('static_files', $directory);
+	recurseCopy('skeleton_only', $directory);
 	zipDirectory($directory, $directory . '.zip');
 }
 

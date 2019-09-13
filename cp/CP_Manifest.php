@@ -9,7 +9,7 @@ class CP_Manifest {
 	
 	public function __construct($title) {
 		
-		$this->dom = DOMDocument::loadXML(file_get_contents('templates/imsmanifest.xml'));
+		$this->dom = DOMDocument::loadXML(file_get_contents('skeleton_only/imsmanifest_template.xml'));
 		
 		$this->organization = $this->dom->documentElement->getElementsByTagName('organization')->item(0);
 		$this->organization->appendChild($this->dom->createElement('title', $title));

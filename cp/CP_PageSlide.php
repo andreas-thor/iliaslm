@@ -10,23 +10,23 @@ class CP_PageSlide extends  CP_Page {
 	
 	public function __construct(string $pageidentifier, array $page) {
 		
-		$this->createPageHTML(file_get_contents('templates/pageSlide.html'), $pageidentifier, $page);		
+		$this->createPageHTML(file_get_contents('skeleton_only/pageSlide.html'), $pageidentifier, $page);		
 		
 		// add questions
-		$questionHTML = '';
+		$questionData = '';
 		
 		if (array_key_exists('question', $page)) {
 			foreach ($page['question'] as $qid => $question) {
 				if ($question['type']=='mc') {
-					$questionHTML .= (new CP_QuestionMC($qid, $question))->getHTMLAsString ();
+					$questionData .= (new CP_QuestionMC($qid, $question))->getJSONString();
 				}
 				if ($question['type']=='gap') {
-					$questionHTML .= (new CP_QuestionGap($qid, $question))->getHTMLAsString ();
+					$questionData .= (new CP_QuestionGap($qid, $question))->getJSONString();
 				}
 			}
 		}
 		
-		$this->pageHTML = str_replace('###QUESTIONS###', $questionHTML, $this->pageHTML);
+		$this->pageHTML = str_replace('// ###QUESTIONDATA###', $questionData, $this->pageHTML);
 		
 		
 	}
