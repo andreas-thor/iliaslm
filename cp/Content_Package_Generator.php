@@ -5,9 +5,9 @@ require_once 'CP_PageSlide.php';
 require_once 'CP_PageOverview.php';
 
 
-$url = "https://www1.hft-leipzig.de/thor/dbs/"; // global URL that has all the media
-
-
+// global URL that has all the media (PDF-script files, videos, images)
+$url = "https://www1.hft-leipzig.de/thor/dbs/"; 
+// $url = "https://bildungsportal.sachsen.de/opal/FolderResource/20615430147/slm/"; 
 
 // load data from json file
 $content = json_decode(file_get_contents('../lm.json'), TRUE);
@@ -22,7 +22,8 @@ if (! is_dir($directory)) {
 $manifest = new CP_Manifest('DBS');
 $chapterItem = null;
 
-foreach ($content['chapter'] as $chapter) {
+// only first 8 chapters
+foreach (array_slice($content['chapter'], 0, 8) as $chapter) {
 	
 	foreach ($chapter['page'] as $page) {
 		
