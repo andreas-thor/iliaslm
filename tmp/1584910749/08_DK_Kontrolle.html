@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="skeleton.css">
+<link rel="stylesheet" href="cp.css">
+
+<script src="jquery.3.3.1.min.js"></script>
+<script src="questions.js"></script>
+<script src="accordion.js"></script>
+
+
+<script>
+	function setQuestionData() {
+		/*
+		 questions[0] = {
+		 "text" : "Hier kjommt der Text",
+		 "answers" : [ {
+		 "text" : "A1",
+		 "value" : 0
+		 }, {
+		 "text" : "A2",
+		 "value" : 1
+		 }, {
+		 "text" : "A3",
+		 "value" : 0
+		 } ]
+		 };
+		 
+		questions[0] = {
+			"type" : "gap",
+			"blocks" : [ {
+				"type" : "text",
+				"text" : "Wir betrachten die Tabelle Student. Geben Sie f\u00fcr die folgenden Elemente an, ob es sich um Metadaten oder Instanzdaten handelt!<br\/><br\/>* Tabellenname Student: "
+			}, {
+				"type" : "gap",
+				"choices" : [ {
+					"value" : "0",
+					"text" : "12Instanzdaten"
+				}, {
+					"value" : "1",
+					"text" : "Metadaten"
+				}, {
+					"value" : "0",
+					"text" : "Instanzdaten"
+				} ]
+			}, {
+				"type" : "text",
+				"text" : "<br\/>* Attributwert 101 f\u00fcr Student Schmidt: "
+			}, {
+				"type" : "gap",
+				"choices" : [ {
+					"value" : "0",
+					"text" : "Metadaten"
+				}, {
+					"value" : "1",
+					"text" : "Instanzdaten"
+				} ]
+			}, {
+				"type" : "text",
+				"text" : "<br\/>* Attributname W-Ort: "
+			}, {
+				"type" : "gap",
+				"choices" : [ {
+					"value" : "1",
+					"text" : "Metadaten"
+				}, {
+					"value" : "0",
+					"text" : "Instanzdaten"
+				} ]
+			}, {
+				"type" : "text",
+				"text" : "<br\/>* Attributwerte des letzten Datensatzes: "
+			}, {
+				"type" : "gap",
+				"choices" : [ {
+					"value" : "0",
+					"text" : "Metadaten"
+				}, {
+					"value" : "1",
+					"text" : "Instanzdaten"
+				} ]
+			}, {
+				"type" : "text",
+				"text" : ""
+			} ]
+		};
+*/
+		// Do not remove the following comment; this will be replaced by the actual question data through the generator
+		questions[0] = {"type":"gap","blocks":[{"type":"text","text":"Die \u00dcberwachnung von Integrti\u00e4tsbedingungen kann sowohl durch Anwendungsprogramme (AP) oder das Datenbanksystem (DBS) realisiert werden. Geben Sie f\u00fcr die nachfolgenden Kriterien an, welche Variante vorteilhafter ist.<br\/><br\/>* Sicherheit und Konsistenzwahrung: "},{"type":"gap","choices":[{"value":"0","text":"Anwendungsprogramm"},{"value":"1","text":"Datenbanksystem"}]},{"type":"text","text":"<br\/>* Aufwand zur Erstellung eines Anwendungsprogramms: "},{"type":"gap","choices":[{"value":"0","text":"Anwendungsprogramm"},{"value":"1","text":"Datenbanksystem"}]},{"type":"text","text":"<br\/>* Unterst\u00fctzung von DB-\u00c4nderungen: "},{"type":"gap","choices":[{"value":"0","text":"Anwendungsprogramm"},{"value":"1","text":"Datenbanksystem"}]},{"type":"text","text":"<br\/>* \u00c4nderbarkeit von Integrit\u00e4tsbedingungen: "},{"type":"gap","choices":[{"value":"0","text":"Anwendungsprogramm"},{"value":"1","text":"Datenbanksystem"}]},{"type":"text","text":" <br\/>* M\u00e4chtigkeit bzgl. Implementierung von Integrit\u00e4tsbedingung: "},{"type":"gap","choices":[{"value":"1","text":"Anwendungsprogramm"},{"value":"0","text":"Datenbanksystem"}]},{"type":"text","text":""}]};
+
+		initAllQuestions();
+	}
+	
+	
+
+	
+</script>
+
+</head>
+<body style="padding: 25pt" onload="setQuestionData()">
+
+	<h1>Kontrolle semantischer Int.Bed.</h1>
+
+	<div class="example-grid">
+
+
+		<div class="row">
+			<div class="one-half column">
+				<div style="border: 1px solid #E1E1E1; border-radius: 4px;">
+					<button onclick="accordionClick (this)" class="accordion accordionOpen button" style="text-align: left; width: 100%">Skriptfolie</button>
+					<div> 
+						<img src="https://www1.hft-leipzig.de/thor/dbs/08_DK_Kontrolle.jpg" width="100%"></img>
+					</div>
+				</div>
+				<div style="border: 1px solid #E1E1E1; border-radius: 4px;">
+
+					<button onclick="accordionClick (this)" class="accordion accordionClosed button-primary" style="text-align: left; width: 100%">Lernvideo</button>
+					<div style="display:none">
+						<p>
+							<video controls width="100%">
+								<source src="https://www1.hft-leipzig.de/thor/dbs/08_DK_Kontrolle.mp4" type="video/mp4"></source>
+							</video>
+							
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="one-half column">
+				<div id="questions"></div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+</body>
+
+</html>

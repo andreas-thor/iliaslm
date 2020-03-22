@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<manifest identifier="olat_ims_cp_editor_v1" schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://www.imsglobal.org/xsd/imsmd_v1p2 imsmd_v1p2p2.xsd">
+	<metadata/>
+	<organizations>
+		<organization identifier="olatcp-99854011956291" structure="hierarchical">
+		<title>DBS</title><item identifier="02_IMP" identifierref="02_IMP_ref" isvisible="true"><title>IMP: Imperative Programmierung</title><item identifier="02_IMP_Typumwandlung" identifierref="02_IMP_Typumwandlung_ref" isvisible="true"><title>Datentypen und Typumwandlung</title></item></item></organization>
+	</organizations>
+	<resources>
+	<resource identifier="02_IMP_ref" href="02_IMP.html" type="text/html"><file href="02_IMP.html"/></resource><resource identifier="02_IMP_Typumwandlung_ref" href="02_IMP_Typumwandlung.html" type="text/html"><file href="02_IMP_Typumwandlung.html"/></resource></resources>
+</manifest>

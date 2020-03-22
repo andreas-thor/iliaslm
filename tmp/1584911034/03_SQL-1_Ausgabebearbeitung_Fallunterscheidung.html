@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="skeleton.css">
+<link rel="stylesheet" href="cp.css">
+
+<script src="jquery.3.3.1.min.js"></script>
+<script src="questions.js"></script>
+<script src="accordion.js"></script>
+
+
+<script>
+	function setQuestionData() {
+		/*
+		 questions[0] = {
+		 "text" : "Hier kjommt der Text",
+		 "answers" : [ {
+		 "text" : "A1",
+		 "value" : 0
+		 }, {
+		 "text" : "A2",
+		 "value" : 1
+		 }, {
+		 "text" : "A3",
+		 "value" : 0
+		 } ]
+		 };
+		 
+		questions[0] = {
+			"type" : "gap",
+			"blocks" : [ {
+				"type" : "text",
+				"text" : "Wir betrachten die Tabelle Student. Geben Sie f\u00fcr die folgenden Elemente an, ob es sich um Metadaten oder Instanzdaten handelt!<br\/><br\/>* Tabellenname Student: "
+			}, {
+				"type" : "gap",
+				"choices" : [ {
+					"value" : "0",
+					"text" : "12Instanzdaten"
+				}, {
+					"value" : "1",
+					"text" : "Metadaten"
+				}, {
+					"value" : "0",
+					"text" : "Instanzdaten"
+				} ]
+			}, {
+				"type" : "text",
+				"text" : "<br\/>* Attributwert 101 f\u00fcr Student Schmidt: "
+			}, {
+				"type" : "gap",
+				"choices" : [ {
+					"value" : "0",
+					"text" : "Metadaten"
+				}, {
+					"value" : "1",
+					"text" : "Instanzdaten"
+				} ]
+			}, {
+				"type" : "text",
+				"text" : "<br\/>* Attributname W-Ort: "
+			}, {
+				"type" : "gap",
+				"choices" : [ {
+					"value" : "1",
+					"text" : "Metadaten"
+				}, {
+					"value" : "0",
+					"text" : "Instanzdaten"
+				} ]
+			}, {
+				"type" : "text",
+				"text" : "<br\/>* Attributwerte des letzten Datensatzes: "
+			}, {
+				"type" : "gap",
+				"choices" : [ {
+					"value" : "0",
+					"text" : "Metadaten"
+				}, {
+					"value" : "1",
+					"text" : "Instanzdaten"
+				} ]
+			}, {
+				"type" : "text",
+				"text" : ""
+			} ]
+		};
+*/
+		// Do not remove the following comment; this will be replaced by the actual question data through the generator
+		questions[0] = {"type":"gap","blocks":[{"type":"text","text":"Vervollst\u00e4ndigen Sie das Ergebnis der folgenden SQL-Anfrage:<pre> SELECT titel, jahr, <br\/> CASE <br\/>    WHEN jahr >= 2000 THEN '2000er'<br\/>    WHEN jahr >= 1990 THEN '90er' <br\/>    ELSE 'Veraltet' <br\/> END AS Dekade <br\/> FROM buch<\/pre>  <br\/> <br\/>  <pre> titel         + jahr + "},{"type":"gap","choices":[{"value":"0","text":"titel"},{"value":"0","text":"jahr"},{"value":"0","text":"CASE"},{"value":"1","text":"Dekade"},{"value":"0","text":"buch"}]},{"type":"text","text":" <br\/> --------------+------+------------------------- <br\/> Excel         + 1991 + "},{"type":"gap","choices":[{"value":"0","text":"2000er"},{"value":"1","text":"90er"},{"value":"0","text":"Veraltet"}]},{"type":"text","text":" <br\/> Grundlagen    + 1991 + "},{"type":"gap","choices":[{"value":"0","text":"2000er"},{"value":"1","text":"90er"},{"value":"0","text":"Veraltet"}]},{"type":"text","text":" <br\/> Kaufvertr\u00e4ge  + 1989 + "},{"type":"gap","choices":[{"value":"0","text":"2000er"},{"value":"0","text":"90er"},{"value":"1","text":"Veraltet"}]},{"type":"text","text":" <br\/> PC Tools      + 1993 + "},{"type":"gap","choices":[{"value":"0","text":"2000er"},{"value":"1","text":"90er"},{"value":"0","text":"Veraltet"}]},{"type":"text","text":" <br\/> Info f\u00fcr Ing. + 1995 + "},{"type":"gap","choices":[{"value":"0","text":"2000er"},{"value":"1","text":"90er"},{"value":"0","text":"Veraltet"}]},{"type":"text","text":" <br\/> Semantik      + 1983 + "},{"type":"gap","choices":[{"value":"0","text":"2000er"},{"value":"0","text":"90er"},{"value":"1","text":"Veraltet"}]},{"type":"text","text":" <br\/> Java          + 1996 + "},{"type":"gap","choices":[{"value":"0","text":"2000er"},{"value":"1","text":"90er"},{"value":"0","text":"Veraltet"}]},{"type":"text","text":" <\/pre> "}]};questions[1] = {"type":"gap","blocks":[{"type":"text","text":"Vervollst\u00e4ndigen Sie das Ergebnis der folgenden SQL-Anfrage:<pre> SELECT titel, COALESCE (preis, 999.99) AS verkaufspreis <br\/> FROM buch<\/pre>  <br\/> <br\/>  <br\/> <pre> titel         + "},{"type":"gap","choices":[{"value":"0","text":"titel"},{"value":"0","text":"preis"},{"value":"1","text":"verkaufspreis"},{"value":"0","text":"buch"}]},{"type":"text","text":" <br\/> --------------+------------------------- <br\/> Excel         + "},{"type":"gap","choices":[{"value":"0","text":"NULL"},{"value":"0","text":"19.80"},{"value":"0","text":"59.00"},{"value":"0","text":"78.00"},{"value":"0","text":"142.00"},{"value":"1","text":"999.99"}]},{"type":"text","text":" <br\/> Grundlagen    + "},{"type":"gap","choices":[{"value":"0","text":"NULL"},{"value":"0","text":"19.80"},{"value":"0","text":"59.00"},{"value":"0","text":"78.00"},{"value":"1","text":"142.00"},{"value":"0","text":"999.99"}]},{"type":"text","text":" <br\/> Kaufvertr\u00e4ge  + "},{"type":"gap","choices":[{"value":"0","text":"NULL"},{"value":"0","text":"19.80"},{"value":"0","text":"59.00"},{"value":"0","text":"78.00"},{"value":"0","text":"142.00"},{"value":"1","text":"999.99"}]},{"type":"text","text":" <br\/> PC Tools      + "},{"type":"gap","choices":[{"value":"0","text":"NULL"},{"value":"0","text":"19.80"},{"value":"1","text":"59.00"},{"value":"0","text":"78.00"},{"value":"0","text":"142.00"},{"value":"0","text":"999.99"}]},{"type":"text","text":" <br\/> Info f\u00fcr Ing. + "},{"type":"gap","choices":[{"value":"0","text":"NULL"},{"value":"0","text":"19.80"},{"value":"0","text":"59.00"},{"value":"1","text":"78.00"},{"value":"0","text":"142.00"},{"value":"0","text":"999.99"}]},{"type":"text","text":" <br\/> Semantik      + "},{"type":"gap","choices":[{"value":"0","text":"NULL"},{"value":"1","text":"19.80"},{"value":"0","text":"59.00"},{"value":"0","text":"78.00"},{"value":"0","text":"142.00"},{"value":"0","text":"999.99"}]},{"type":"text","text":" <br\/> Java          + "},{"type":"gap","choices":[{"value":"0","text":"NULL"},{"value":"1","text":"19.80"},{"value":"0","text":"59.00"},{"value":"0","text":"78.00"},{"value":"0","text":"142.00"},{"value":"0","text":"999.99"}]},{"type":"text","text":" <\/pre> "}]};
+
+		initAllQuestions();
+	}
+	
+	
+
+	
+</script>
+
+</head>
+<body style="padding: 25pt" onload="setQuestionData()">
+
+	<h1>Fallunterscheidung</h1>
+
+	<div class="example-grid">
+
+
+		<div class="row">
+			<div class="one-half column">
+				<div style="border: 1px solid #E1E1E1; border-radius: 4px;">
+					<button onclick="accordionClick (this)" class="accordion accordionOpen button" style="text-align: left; width: 100%">Skriptfolie</button>
+					<div> 
+						<img src="https://www1.hft-leipzig.de/thor/dbs/03_SQL-1_Ausgabebearbeitung_Fallunterscheidung.jpg" width="100%"></img>
+					</div>
+				</div>
+				<div style="border: 1px solid #E1E1E1; border-radius: 4px;">
+
+					<button onclick="accordionClick (this)" class="accordion accordionClosed button-primary" style="text-align: left; width: 100%">Lernvideo</button>
+					<div style="display:none">
+						<p>
+							<video controls width="100%">
+								<source src="https://www1.hft-leipzig.de/thor/dbs/03_SQL-1_Ausgabebearbeitung_Fallunterscheidung.mp4" type="video/mp4"></source>
+							</video>
+							
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="one-half column">
+				<div id="questions"></div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+</body>
+
+</html>

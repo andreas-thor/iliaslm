@@ -6,14 +6,15 @@ require_once 'CP_PageOverview.php';
 
 
 // global URL that has all the media (PDF-script files, videos, images)
-$url = "https://www1.hft-leipzig.de/thor/dbs/"; 
+$url = $argv[3]; 
 // $url = "https://bildungsportal.sachsen.de/opal/FolderResource/20615430147/slm/"; 
 
 // load data from json file
-$content = json_decode(file_get_contents('../lm.json'), TRUE);
+$content = json_decode(file_get_contents($argv[1]), TRUE);
 
 
-$directory = 'tmp/' . time();
+$directory = $argv[2] . '/' . time();
+print $directory;
 if (! is_dir($directory)) {
 	mkdir($directory, 0755, true);
 }
