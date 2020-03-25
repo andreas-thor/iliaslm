@@ -16,16 +16,22 @@
 					]
 				},
 				{
-					"name": "Typumwandlung",
-					"title": "Datentypen und Typumwandlung",
+					"name": "Datentyp",
+					"title": "Primitive Datentypen und Typumwandlung",
 					"question": [
 						{
 							"type": "gap",
-							"text": "Gegeben ist folgendes Java-Fragment: <pre>int a = 5000;<br/>a = a + 700</pre> Geben Sie den Wert der Variablen nach Ablauf des Programms an. Falls ein Wert nicht definiert ist (z.B. wegen eines Programmfehlers), geben Sie X an.\n* a: |700; 5000; ~5700; X|"
-						},
+							"text": "Geben Sie die Werte der Variablen nach der Ausführung von Java-Code an. Sollte es bei der Ausführung zu einem Fehler kommen (sowohl zur Compile- als auch Runtime) geben Sie 'Fehler' an!\n\n Welchen Wert hat <code>a</code> nach Ausführung von <code>a = a + 100;</code>? |100;130;200;~230;Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>a += 100;</code>? |100;130;200;~230;Fehler|\nWelchen Wert hat <code>b</code> nach Ausführung von <code>b += 100;</code>? |~-106;50;100;150;Fehler|\nWelchen Wert hat <code>b</code> nach Ausführung von <code>b = b + 100;</code>? |-106;50;100;150;~Fehler|\nWelchen Wert hat <code>b</code> nach Ausführung von <code>b = (byte) (b + 100);</code>? |~-106;50;100;150;Fehler|\nWelchen Wert hat <code>c</code> nach Ausführung von <code>c *= c;</code>? |1000;~16960;1000000;Fehler|\nWelchen Wert hat <code>d</code> nach Ausführung von <code>d++;</code>? |A;~B;a;b;Fehler|\nWelchen Wert hat <code>d</code> nach Ausführung von <code>d += '!'</code>? |A;B;a;~b;Fehler|\nWelchen Datentyp hat der Ausdruck <code>d+100</code>? |char;~int;long|\nWelcher Datentyp kann bei der Zuweisung <code>[Datentyp] x = d + 100;</code> für die Variable <code>x</code> <u>nicht</u> angegeben werden? |~char;int;long|\nWelche der folgenden Zuweisungen ist gültig? |e = a;e = (boolean)a;a = e;a = (int)e;~keine|\nWelchen Wert hat <code>f</code> nach Ausführung von <code>f = a;</code>? |0;7.9;~130.0;Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>a = f;</code>? |0;7;7.9;8;130;~Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>a = (int)f;</code>? |0;~7;7.9;8;130;Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>f = -7.9f; a = (int) f;</code>? |0;~-7;-7.9;-8;130;Fehler|"
+						}
+					]
+				}, 
+				{
+					"name": "Operator",
+					"title": "Operatoren (Präzedenz, Assoziativität)",
+					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie für jede der Anfragen an, wieviele Tabellen zur Beantwortung verwendet werden!\n\n* Liste der Namen aller Studenten: |~1;2;3;4|\n* Liste der Büros aller Professoren aus dem Wirtschafts-Department: |1;~2;3;4|\n* Namen der Studenten, die von einem Professor aus dem Wirtschafts-Department mit der Note 1.3 geprüft wurden? |1;2;3;~4|"
+							"text": "Geben Sie die Werte der folgenden Ausdrücke an!\n\n<code>x && z</code>: |true;~false|\n<code>x &#x007C;&#x007C; z</code>: |~true;false|\n<code>x #x007C;&#x007C; y && z</code>: |~true;false|\n<code>x #x007C;&#x007C; (y && z)</code>: |~true;false|\n<code>(x #x007C;&#x007C; y) && z</code>: |true;~false|\n<code>a * b / c</code>: |1;2;~3;4|\n<code>(a * b) / c</code>: |1;2;~3;4|\n<code>a * (b / c)</code>: |1;~2;3;4|\n<code>b % c</code>: |1;~2;3;4|\n<code>c % b</code>: |1;2;3;~4|\n<code>b &lt; 2</code>: |true;~false;2;6;24|\n<code>b &lt;&lt; 2</code>: |true;false;2;6;~24|\n<code>a == c</code>: |true;~false;2;4|\n<code>a = c</code>: |true;false;2;~4|"
 						}
 					]
 				}
