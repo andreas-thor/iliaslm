@@ -28,7 +28,9 @@ class CP_QuestionGap extends CP_Question{
 			} else { // list of choices 
 				
 				$choices = [];
-				foreach (explode(";", $blockText) as $choiceNumber => $choiceText) {	// choices are separated by ";"
+				// choices are separated by " ;"
+				// must have a leading white space --> allows HTML entities such as &gt; to appear in the text
+				foreach (explode(" ;", $blockText) as $choiceNumber => $choiceText) {	
 					
 					$points = "0";
 					$choiceText = trim($choiceText);

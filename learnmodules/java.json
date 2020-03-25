@@ -16,22 +16,88 @@
 					]
 				},
 				{
-					"name": "Datentyp",
+					"name": "Datentypen",
 					"title": "Primitive Datentypen und Typumwandlung",
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie die Werte der Variablen nach der Ausführung von Java-Code an. Sollte es bei der Ausführung zu einem Fehler kommen (sowohl zur Compile- als auch Runtime) geben Sie 'Fehler' an!\n\n Welchen Wert hat <code>a</code> nach Ausführung von <code>a = a + 100;</code>? |100;130;200;~230;Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>a += 100;</code>? |100;130;200;~230;Fehler|\nWelchen Wert hat <code>b</code> nach Ausführung von <code>b += 100;</code>? |~-106;50;100;150;Fehler|\nWelchen Wert hat <code>b</code> nach Ausführung von <code>b = b + 100;</code>? |-106;50;100;150;~Fehler|\nWelchen Wert hat <code>b</code> nach Ausführung von <code>b = (byte) (b + 100);</code>? |~-106;50;100;150;Fehler|\nWelchen Wert hat <code>c</code> nach Ausführung von <code>c *= c;</code>? |1000;~16960;1000000;Fehler|\nWelchen Wert hat <code>d</code> nach Ausführung von <code>d++;</code>? |A;~B;a;b;Fehler|\nWelchen Wert hat <code>d</code> nach Ausführung von <code>d += '!'</code>? |A;B;a;~b;Fehler|\nWelchen Datentyp hat der Ausdruck <code>d+100</code>? |char;~int;long|\nWelcher Datentyp kann bei der Zuweisung <code>[Datentyp] x = d + 100;</code> für die Variable <code>x</code> <u>nicht</u> angegeben werden? |~char;int;long|\nWelche der folgenden Zuweisungen ist gültig? |e = a;e = (boolean)a;a = e;a = (int)e;~keine|\nWelchen Wert hat <code>f</code> nach Ausführung von <code>f = a;</code>? |0;7.9;~130.0;Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>a = f;</code>? |0;7;7.9;8;130;~Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>a = (int)f;</code>? |0;~7;7.9;8;130;Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>f = -7.9f; a = (int) f;</code>? |0;~-7;-7.9;-8;130;Fehler|"
+							"text": "Geben Sie jeweils den der Variablen nach der Ausführung vom gegebenen Java-Code an. Sollte es bei der Ausführung zu einem Fehler kommen (sowohl zur Compile- als auch Runtime) geben Sie 'Fehler' an!\n\n <code>int a = 130; a = a + 100;</code>? |100 ; 130 ; 200 ; ~230 ; Fehler|\n<code>int a = 130; a += 100;</code>? | 100 ; 130 ; 200 ; ~230 ; Fehler|\n<code>byte b = 50; b += 100;</code>? |~-106 ; 50 ; 100 ; 150 ; Fehler|\n<code>byte b = 50; b = b + 100;</code>? |-106 ; 50 ; 100 ; 150 ; ~Fehler|\n<code>byte b = 50; b = (byte) (b + 100);</code>? |~-106 ; 50 ; 100 ; 150 ; Fehler|\n<code>short c = 1000; c *= c;</code>? |1000 ; ~16960 ; 1000000 ; Fehler|\n<code>char d = 'A'; d++;</code>? |A ; ~B ; a ; b ; Fehler|\n<code>char d = 'A'; d += '!';</code>? |A ; B ; a ; ~b ; Fehler|"
+						},
+						{
+							"type": "gap",
+							"text": "Gegeben ist die Variable <code>char d = 'A';</code>.\nWelchen Datentyp hat der Ausdruck <code>d+100</code>? |char ; ~int ; long|\nWelcher Datentyp kann bei der Zuweisung <code>[Datentyp] x = d + 100;</code> für die Variable <code>x</code> <u>nicht</u> angegeben werden? |~char ; int ; long|"
+						},
+						{ 
+							"type": "gap",
+							"text": "Gegeben sind die Variablen <code>int a = 130;</code> und <code>boolean e = true;</code>.\nGeben Sie für die folgenen Zuweisungen an, ob sie gültig sind!\n<code>e = a;</code> : |gültig ; ~nicht gültig|\n<code>e = (boolean)a;</code> : |gültig ; ~nicht gültig|\n<code>a = e;</code> : |gültig ; ~nicht gültig|\n<code>a = (int)e;</code> : |gültig ; ~nicht gültig|"
+						},
+						{ 
+							"type": "gap",
+							"text": "Welchen Wert hat <code>f</code> nach Ausführung von <code>int a = 130; float f = a;</code>? |0 ; 7.9 ; ~130.0 ; Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>float f = 7.9f; a = f;</code>? |0 ; 7 ; 7.9 ; 8 ; 130 ; ~Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>float f = 7.9f; a = (int)f;</code>? |0 ; ~7 ; 7.9 ; 8 ; 130 ; Fehler|\nWelchen Wert hat <code>a</code> nach Ausführung von <code>float f = -7.9f; a = (int) f;</code>? |0 ; ~-7 ; -7.9 ; -8 ; 130 ; Fehler|"
 						}
 					]
 				}, 
 				{
-					"name": "Operator",
+					"name": "Operatoren",
 					"title": "Operatoren (Präzedenz, Assoziativität)",
 					"question": [
 						{
 							"type": "gap",
-							"text": "Geben Sie die Werte der folgenden Ausdrücke an!\n\n<code>x && z</code>: |true;~false|\n<code>x &#x007C;&#x007C; z</code>: |~true;false|\n<code>x #x007C;&#x007C; y && z</code>: |~true;false|\n<code>x #x007C;&#x007C; (y && z)</code>: |~true;false|\n<code>(x #x007C;&#x007C; y) && z</code>: |true;~false|\n<code>a * b / c</code>: |1;2;~3;4|\n<code>(a * b) / c</code>: |1;2;~3;4|\n<code>a * (b / c)</code>: |1;~2;3;4|\n<code>b % c</code>: |1;~2;3;4|\n<code>c % b</code>: |1;2;3;~4|\n<code>b &lt; 2</code>: |true;~false;2;6;24|\n<code>b &lt;&lt; 2</code>: |true;false;2;6;~24|\n<code>a == c</code>: |true;~false;2;4|\n<code>a = c</code>: |true;false;2;~4|"
+							"text": "Gegeben sind die folgenden drei Variablen: <code>boolean x = true; boolean y = true; boolean z = false;</code>\nGeben Sie die Werte der folgenden Ausdrücke an!\n\n<code>x && z</code>: |true ; ~false|\n<code>x &#x007C;&#x007C; z</code>: |~true ; false|\n<code>x &#x007C;&#x007C; y && z</code>: |~true ; false|\n<code>x &#x007C;&#x007C; (y && z)</code>: |~true ; false|\n<code>(x &#x007C;&#x007C; y) && z</code>: |true ; ~false|"
+						},
+						{
+							"type": "gap",
+							"text": "Gegeben sind die folgenden drei Variablen: <code>int a = 2; int b = 6; int c = 4;</code>\nGeben Sie die Werte der folgenden Ausdrücke an!\n\n<code>a * b / c</code>: |1 ; 2 ; ~3 ; 4|\n<code>(a * b) / c</code>: |1 ; 2 ; ~3 ; 4|\n<code>a * (b / c)</code>: |1 ; ~2 ; 3 ; 4|\n<code>b % c</code>: |1 ; ~2 ; 3 ; 4|\n<code>c % b</code>: |1 ; 2 ; 3 ; ~4|\n<code>b &lt; 2</code>: |true ; ~false ; 2 ; 6 ; 24|\n<code>b &lt;&lt; 2</code>: |true ; false ; 2 ; 6 ; ~24|\n<code>a == c</code>: |true ; ~false ; 2 ; 4|\n<code>a = c</code>: |true ;false ; 2 ; ~4|"
+						}
+					]
+				}, 
+				{
+					"name": "EingabeAusgabe",
+					"title": "Ein- und Ausgabe",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Gegeben sind die Variable <code>int alter = 6;</code> und <code>float spardose = 33.05;</code>.\nGeben Sie jeweils die Ausgaben der folgenden Anweisungen an:\n\n<code>System.out.println(alter + \" Jahre\");</code>: |alter Jahre ; ~6 Jahre ; Jahre|\n <code>System.out.println(spardose);</code>: |33.05 ; 33,05 ; 33.049999 ; 33,049999 ; ~33.04999923706055 ; 33,04999923706055|\n <code>System.out.printf(java.util.Locale.GERMAN, \"%.2f\", spardose);</code>: |33.05 ; ~33,05 ; 33.0500 ; 33,0500|\n <code>System.out.printf(java.util.Locale.US, \"%.2f\", spardose);</code>: |~33.05 ; 33,05 ; 33.0500 ; 33,0500|\n <code>System.out.printf(java.util.Locale.GERMAN, \"%7.2f\", spardose);</code> (Leerzeichen durch &blank; dargestellt): |&blank;&blank;&blank&blank;&blank;&blank;&blank;33,05 ; &blank;&blank;&blank;33,05 ; ~&blank;&blank;33,05 ; 33,05000 ; 33,0500000|"
+						}, 
+						{
+							"type": "gap",
+							"text": "Geben ist die Variable <code>java.util.Scanner sc = new java.util.Scanner(System.in);</code>\n \nWelchen Wert hat die Variable <code>s</code> nach Ausführung von <code>String s = sc.nextLine();</code>, wenn der Nutzer einfach nur die Eingabetaste drückt? | NULL ; ~ein Leerstring, d.h. mit keinem Zeichen ; ein String mit einem NewLine-Zeichen ; es kommt zu einem Fehler|\n\nWelchen Wert hat die Variable <code>t</code> nach Ausführung von <code>int t = sc.nextInt();</code>, wenn der Nutzer <code>7c</code> eingibt und die Eingabetaste drückt? | 0 ; 7 ; ~es kommt zu einem Fehler|"
+						}
+					]
+				},
+				{
+					"name": "Bedingung",
+					"title": "Bedingungen (IF, SWITCH)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Gegeben ist eine Variable <code>int b=0;</code>. Geben Sie jeweils den Wert von <code>b</code> nach Ausführung des Codes an!\n\n<code>int a = 2; if (a % 2 == 0) { b = 1; }</code> : |0 ; ~1 ; 2 ; 5|\n<code>int a = 5; if (a % 2 == 0) { b = 1; }</code> : |~0 ; 1 ; 2 ; 5|\n<code>int a = 2; if (a % 2 == 0) { b = 1; } else { b = 2; }</code> : |0 ; ~1 ; 2 ; 5|\n<code>int a = 5; if (a % 2 == 0) { b = 1; } else { b = 2; }</code> : |0 ; 1 ; ~2 ; 5|"
+						}, 
+						{
+							"type": "gap",
+							"text": "Gegeben ist eine Variable <code>int b=0;</code>. Geben Sie jeweils den Wert von <code>b</code> nach Ausführung des Codes an!\n\n<code>int a = 2; b = (a % 2 == 0) ? 1 : 2;</code> : |0 ; ~1 ; 2 ; 5|\n<code>int a = 5; b = (a % 2 == 0) ? 1 : 2;</code> : |0 ; 1 ; ~2 ; 5|\n<code>int a = 2; b = (a % 2 == 0) ? 1 : b;</code> : |0 ; ~1 ; 2 ; 5|\n<code>int a = 5; b = (a % 2 == 0) ? 1 : b;</code> : |~0 ; 1 ; 2 ; 5|"
+						},
+						{
+							"type": "gap",
+							"text": "Gegeben ist folgendes SWITCH-Statement:\n<code>switch (a) {\n&nbsp;&nbsp;&nbsp;case 1: System.out.println(\"case 1\");\n&nbsp;&nbsp;&nbsp;case 2: System.out.println(\"case 2\"); break;\n&nbsp;&nbsp;&nbsp;case 3: System.out.println(\"case 3\"); break;\n&nbsp;&nbsp;&nbsp;default: System.out.println(\"default\");\n}</code>\n\nGeben Sie für die jeweiligen Werte von <code>a</code> an, welche Ausgabe SWITCH-Statement erzeugt:\n<code>a=0</code>: |case 1 ; case 2 ; case 3 ; ~default ; case 1 und case 2 ; case 1 und case 3; case 2 und case 3 ; case 1 und default ; case 2 und default ; case 3 und default|\n<code>a=1</code>: |case 1 ; case 2 ; case 3 ; default ; ~case 1 und case 2 ; case 1 und case 3; case 2 und case 3 ; case 1 und default ; case 2 und default ; case 3 und default|\n<code>a=2</code>: |case 1 ; ~case 2 ; case 3 ; default ; case 1 und case 2 ; case 1 und case 3; case 2 und case 3 ; case 1 und default ; case 2 und default ; case 3 und default|\n<code>a=3</code>: |case 1 ; case 2 ; ~case 3 ; default ; case 1 und case 2 ; case 1 und case 3; case 2 und case 3 ; case 1 und default ; case 2 und default ; case 3 und default|"
+						}
+					]
+				},
+				{
+					"name": "Wiederholung",
+					"title": "Wiederholungen (FOR, WHILE)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Geben Sie jeweils die Ausgabe der folgenden FOR-Schleifen an!\n\n<code>for (int i=1; i<5; i++) System.out.print(i);</code> : |12 ; 13 ; 14 ; 23 ; 24 ; 34 ; 123 ; 124 ; 234 ; ~1234|\n<code>for (int i=1; i<5; i+=2) System.out.print(i);</code> : |12 ; ~13 ; 14 ; 23 ; 24 ; 34 ; 123 ; 124 ; 234 ; 1234|\n<code>for (int i=1; i<5; i*=2) System.out.print(i);</code> : |12 ; 13 ; 14 ; 23 ; 24 ; 34 ; 123 ; ~124 ; 234 ; 1234|\n<code>for (int i=1, k=3; i&lt;k; i+=2) System.out.print(k++);</code> : |12 ; 13 ; 14 ; 23 ; 24 ; ~34 ; 123 ; 124 ; 234 ; 1234|"
+						},
+						{
+							"type": "gap",
+							"text": "Gegeben Sie jeweils die Ausgabe der folgenden WHILE-Schleifen an!\n\n<code>int n = 1; while (n<4) { System.out.print(n); n = n + 1; }</code> : | 1 ; 2 ; 3 ; 4 ; 12 ; ~123 ; 1234 ; keine Ausgabe|\n<code>int n = 1; do { System.out.print(n); n = n + 1; } while (n<4)</code> : | 1 ; 2 ; 3 ; 4 ; 12 ; ~123 ; 1234 ; keine Ausgabe|\n<code>int n = 4; while (n<4) {System.out.print(n);  n = n + 1;}</code> : | 1 ; 2 ; 3 ; 4 ; 12 ; 123 ; 1234 ; ~keine Ausgabe|\n<code>int n = 4; do { System.out.print(n); n = n + 1;} while (n<4)</code> : | 1 ; 2 ; 3 ; ~4 ; 12 ; 123 ; 1234 ; keine Ausgabe|"
+						},
+						{
+							"type": "gap",
+							"text": "Gegeben Sie jeweils die Ausgabe der folgenden WHILE-Schleifen an!\n\n<code>int n = 0; while (n<4) { n++; if (n % 3 == 0) continue; System.out.print(n); }</code> : | 1 ; 12 ; 13 ; 14 ; 23 ; 24 ; 123 ; ~124 ; 234 ; 1234|\n<code>int n = 0; while (n<4) { n++; if (n % 3 == 0) break; System.out.print(n); }</code> : | 1 ; ~12 ; 13 ; 14 ; 23 ; 24 ; 123 ; 124 ; 234 ; 1234|"
 						}
 					]
 				}
