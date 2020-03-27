@@ -102,6 +102,29 @@
 					]
 				}
 			]
-		}		
+		},
+		{
+			"name": "03_PROC",
+			"title": "PROC: Prozedurale Programmierung",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"..."
+					]
+				},
+				{
+					"name": "Methoden",
+					"title": "Methoden",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Geben sind die folgenden zwei Java-Methoden:\n<code>public static int a() {\n &nbsp;&nbsp;int x = 7;\n &nbsp;&nbsp;System.out.println(x);  // Pos #1\n &nbsp;&nbsp;int y = 2 * b();\n &nbsp;&nbsp;System.out.println(x);  // Pos #2\n &nbsp;&nbsp;return y;\n }\n \n public static int b() {\n &nbsp;&nbsp;int x = 10;\n &nbsp;&nbsp;System.out.println(x);  // Pos #3\n &nbsp;&nbsp;x = x + 1;\n &nbsp;&nbsp;System.out.println(x);  // Pos #4\n &nbsp;&nbsp;return 2*x+1;\n }\n</code>\nGeben Sie für den Methodenaufruf <code>a();</code> den Wert der Variablen <code>x</code> jeweils an den folgenden Positionen an!\n\nPos #1: |~7 ; 8 ; 9 ; 10 ; 11 ; 12|\nPos #2: |7 ; 8 ; 9 ; ~10 ; 11 ; 12|\nPos #3: |7 ; 8 ; 9 ; 10 ; ~11 ; 12|\nPos #4: |~7 ; 8 ; 9 ; 10 ; 11 ; 12|\n\nGeben Sie für den Methodenaufruf <code>a();</code> die Reihenfolge der <code>System.out.println(x);</code> Aufrufe an. Geben Sie dazu für jede Position die Reihenfolgennummer an! (D.h. 1 für die erste Ausgabe, 2 für die zweite usw.)!\n\nPos #1: |~1 ; 2 ; 3 ; 4|\nPos #2: |1 ; 2 ; 3 ; ~4|\nPos #3: |1 ; ~2 ; 3 ; 4|\nPos #4: |1 ; 2 ; ~3 ; 4|\n\nGeben Sie für den Methodenaufruf <code>a();</code> den Rückgabewert an! |7 ; 10 ; 11 ; 20 ; ~46|"
+						}
+					]
+				}
+			]				
+		}
 	]
 }
