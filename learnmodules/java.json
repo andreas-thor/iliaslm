@@ -161,6 +161,53 @@
 					]
 				}
 			]				
+		}, {
+			"name": "04_OO",
+			"title": "Objektorientierung",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"..."
+					]
+				},
+				{
+					"name": "Konstruktoren",
+					"title": "Konstruktoren", 
+					"question": [
+					]
+				},{
+					"name": "Methoden_Ueberladen",
+					"title": "Methoden und Überladen von Methoden", 
+					"question": [
+					]
+				},
+				{
+					"name": "Klassen_Attribute_Methoden",
+					"title": "Klassen-Attribute und -Methoden", 
+					"question": [
+						{	
+							"type": "gap",
+							"text": "Gegeben ist die folgende Java-Klasse:\n<code>\nclass Auto {\n \n &nbsp; int kmZaehler;\n &nbsp; int fahrten1;\n &nbsp; static int fahrten2;\n \n &nbsp; void fahren (int entfernung) {\n &nbsp; &nbsp; kmZaehler += entfernung;\n &nbsp; &nbsp; fahrten1++;\n &nbsp; &nbsp; fahrten2++;\n &nbsp; }\n }</code> \n sowie folgendes Programm:\n<code>Auto bus = new Auto();\n Auto opel = new Auto();\n bus.fahren(100);\n opel.fahren(70);\n bus.fahren(50);</code>\n\nGeben Sie jeweils den Wert der folgenden Ausdrücke an bzw. \"Fehler\", wenn der Ausdruck nicht definiert ist: \n<code>bus.kmZaehler</code>: |0 ; 50 ; 70 ; 100 ; ~120 ; 150 ; 170 ; 220 ; Fehler|\n<code>opel.kmZaehler</code>: |0 ; 50 ; ~70 ; 100 ; 120 ; 150 ; 170 ; 220 ; Fehler|\n<code>Auto.kmZaehler</code>: |0 ; 50 ; 70 ; 100 ; 120 ; 150 ; 170 ; 220 ; ~Fehler|\n<code>bus.fahrten1</code>: |0 ; 1 ; ~2 ; 3 ; 4 ; Fehler|\n<code>opel.fahrten1</code>: |0 ; ~1 ; 2 ; 3 ; 4 ; Fehler|\n<code>Auto.fahrten1</code>: |0 ; 1 ; 2 ; 3 ; 4 ; ~Fehler|\n<code>bus.fahrten2</code>: |0 ; 1 ; 2 ; ~3 ; 4 ; Fehler|\n<code>opel.fahrten2</code>: |0 ; 1 ; 2 ; ~3 ; 4 ; Fehler|\n<code>Auto.fahrten2</code>: |0 ; 1 ; 2 ; ~3 ; 4 ; Fehler|"
+						}
+
+					]
+				}, 
+				{
+					"name": "Main",
+					"title": "Main-Methode", 
+					"question": [
+						{	
+							"type": "gap",
+							"text": "Gegeben ist eine Java-Klasse <code>Echo</code> mit einer Main-Methode <code>public static void main (String[] args) { }</code>. Geben Sie für die folgende Aufrufe der Klasse jeweils an, welchen Wert der Parameter <code>args</code> hat!\n\n<code>java Echo Hello World</code>: |String mit Wert \"Hello World\" ; Array der Länge 1 mit Wert args[0]=\"Hello World\" ; ~Array der Länge 2 mit Wert args[0]=\"Hello\" und args[1]=\"World\"|\n<code>java Echo 'Hello World'</code>: |String mit Wert \"Hello World\" ; ~Array der Länge 1 mit Wert args[0]=\"Hello World\" ; Array der Länge 2 mit Wert args[0]=\"Hello\" und args[1]=\"World\"|"
+						}
+
+					]
+				}
+
+
+			]
 		}
 	]
 }
