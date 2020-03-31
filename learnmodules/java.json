@@ -158,6 +158,10 @@
 					"name": "Hanoi",
 					"title": "Hanoi",
 					"question": [
+						{
+							"type": "gap",
+							"text": "Geben Sie für die nachfolgenden Werte <code>h</code> an, wieviele Scheibenbewegungen bei den Türmen von Hanoi mit der Höhe <code>h</code> (mindestens) benötigt werden!\n\n<code>h=3</code>: | 3 ; 5 ; ~7 ; 9 |\n<code>h=5</code>: | 13 ; 19 ; 25 ; ~31 |\n<code>h=10</code>: | 789 ; ~1023 ; 2034 ; 5432 |"
+						}
 					]
 				}
 			]				
@@ -176,11 +180,23 @@
 					"name": "Konstruktoren",
 					"title": "Konstruktoren", 
 					"question": [
+						{
+							"type": "gap",
+							"text": "Gegeben ist die folgende Klasse:\n<code>\nclass Auto {\n &nbsp; int kmZaehler;\n &nbsp; int fahrten;\n \n &nbsp; Auto (int kmZaehler) {\n &nbsp; &nbsp; this (kmZaehler, kmZaehler/10);\n &nbsp; }\n \n &nbsp; Auto (int kmZaehler, int fahrten) {\n &nbsp; &nbsp; this.kmZaehler = kmZaehler;\n &nbsp; &nbsp; this.fahrten = fahrten;\n &nbsp; }\n }</code>\n\nsowie die folgenden drei Objekte:\n<code>\nAuto a1 = new Auto(); \nAuto a2 = new Auto(47); \nAuto a3 = new Auto (52, 3);</code>\n\nGeben Sie die Werte der folgenden Ausdrücke an bzw. Fehler, wenn der Wert oder das Objekt nicht definiert sind!\n<code>a1.kmZaehler</code>: | 0 ; 3 ; 4 ; 5 ; 47 ; 52 ; ~Fehler|\n<code>a2.kmZaehler</code>: | 0 ; 3 ; 4 ; 5 ; ~47 ; 52 ; Fehler|\n<code>a3.kmZaehler</code>: | 0 ; 3 ; 4 ; 5 ; 47 ; ~52 ; Fehler|\n<code>a1.fahrten</code>: | 0 ; 3 ; 4 ; 5 ; 47 ; 52 ; ~Fehler|\n<code>a2.fahrten</code>: | 0 ; 3 ; ~4 ; 5 ; 47 ; 52 ; Fehler|\n<code>a3.fahrten</code>: | 0 ; ~3 ; 4 ; 5 ; 47 ; 52 ; Fehler|"
+						}
 					]
 				},{
 					"name": "Methoden_Ueberladen",
 					"title": "Methoden und Überladen von Methoden", 
 					"question": [
+						{
+							"type": "gap",
+							"text": "Gegeben ist die folgende Java-Klasse:\n<code>\nclass Auto {\n &nbsp;int kmZaehler;\n &nbsp;int fahrten;\n \n &nbsp;void fahren (int entfernung) {\n &nbsp;&nbsp;kmZaehler += entfernung;\n &nbsp;&nbsp;fahrten++;\n &nbsp;}\n \n &nbsp;void fahren (int pos1, int pos2) {\n &nbsp;&nbsp;fahren (pos2>pos1 ? pos2-pos1 : pos1-pos2);\n &nbsp;}\n }</code>\n\n sowie eine Instanz <code>Auto opel = new Auto();</code>.\n Geben Sie für die nachfolgenden Methoden-Aufrufe jeweils an, ob der Aufruf gültig ist!\n<code>opel.fahren(100);</code>: | ~gültig ; nicht gültig |\n <code>opel.fahren(20.0);</code>: | gültig ; ~nicht gültig |\n <code>opel.fahren(30L);</code>: | gültig ; ~nicht gültig |\n <code>opel.fahren(0xFF);</code>: | ~gültig ; nicht gültig |\n <code>opel.fahren(10, 30);</code>: | ~gültig ; nicht gültig |\n <code>opel.fahren(30, 20);</code>: | ~gültig ; nicht gültig |\n <code>opel.fahren(10, 20, 30);</code>: | gültig ; ~nicht gültig |\n <code>opel.fahren(new int[] {1,2});</code>: | gültig ; ~nicht gültig |\n\nWelchen Wert haben die Attribute des Objekts <code>opel</code> nach Ausführung aller gültigen Methodenaufrufe?\n<code>opel.kmZaehler</code>: | 0 ; 100 ; 120 ; 130 ; 150 ; 160 ; 355 ; 365 ; 375 ; ~385 ; 395 |\n<code>opel.fahrten</code>: | 0 ; 1 ; 2 ; 3 ; ~4 ; 5 ; 6 ; 7 ; 8|"
+						}, 
+						{
+							"type": "gap",
+							"text": "Gegeben ist folgende Java-Klasse:\n<code>class K {\n  &nbsp; static void x (int a, int b) { } // Methode #1\n  &nbsp; static void x (int a, double b) { } // Methode #2\n  &nbsp; static void x (double a, double b) { } // Methode #3\n }</code>\n\nGeben Sie für die nachfolgenden Methoden-Aufrufe an, welche Methode aufgerufen wird. Falls keine passende Methode existiert, geben Sie Fehler an!\n\n<code>K.x(1,2);</code> | ~Methode #1 ; Methode #2 ; Methode #3 ; Fehler |\n <code>K.x(1.2,3);</code> | Methode #1 ; Methode #2 ; ~Methode #3 ; Fehler |\n <code>K.x(1,2.3);</code> | Methode #1 ; ~Methode #2 ; Methode #3 ; Fehler |\n <code>K.x(1.2,3.4);</code> | Methode #1 ; Methode #2 ; ~Methode #3 ; Fehler |\n <code>K.x(1,'c');</code> | ~Methode #1 ; Methode #2 ; Methode #3 ; Fehler |\n <code>K.x(1.2,'c');</code> | Methode #1 ; Methode #2 ; ~Methode #3 ; Fehler |\n <code>K.x(1,\"s\");</code> | Methode #1 ; Methode #2 ; Methode #3 ; ~Fehler |"
+						}
 					]
 				},
 				{
