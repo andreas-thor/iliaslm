@@ -2,17 +2,34 @@
 	"title": "Java Lernmodul (aus JSON erzeugt)",
 	"chapter": [
 		{
-			"name": "02_IMP",
-			"title": "IMP: Imperative Programmierung",
+			"name": "01_INTRO",
+			"title": "Einführung",
 			"page": [
 				{
 					"name": "overview",
 					"title": "Übersicht",
 					"outcome": [
-						"Vorteile der Datenhaltung mittels Datenbanksystemen gegenüber Dateisystemen zu erklären",
-						"die wesentlichen Eigenschaften relationaler Datenbanksysteme zu erläutern",
-						"das Transaktionskonzept und die Transaktionseigenschaften (ACID) an einem Beispiel darzustellen",
-						"praktische Einsatzszenarien den DBS-Einsatzformen OLTP und OLAP zuzuordnen"
+						"das Konzept Objekt-Orientierung zu erläutern und gegenüber der prozeduralen Programmierung abzugrenzen", 
+						"die wesentlichen Komponenten und deren Funktionen der Java-Technologie zu benennen", 
+						"zu erklären, warum Java die plattformunabhängige Entwicklung ermöglicht und welche Vor- und Nachteile daraus resultieren", 
+						"die Schritte zur Erstellung eines Java-Programms durchzuführen"
+					]
+				}
+				
+			]
+		},
+		{
+			"name": "02_IMP",
+			"title": "Imperative Programmierung",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"geeignete primitive Datentypen für Variablen eines Java-Programms zu identifizieren",
+						"Java-Ausdrücke mit primitiven Datentypen zu berechnen",
+						"Eingabe von Daten sowie die formatierte Ausgabe in Java zu realisieren",
+						"Kontrollstrukturen (u.a. Schleifen, Bedingungen) in Java umzusetzen"
 					]
 				},
 				{
@@ -105,13 +122,17 @@
 		},
 		{
 			"name": "03_PROC",
-			"title": "PROC: Prozedurale Programmierung",
+			"title": "Prozedurale Programmierung",
 			"page": [
 				{
 					"name": "overview",
 					"title": "Übersicht",
 					"outcome": [
-						"..."
+						"zur Umsetzung von Algorithmen (statische) Methoden in Java zu implementieren",  
+						"Methoden mit Parametern aufzurufen und deren Rückgabewerte zu verarbeiten", 
+						"den Gültigkeitsbereich einer Variablen in einem Java-Programm zu identifizieren", 
+						"das Prinzip der Rekursion in Java zur Umsetzung von Algorithmen anzuwenden"
+						
 					]
 				},
 				{
@@ -165,7 +186,8 @@
 					]
 				}
 			]				
-		}, {
+		}, 
+		{
 			"name": "04_OO",
 			"title": "Objektorientierung",
 			"page": [
@@ -173,9 +195,16 @@
 					"name": "overview",
 					"title": "Übersicht",
 					"outcome": [
-						"..."
+						"für einen Anwendungsfall ein Objekt-orientiertes Modell als UML-Klassendiagramm zu erstellen",
+						"ein UML-Klassendiagramm in die Definition von Java-Klassen inkl. Attribute zu überführen",
+						"für Java-Klassen Konstruktoren, Instanz- und Klassen-Methoden zu implementieren",
+						"Instanzen für Java-Klassen zu erstellen und deren Methoden aufzurufen"
 					]
 				},
+				{
+					"name": "Anwendungsbeispiel",
+					"title": "Anwendungsbeispiel"
+				}, 
 				{
 					"name": "Konstruktoren",
 					"title": "Konstruktoren", 
@@ -221,7 +250,201 @@
 
 					]
 				}
+			]
+		},
+		{
+			"name": "05_REF",
+			"title": "Referenzdatentypen",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+						"Arrays in Java-Programmen geeignet einzusetzen", 
+						"die Unterschiede zwischen primitiven Datentypen und Referenzdatentypen bzgl. Zuweisung und Operatoren an Beispielen zu erklären",
+						"Referenz- und Wertegleichheit am Beispiel zu erklären und entsprechende Methoden zur Gleichheitsprüfung zu implementieren",
+						"Referenzierung bzw. Speichermanagement bei Referenzdatentypen zu erklären"
+					]
+				},
+				{
+					"name": "Array_Initialisierung",
+					"title": "Array: Initialisierung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Vier Arrays werden wie folgt initialisiert:\n<code>\nint[] v1 = new int[5]; \nfor (int i = 0; i < v1.length; i++) v1[i] = 2 * i; \n\nint[] v2 = new int[5]; \nfor (int v: v2) v= 4;\n\nint[] v3 = { 2, 3, 5, 7, 11};\n\nint[] v4 = { 1, 2, v1[3]};</code>\n\nGeben Sie die Werte der folgenden Ausdrücke an (oder Fehler, falls der Ausdruck nicht definiert ist):\n<code>v1[3] ==</code> | 0 ; 4 ; 5 ; ~6 ; 7 ; 8 ; Fehler |\n<code>v2[3] ==</code> | ~0 ; 4 ; 5 ; 6 ; 7 ; 8 ; Fehler |\n<code>v3[3] ==</code> | 0 ; 4 ; 5 ; 6 ; ~7 ; 8 ; Fehler |\n<code>v4[3] ==</code> | 0 ; 4 ; 5 ; 6 ; 7 ; 8 ; ~Fehler |"
+						}
 
+					]
+				},
+				{
+					"name": "Mehrdimensionale_Arrays",
+					"title": "Mehrdimensionale Arrays",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Das mehrdimensionale Array <code>z</code> wird wie folgt initialisiert:\n<code>\nint[][] z = new int[3][];\nz[0] = new int[]{ 1, 2};\nz[1] = new int[]{3};\nz[2] = z[0];\nz[2][0] = 4;\nz[0][1] = 5;</code>\n\nGeben Sie für die folgenden Ausgaben in der Schlefie jeweils an, welcher Wert ausgegeben wird!\n<code>\nfor (int[] x: z) {\n&nbsp;&nbsp;for (int y: x) {\n&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(y);\n&nbsp;&nbsp;}\n}</code>\n\n1. Ausgabe: | 0 ; 1 ; 2 ; 3 ; ~4 ; 5 ; keine weitere Ausgabe |\n2. Ausgabe: | 0 ; 1 ; 2 ; 3 ; 4 ; ~5 ; keine weitere Ausgabe |\n3. Ausgabe: | 0 ; 1 ; 2 ; ~3 ; 4 ; 5 ; keine weitere Ausgabe |\n4. Ausgabe: | 0 ; 1 ; 2 ; 3 ; ~4 ; 5 ; keine weitere Ausgabe |\n5. Ausgabe: | 0 ; 1 ; 2 ; 3 ; 4 ; ~5 ; keine weitere Ausgabe |\n6. Ausgabe: | 0 ; 1 ; 2 ; 3 ; 4 ; 5 ; ~keine weitere Ausgabe |"
+						}
+					]
+				},
+				{
+					"name": "Zuweisung",
+					"title": "Zuweisung",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Gegeben sei folgendes Programmfragment: \n<code>\n int x[] = new int[5], y[];\n y = x; \n x[2] = 3;\n</code>\n\ngeben Sie die Werte für folgende Ausdrücke an. (Geben Sie Fehler an, wenn der Wert nicht definiert ist.)\n\n<code>y[0] == </code> | ~0 ; 1 ; 2 ; 3 ; 4 ; 5 ; Fehler |\n<code>x[2] == </code> | 0 ; 1 ; 2 ; ~3 ; 4 ; 5 ; Fehler |\n<code>y[2] == </code> | 0 ; 1 ; 2 ; ~3 ; 4 ; 5 ; Fehler |\n<code>x[5] == </code> | 0 ; 1 ; 2 ; 3 ; 4 ; 5 ; ~Fehler |"
+						}
+					]
+				}, 
+				{
+					"name": "Gleichheit_Klassen",
+					"title": "Gleichheit (Klassen)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Gegeben ist folgendes Programmfragment.\n <code>\nint a=7, b=7;\n Integer c = 7;\n Integer d = new Integer(7);\n Integer e = Integer.valueOf(7);\n</code>\nGeben Sie die Werte der folgenden Ausdrücke an!\n\n<code>a==b</code> : | ~true ; false |\n <code>a==c</code> : | ~true ; false |\n <code>c==d</code> : | true ; ~false |\n <code>c==e</code> : | ~true ; false |\n <code>d==e</code> : | true ; ~false |\n <code>c.equals(d)</code> : | ~true ; false |\n <code>c.equals(e)</code> : | ~true ; false |\n <code>d.equals(e)</code> : | ~true ; false |\n"
+						},
+						{
+							"type": "gap",
+							"text": "Gegeben ist die Klasse <code>Person</code>:\n<code>\nclass Person {\n &nbsp;String name;\n &nbsp;boolean hatVater;\n &nbsp;Person vater;\n \n &nbsp;Person (String name) {\n &nbsp;&nbsp;this.name = name;\n &nbsp;&nbsp;this.hatVater = false;\n &nbsp;&nbsp;this.vater = null;\n &nbsp;}\n \n &nbsp;void setVater (Person vater) {\n &nbsp;&nbsp;this.hatVater = vater != null;\n &nbsp;&nbsp;this.vater = vater;\n &nbsp;}\n }</code>\n\nsowie die folgenden fünf Instanzen der Klasse <code>Person</code>:\n<code>\nPerson a = new Person(\"Paul\");\n Person b = new Person(\"Paul\");\n Person c = new Person(\"Maria\");\n Person d = new Person(\"Maria\");\n Person e = new Person(\"Maria\");\n c.setVater(a);\n d.setVater(a);\n e.setVater(b);\n</code>\n\nGeben Sie den Rückgabewert der Funktionsaufrufe von <code>gleich1</code> an!\n<code> static boolean gleich1 (Person p1, Person p2) {\n&nbsp;&nbsp; return p1.name.equals(p2.name) && (p1.hatVater == p2.hatVater); \n}</code>\n\n<code>Person.gleich1(a, b) == </code> | ~true ; false | \n<code>Person.gleich1(a, c) == </code> | true ; ~false | \n<code>Person.gleich1(c, d) == </code> | ~true ; false | \n<code>Person.gleich1(c, e) == </code> | ~true ; false | \n\n\nGeben Sie den Rückgabewert der Funktionsaufrufe von <code>gleich2</code> an!\n<code> static boolean gleich2 (Person p1, Person p2) {\n&nbsp;&nbsp; return Person.gleich1(p1, p2) && (p1.hatVater ? p1.vater==p2.vater : true); \n}</code>\n\n<code>Person.gleich2(a, b) == </code> | ~true ; false | \n<code>Person.gleich2(a, c) == </code> | true ; ~false | \n<code>Person.gleich2(c, d) == </code> | ~true ; false | \n<code>Person.gleich2(c, e) == </code> | true ; ~false | \n\n\nGeben Sie den Rückgabewert der Funktionsaufrufe von <code>gleich3</code> an!\n<code> static boolean gleich3 (Person p1, Person p2) {\n&nbsp;&nbsp; return Person.gleich1(p1, p2) && (p1.hatVater ? Person.gleich3(p1.vater, p2.vater) : true); \n}</code>\n\n<code>Person.gleich3(a, b) == </code> | ~true ; false | \n<code>Person.gleich3(a, c) == </code> | true ; ~false | \n<code>Person.gleich3(c, d) == </code> | ~true ; false | \n<code>Person.gleich3(c, e) == </code> | ~true ; false | \n\n"
+
+						}
+					]
+				},
+				{
+					"name": "Gleichheit_Arrays",
+					"title": "Gleichheit (Arrays)",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Gegeben sind die folgenden Arrays:\n<code>\nint[] a = {1, 2};\n int[] b = {1, 2};\n int[][] c = {a, b};\n int[][] d = {a, b};\n int[][] e = {b, a};\n int[][] f = {a, {1, 2}};\n</code>\n\nGeben Sie den Wert der folgenden booleaschen Ausdrücke an (oder Fehler, wenn der Ausdruck nicht definiert ist)!\n\n<code>a == b</code>: | true ; ~false ; Fehler |\n<code>java.util.Arrays.equals(a, b)</code>: | ~true ; false ; Fehler |\n<code>java.util.Arrays.deepEquals(a, b)</code>: | true ; false ; ~Fehler |\n<code>c == d</code>: | true ; ~false ; Fehler |\n<code>java.util.Arrays.equals(c, d)</code>: | ~true ; false ; Fehler |\n<code>java.util.Arrays.deepEquals(c, d)</code>: | ~true ; false ; Fehler |\n<code>c == e</code>: | true ; ~false ; Fehler |\n<code>java.util.Arrays.equals(c, e)</code>: | true ; ~false ; Fehler |\n<code>java.util.Arrays.deepEquals(c, e)</code>: | ~true ; false ; Fehler |\n<code>c == f</code>: | true ; ~false ; Fehler |\n<code>java.util.Arrays.equals(c, f)</code>: | true ; ~false ; Fehler |\n<code>java.util.Arrays.deepEquals(c, f)</code>: | ~true ; false ; Fehler |"
+						}
+
+					]
+				},
+				{
+					"name": "Parameter",
+					"title": "Parameterübergabe"
+				}
+
+
+			]
+		},
+		{
+			"name": "06_ACC",
+			"title": "Kapselung",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+					]
+				}
+
+			]
+		},
+		{
+			"name": "07_INH",
+			"title": "Vererbung",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+					]
+				}
+
+			]
+		},
+		{
+			"name": "08_POL",
+			"title": "Polymorphismus",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+					]
+				}
+
+			]
+		},
+		{
+			"name": "09_ABS",
+			"title": "Abstraktion",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+					]
+				}
+
+			]
+		},
+		{
+			"name": "10_GEN",
+			"title": "Generics",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+					]
+				}
+
+			]
+		},
+		{
+			"name": "11_FUNC",
+			"title": "Funktionale Programmierung",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+					]
+				}
+
+			]
+		},
+		{
+			"name": "12_EXC",
+			"title": "Ausnahmebehandlung",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+					]
+				}
+
+			]
+		},
+		{
+			"name": "13_THREAD",
+			"title": "Multi-Threading",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+					]
+				}
+
+			]
+		},
+		{
+			"name": "14_GUI",
+			"title": "Oberflächenprogrammierung",
+			"page": [
+				{
+					"name": "overview",
+					"title": "Übersicht",
+					"outcome": [
+					]
+				}
 
 			]
 		}

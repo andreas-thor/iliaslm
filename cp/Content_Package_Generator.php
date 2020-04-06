@@ -24,7 +24,7 @@ $manifest = new CP_Manifest('DBS');
 $chapterItem = null;
 
 // only first 8 chapters
-foreach (array_slice($content['chapter'], 0, 8) as $chapter) {
+foreach ($content['chapter'] as $chapter) {
 	
 	foreach ($chapter['page'] as $page) {
 		
