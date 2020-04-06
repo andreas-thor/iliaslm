@@ -47,6 +47,10 @@ foreach ($content['chapter'] as $chapter) {
 
 	// copy static files (css, js, etc.) and zip
 	recurseCopy('skeleton_only', $directory);
+
+	// copy file from the directory of the json file
+	recurseCopy(dirname($argv[1]), $directory);
+
 	zipDirectory($directory, $directory . '.zip');
 }
 
