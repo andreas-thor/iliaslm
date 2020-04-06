@@ -325,7 +325,17 @@
 				},
 				{
 					"name": "Parameter",
-					"title": "Parameterübergabe"
+					"title": "Parameterübergabe",
+					"question": [
+						{
+							"type": "gap",
+							"text": "Gegeben ist die folgende Klasse <code>A</code>:\n<code>\nclass A {\n &nbsp;&nbsp;int x = 1;\n &nbsp;&nbsp;int y = 2;\n &nbsp;&nbsp;Integer z = Integer.valueOf(3);\n }\n</code>\nsowie die Methode <code>changeA</code>:\n<code>\nstatic void changeA (A a) {\n &nbsp;&nbspa.x++;\n &nbsp;&nbspa.y = a.y+1;\n &nbsp;&nbspa.z = 5;\n }</code>\n\nGeben Sie die Attributwerte der Instanz <code>myA</code> an, nachdem folgendes Code ausgeführt wurde:\n<code>\nA myA = new A();\n changeA(myA);</code>\n\n<code>myA.x == </code> | 1 ; ~2 ; 3 ; 4 ; 5 |\n<code>myA.y == </code> | 1 ; 2 ; ~3 ; 4 ; 5 |\n<code>myA.z == </code> | 1 ; 2 ; 3 ; 4 ; ~5 |"
+						}, 
+						{
+							"type": "gap",
+							"text": "Gegeben ist die folgende Methode: \n<code>\nstatic void changeArray (int[] a, int[] b) {\n &nbsp;&nbsp;a = new int[2];\n &nbsp;&nbsp;a[0] = 5;\n &nbsp;&nbsp;a[1] = 6;\n &nbsp;&nbsp;b[0] = 7;\n &nbsp;&nbsp;b[1] = 8;\n }</code>\n\nGeben Sie die Werte der beiden Arrays <code>x</code> und <code>y</code> an, nachdem folgendes Programm ausgeführt wurde:\n<code>\n int[] x = {1, 2};\n int[] y = {3, 4};\n changeArray(x, y);</code>\n\n<code>x[0] == </code> | ~1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8 |\n<code>x[1] == </code> | 1 ; ~2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8 |\n<code>y[0] == </code> | 1 ; 2 ; 3 ; 4 ; 5 ; 6 ; ~7 ; 8 |\n<code>y[1] == </code> | 1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; ~8 |"
+						}
+					]
 				}
 
 
