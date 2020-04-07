@@ -10,14 +10,12 @@ class CP_QuestionGap extends CP_Question{
 
 		parent::__construct($qid);
 		
-		global $url;
-		
 		$this->json = [
 			'type' => 'gap',
 			'blocks' => []
 		];
 		
-		foreach (explode("|", str_replace("[URL]", $url, $question["text"])) as $blockNumber => $blockText) {
+		foreach (explode("|", $question["text"]) as $blockNumber => $blockText) {
 		
 			if (($blockNumber % 2) == 0) { // regular text
 				$this->json['blocks'][$blockNumber] = [

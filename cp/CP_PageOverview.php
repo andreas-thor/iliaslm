@@ -5,8 +5,8 @@ require_once 'CP_Page.php';
 class CP_PageOverview extends CP_Page {
 
 	
-	public function __construct(string $pageidentifier, array $page) {
-		$this->createPageHTML(file_get_contents('skeleton_only/pageOverview.html'), $pageidentifier, $page);
+	public function __construct(string $pageidentifier, array $page, array $url) {
+		$this->createPageHTML(file_get_contents('skeleton_only/pageOverview.html'), $pageidentifier, $page, $url);
 		
 		$los = "";
 		foreach ($page['outcome'] as $id => $outcome) {

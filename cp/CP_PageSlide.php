@@ -8,9 +8,9 @@ class CP_PageSlide extends  CP_Page {
 
 	
 	
-	public function __construct(string $pageidentifier, array $page) {
+	public function __construct(string $pageidentifier, array $page, array $url) {
 		
-		$this->createPageHTML(file_get_contents('skeleton_only/pageSlide.html'), $pageidentifier, $page);		
+		$this->createPageHTML(file_get_contents('skeleton_only/pageSlide.html'), $pageidentifier, $page, $url);		
 		
 		// add questions
 		$questionData = '';

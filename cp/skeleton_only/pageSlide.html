@@ -111,20 +111,14 @@
 				<div style="border: 1px solid #E1E1E1; border-radius: 4px;">
 					<button onclick="accordionClick (this)" class="accordion accordionOpen button" style="text-align: left; width: 100%">Skriptfolie</button>
 					<div> 
-<!--						<img src="###URL######PAGEID###.jpg" width="100%"></img> -->
 						<img src="###PAGEID###.jpg" width="100%"></img>
 					</div>
 				</div>
-				<div style="border: 1px solid #E1E1E1; border-radius: 4px;">
-
+				<div style="border: 1px solid #E1E1E1; border-radius: 4px; display:###SHOW_VIDEO###">
 					<button onclick="accordionClick (this)" class="accordion accordionClosed button-primary" style="text-align: left; width: 100%">Lernvideo</button>
 					<div style="display:none">
 						<p>
-<!--							<iframe width="720" height="530" src="https://mediaserver.htwk-leipzig.de/permalink/v125f4608f1e75j6rc33/iframe/"></iframe> -->
-							<video controls width="100%">
-								<source src="###URL######PAGEID###.mp4" type="video/mp4"></source>
-							</video>
-							
+							<iframe width="100%" height="70%" src="###URL_VIDEO###" allowfullscreen="allowfullscreen" allow="autoplay"></iframe>
 						</p>
 					</div>
 				</div>
@@ -133,13 +127,7 @@
 				<div id="questions"></div>
 			</div>
 		</div>
-
 	</div>
-
-
-
-
-
 </body>
 
 </html>

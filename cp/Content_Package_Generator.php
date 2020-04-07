@@ -5,13 +5,10 @@ require_once 'CP_PageSlide.php';
 require_once 'CP_PageOverview.php';
 
 
-// global URL that has all the media (PDF-script files, videos, images)
-$url = $argv[3]; 
-// $url = "https://bildungsportal.sachsen.de/opal/FolderResource/20615430147/slm/"; 
-
 // load data from json file
 $content = json_decode(file_get_contents($argv[1]), TRUE);
 
+$url= $content['url'];
 
 $directory = $argv[2] . '/' . time();
 print $directory;
@@ -20,7 +17,7 @@ if (! is_dir($directory)) {
 }
 
 // create manifest and pages
-$manifest = new CP_Manifest('DBS');
+$manifest = new CP_Manifest($content['title']);
 $chapterItem = null;
 
 // only first 8 chapters
@@ -30,11 +27,11 @@ foreach ($content['chapter'] as $chapter) {
 		
 		if ($page['name'] == 'overview') {
 			$pageidentifier = $chapter['name'];
-			$pageObj = new CP_PageOverview ($pageidentifier, $page);
+			$pageObj = new CP_PageOverview ($pageidentifier, $page, $url);
 			$chapterItem = $manifest->addPage($pageidentifier, $chapter['title']);
 		} else {
 			$pageidentifier = $chapter['name'] . '_' . $page['name'];
-			$pageObj = new CP_PageSlide($pageidentifier, $page);
+			$pageObj = new CP_PageSlide($pageidentifier, $page, $url);
 			$manifest->addPage($pageidentifier, $page['title'], $chapterItem);
 		}
 		

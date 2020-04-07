@@ -11,17 +11,16 @@ class CP_QuestionMC extends CP_Question {
 
 		parent::__construct($qid);
 		
-		global $url;
-		list ($questionText, $answerChoices) = explode("|", str_replace("[URL]", $url, $question["text"]), 2);
+		list ($questionText, $answerChoices) = explode("|", $question["text"], 2);
 
 		$this->qid = $qid;
 		$this->json = [
 			'type' => 'mc',
-			'text' => $questionText,
+			'text' => str_replace("\n", '<br/>', $questionText),
 			'answers' => []
 		];
 		
-		foreach (explode(";", $answerChoices) as $choiceNumber => $choiceText) {	// choices are separated by ";"
+		foreach (explode(" ;", $answerChoices) as $choiceNumber => $choiceText) {	// choices are separated by " ;"
 			
 			$points = 0;
 			$choiceText = trim($choiceText);
