@@ -20,7 +20,7 @@ if (! is_dir($directory)) {
 $manifest = new CP_Manifest($content['title']);
 $chapterItem = null;
 
-// only first 8 chapters
+// only first 8 chapters: array_slice ($content['chapter'], 0, 8)
 foreach ($content['chapter'] as $chapter) {
 	
 	foreach ($chapter['page'] as $page) {
