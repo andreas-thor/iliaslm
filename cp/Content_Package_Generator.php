@@ -23,6 +23,8 @@ $chapterItem = null;
 // only first 8 chapters: array_slice ($content['chapter'], 0, 8)
 foreach ($content['chapter'] as $chapter) {
 	
+	
+
 	foreach ($chapter['page'] as $page) {
 		
 		if ($page['name'] == 'overview') {
@@ -37,8 +39,13 @@ foreach ($content['chapter'] as $chapter) {
 		
 		file_put_contents($directory . '/' . $pageidentifier . '.html', $pageObj->getHTMLAsString());
 		
+		// Zwischenstand für DBS2!!! Nur Übersicht für die letzten drei Kapitel
+		if (($chapter['name'] == '19_DI') || ($chapter['name'] == '14_DWH') || ($chapter['name'] == '15_DM')) {
+			break;
+		}
 		
 	}
+
 	file_put_contents($directory . '/imsmanifest.xml', $manifest->getXMLAsString());
 	
 
