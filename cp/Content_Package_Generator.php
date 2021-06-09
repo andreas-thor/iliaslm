@@ -39,10 +39,6 @@ foreach ($content['chapter'] as $chapter) {
 		
 		file_put_contents($directory . '/' . $pageidentifier . '.html', $pageObj->getHTMLAsString());
 		
-		// Zwischenstand für DBS2!!! Nur Übersicht für die letzten drei Kapitel
-		if (($chapter['name'] == '19_DI') || ($chapter['name'] == '14_DWH') || ($chapter['name'] == '15_DM')) {
-			break;
-		}
 		
 	}
 
